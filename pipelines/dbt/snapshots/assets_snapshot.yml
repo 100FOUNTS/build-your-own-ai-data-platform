@@ -1,0 +1,10 @@
+# Challenge R4 — history of the asset master data (SCD type 2).
+# check: the master data has no `updated_at`, so dbt compares the columns one by one on every run.
+snapshots:
+  - name: assets_snapshot
+    relation: source('master_data', 'assets')
+    config:
+      unique_key: asset_id
+      strategy: check
+      check_cols: [plant, model, criticality, install_date, rated_flow_m3h, rated_kw]
+      hard_deletes: invalidate

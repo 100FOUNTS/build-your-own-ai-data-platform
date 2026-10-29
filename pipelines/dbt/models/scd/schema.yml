@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: master_data
+    description: Pump master data in Postgres (module 1)
+    database: pg
+    schema: public
+    tables:
+      - name: assets
+
+models:
+  - name: dim_assets_current
+    description: Current version of each pump according to the snapshot
+    columns:
+      - name: asset_id
+        data_tests: [unique, not_null]
+      - name: criticality
+        data_tests:
+          - accepted_values:
+              arguments: {values: ["A", "B", "C"]}
