@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run *)",
+      "Bash(make *)",
+      "Bash(docker compose *)",
+      "Bash(docker ps*)",
+      "Bash(docker logs*)",
+      "Bash(kubectl get *)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl logs *)",
+      "Bash(ls *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)"
+    ],
+    "deny": [
+      "Read(./checks/_heldout.jsonl)",
+      "Bash(*_heldout*)",
+      "Edit(./data/history/**)",
+      "Write(./data/history/**)",
+      "Edit(./platform/**)",
+      "Write(./platform/**)",
+      "Bash(docker compose * down -v*)",
+      "Bash(docker volume rm*)",
+      "Bash(rm -rf data*)"
+    ]
+  }
+}

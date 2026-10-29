@@ -1,0 +1,10 @@
+# Starting config (it only prints). In module 10 you REPLACE it with yours in observability/otel-collector.yaml.
+receivers:
+  otlp: {protocols: {grpc: {endpoint: 0.0.0.0:4317}, http: {endpoint: 0.0.0.0:4318}}}
+exporters:
+  debug: {verbosity: basic}
+service:
+  pipelines:
+    traces: {receivers: [otlp], exporters: [debug]}
+    metrics: {receivers: [otlp], exporters: [debug]}
+    logs: {receivers: [otlp], exporters: [debug]}

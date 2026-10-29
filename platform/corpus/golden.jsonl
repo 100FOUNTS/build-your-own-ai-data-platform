@@ -1,0 +1,24 @@
+{"question": "At what vibration value does a bearing alarm trigger?", "expected_docs": ["man-005-alarms", "man-001-bearings"]}
+{"question": "What is the maximum temperature allowed in the bearing housing?", "expected_docs": ["man-001-bearings", "man-005-alarms"]}
+{"question": "How much grease is applied per bearing, and how often?", "expected_docs": ["man-006-lubrication"]}
+{"question": "Can lithium and polyurea greases be mixed?", "expected_docs": ["man-006-lubrication"]}
+{"question": "How many drops per minute of leakage are acceptable on a mechanical seal?", "expected_docs": ["man-002-mechanical-seal"]}
+{"question": "Which flush plan do pumps with solids in the fluid use?", "expected_docs": ["man-002-mechanical-seal"]}
+{"question": "How do I recognize cavitation by its noise?", "expected_docs": ["man-003-cavitation"]}
+{"question": "What NPSH margin must there be between the available and the required?", "expected_docs": ["man-003-cavitation", "man-012-glossary"]}
+{"question": "What are the six steps of lockout/tagout?", "expected_docs": ["man-004-loto"]}
+{"question": "Who can remove a LOTO padlock?", "expected_docs": ["man-004-loto"]}
+{"question": "What do I do if the model gives a risk of 0.85 for a pump?", "expected_docs": ["man-005-alarms"]}
+{"question": "How soon must a pump with a risk of 0.6 be inspected?", "expected_docs": ["man-005-alarms"]}
+{"question": "What laser alignment tolerance is required?", "expected_docs": ["man-007-alignment"]}
+{"question": "How do I detect soft foot on the motor?", "expected_docs": ["man-007-alignment"]}
+{"question": "How long can a pump run with the discharge closed?", "expected_docs": ["man-008-startup-shutdown"]}
+{"question": "How many starts per hour does the motor allow?", "expected_docs": ["man-008-startup-shutdown"]}
+{"question": "How often is preventive maintenance done on a criticality A pump?", "expected_docs": ["man-009-preventive"]}
+{"question": "What does major preventive maintenance include?", "expected_docs": ["man-009-preventive"]}
+{"question": "What minimum insulation value must the megohmmeter show before energizing a motor?", "expected_docs": ["man-010-electrical-safety"]}
+{"question": "What protective equipment is needed for electrical work on 480 V motors?", "expected_docs": ["man-010-electrical-safety"]}
+{"question": "What must the corrective work order include after a failure?", "expected_docs": ["man-011-incidents"]}
+{"question": "How soon is the follow-up report written after a failure?", "expected_docs": ["man-011-incidents"]}
+{"question": "What does MTTR mean?", "expected_docs": ["man-012-glossary", "man-011-incidents"]}
+{"question": "What is the L10 rated life of a bearing?", "expected_docs": ["man-001-bearings"]}

@@ -1,0 +1,36 @@
+{
+  "realm": "plant",
+  "enabled": true,
+  "sslRequired": "none",
+  "registrationAllowed": false,
+  "accessTokenLifespan": 900,
+  "roles": {"realm": [{"name": "operator"}, {"name": "engineer"}, {"name": "admin"}]},
+  "clients": [
+    {
+      "clientId": "plant-web", "name": "Plant web (Next.js)", "enabled": true, "publicClient": true,
+      "standardFlowEnabled": true, "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://localhost:3300/*"], "webOrigins": ["+"],
+      "attributes": {"pkce.code.challenge.method": "S256"},
+      "protocolMappers": [{"name": "aud-plant-api", "protocol": "openid-connect", "protocolMapper": "oidc-audience-mapper",
+        "config": {"included.client.audience": "plant-api", "id.token.claim": "false", "access.token.claim": "true"}}]
+    },
+    {
+      "clientId": "plant-cli", "name": "Test and script client (development only)", "enabled": true, "publicClient": true,
+      "standardFlowEnabled": false, "directAccessGrantsEnabled": true,
+      "protocolMappers": [{"name": "aud-plant-api", "protocol": "openid-connect", "protocolMapper": "oidc-audience-mapper",
+        "config": {"included.client.audience": "plant-api", "id.token.claim": "false", "access.token.claim": "true"}}]
+    },
+    {
+      "clientId": "plant-api", "name": "Plant API (resource)", "enabled": true, "publicClient": false,
+      "secret": "plant-api-secret", "standardFlowEnabled": false, "directAccessGrantsEnabled": false, "serviceAccountsEnabled": true
+    }
+  ],
+  "users": [
+    {"username": "ana", "enabled": true, "email": "ana@plant.test", "emailVerified": true, "firstName": "Ana", "lastName": "Operator",
+     "credentials": [{"type": "password", "value": "ana", "temporary": false}], "realmRoles": ["operator"]},
+    {"username": "bruno", "enabled": true, "email": "bruno@plant.test", "emailVerified": true, "firstName": "Bruno", "lastName": "Engineer",
+     "credentials": [{"type": "password", "value": "bruno", "temporary": false}], "realmRoles": ["engineer"]},
+    {"username": "carla", "enabled": true, "email": "carla@plant.test", "emailVerified": true, "firstName": "Carla", "lastName": "Admin",
+     "credentials": [{"type": "password", "value": "carla", "temporary": false}], "realmRoles": ["admin", "engineer", "operator"]}
+  ]
+}

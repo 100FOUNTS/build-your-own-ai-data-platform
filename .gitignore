@@ -1,0 +1,6 @@
+# Starter ignores. Module 0 asks you to complete this file (data/, .env, node_modules, secrets…).
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/

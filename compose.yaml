@@ -1,0 +1,229 @@
+# The platform the "platform team" gives you. It starts BY PROFILE, depending on the module you are on:
+#   db       Postgres+pgvector, Valkey (Redis compatible), Qdrant
+#   stream   Redpanda (Kafka API) + console
+#   lake     SeaweedFS (local S3), Iceberg REST catalog, MLflow
+#   auth     Keycloak (OAuth2/OIDC), OpenBao (secrets)
+#   obs      OpenTelemetry Collector, Prometheus, Grafana, Loki, Tempo
+#   cloud    Floci (local AWS)
+#   git      Forgejo (Git + registry, for GitOps)
+# Shortcuts: make up-db, up-stream, up-lake, up-auth, up-obs, up-cloud, up-git · make down · make ps
+# Local DEVELOPMENT credentials. Module 8 teaches you to get them out of the code.
+# Ollama runs on your machine (not in Docker) to use the GPU: containers see it as host.docker.internal:11434.
+
+name: ai-data-platform
+
+x-s3-env: &s3-env
+  AWS_ACCESS_KEY_ID: lakeaccess
+  AWS_SECRET_ACCESS_KEY: lakesecret
+  AWS_REGION: us-east-1
+
+services:
+  # ----------------------------------------------------------------- db
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg17
+    profiles: [db, lake, auth, all]
+    environment: {POSTGRES_USER: plant, POSTGRES_PASSWORD: plant, POSTGRES_DB: plant}
+    ports: ["5433:5432"]            # 5433 on the host so it doesn't clash with a local Postgres on 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./platform/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U plant -d plant"], interval: 3s, timeout: 3s, retries: 30}
+
+  valkey:
+    image: valkey/valkey:9.0.6-alpine   # open fork of Redis: same protocol, same clients (redis-py)
+    profiles: [db, stream, all]
+    ports: ["6380:6379"]            # 6380 so it doesn't clash with a local Redis on 6379
+    healthcheck: {test: ["CMD", "valkey-cli", "ping"], interval: 3s, timeout: 3s, retries: 20}
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.2
+    profiles: [db, vector, all]
+    ports: ["6333:6333"]
+
+  # ----------------------------------------------------------------- stream
+  redpanda:
+    image: redpandadata/redpanda:v26.2.5
+    profiles: [stream, lake, all]
+    command:
+      - redpanda
+      - start
+      - --mode=dev-container
+      - --smp=1
+      - --memory=768M
+      - --kafka-addr=internal://0.0.0.0:9092,external://0.0.0.0:19092,k8s://0.0.0.0:29092
+      - --advertise-kafka-addr=internal://redpanda:9092,external://localhost:19092,k8s://host.docker.internal:29092
+    ports: ["19092:19092", "29092:29092", "9644:9644"]   # 29092: for Kubernetes (kind) pods
+    healthcheck: {test: ["CMD-SHELL", "rpk cluster health | grep -E 'Healthy:.+true' || exit 1"], interval: 5s, timeout: 5s, retries: 30}
+
+  redpanda-console:
+    image: redpandadata/console:v3.12.0
+    profiles: [stream, all]
+    depends_on: {redpanda: {condition: service_healthy}}
+    environment: {KAFKA_BROKERS: "redpanda:9092"}
+    ports: ["8088:8080"]
+
+  # ----------------------------------------------------------------- lake
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest   # S3-compatible storage (MinIO no longer gets patches)
+    profiles: [lake, all]
+    command: ["server", "-dir=/data", "-s3", "-s3.port=8333", "-s3.config=/etc/s3.json", "-ip.bind=0.0.0.0"]
+    ports: ["8333:8333"]
+    volumes:
+      - ./platform/seaweedfs/s3.json:/etc/s3.json:ro
+      - swdata:/data
+
+  s3-init:
+    image: amazon/aws-cli:latest
+    profiles: [lake, all]
+    depends_on: [seaweedfs]
+    environment: *s3-env
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        for i in $$(seq 1 40); do aws --endpoint-url http://seaweedfs:8333 s3 ls >/dev/null 2>&1 && break; sleep 2; done
+        for b in warehouse mlflow landing backups; do aws --endpoint-url http://seaweedfs:8333 s3 mb s3://$$b 2>/dev/null || true; done
+        echo "buckets listos"
+    restart: "no"
+
+  iceberg-rest:
+    image: apache/iceberg-rest-fixture:1.10.1
+    profiles: [lake, all]
+    depends_on: [seaweedfs]
+    environment:
+      <<: *s3-env
+      CATALOG_WAREHOUSE: s3://warehouse/
+      CATALOG_IO__IMPL: org.apache.iceberg.aws.s3.S3FileIO
+      CATALOG_S3_ENDPOINT: http://seaweedfs:8333
+      CATALOG_S3_PATH__STYLE__ACCESS: "true"
+    ports: ["8181:8181"]
+
+  mlflow:
+    build: ./platform/mlflow
+    profiles: [lake, all]
+    depends_on: {postgres: {condition: service_healthy}, s3-init: {condition: service_completed_successfully}}
+    environment:
+      <<: *s3-env
+      MLFLOW_S3_ENDPOINT_URL: http://seaweedfs:8333
+    command: >
+      mlflow server --host 0.0.0.0 --port 5000
+      --backend-store-uri postgresql://plant:plant@postgres:5432/mlflow
+      --artifacts-destination s3://mlflow --serve-artifacts --workers 1
+    mem_limit: 1500m
+    ports: ["5001:5000"]            # 5001: AirPlay uses 5000 on macOS
+
+  # ----------------------------------------------------------------- auth
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8
+    profiles: [auth, all]
+    command: ["start-dev", "--import-realm"]
+    environment: {KC_BOOTSTRAP_ADMIN_USERNAME: admin, KC_BOOTSTRAP_ADMIN_PASSWORD: admin, KC_HTTP_PORT: "8080", KC_HEALTH_ENABLED: "true"}
+    healthcheck:   # the image has no curl: the management port (9000) is probed with bash
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/9000 && printf 'GET /health/ready HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3 && grep -q '\"UP\"' <&3"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 20s
+    volumes: ["./platform/keycloak/plant-realm.json:/opt/keycloak/data/import/plant-realm.json:ro"]
+    ports: ["8089:8080"]
+
+  openbao:
+    image: openbao/openbao:2.7
+    profiles: [auth, all]
+    command: ["server", "-dev", "-dev-root-token-id=root", "-dev-listen-address=0.0.0.0:8200"]
+    cap_add: [IPC_LOCK]
+    ports: ["8200:8200"]
+
+  # ----------------------------------------------------------------- obs
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.163.1
+    profiles: [obs, all]
+    command: ["--config=/etc/otelcol/config.yaml"]
+    volumes: ["./observability/otel-collector.yaml:/etc/otelcol/config.yaml:ro"]   # you write it (module 10)
+    ports: ["4317:4317", "4318:4318", "8889:8889"]
+    depends_on: [tempo, loki]
+
+  prometheus:
+    image: prom/prometheus:v3.13.4
+    profiles: [obs, all]
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--web.enable-lifecycle", "--enable-feature=exemplar-storage"]
+    volumes:
+      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml:ro          # you write it
+      - ./observability/rules:/etc/prometheus/rules:ro
+    ports: ["9090:9090"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+
+  loki:
+    image: grafana/loki:3.5.5
+    profiles: [obs, all]
+    command: ["-config.file=/etc/loki/loki.yaml"]
+    volumes: ["./platform/loki/loki.yaml:/etc/loki/loki.yaml:ro"]
+    ports: ["3100:3100"]
+
+  tempo:
+    image: grafana/tempo:2.10.9
+    profiles: [obs, all]
+    command: ["-config.file=/etc/tempo/tempo.yaml"]
+    volumes: ["./platform/tempo/tempo.yaml:/etc/tempo/tempo.yaml:ro"]
+    ports: ["3200:3200"]
+
+  grafana:
+    image: grafana/grafana:13.2.4
+    profiles: [obs, all]
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro          # you write it
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports: ["3030:3000"]
+    depends_on: [prometheus, loki, tempo]
+
+  # ----------------------------------------------------------------- cloud
+  floci:
+    image: floci/floci:2.3.0              # AWS emulator (MIT, no account needed). LocalStack is no longer free
+    profiles: [cloud, all]
+    ports: ["4566:4566"]
+
+  # ----------------------------------------------------------------- git (GitOps)
+  forgejo:
+    image: codeberg.org/forgejo/forgejo:11
+    profiles: [git, all]
+    environment:
+      USER_UID: "1000"
+      USER_GID: "1000"
+      FORGEJO__security__INSTALL_LOCK: "true"
+      FORGEJO__server__ROOT_URL: http://localhost:3002/
+      FORGEJO__server__HTTP_PORT: "3000"
+      FORGEJO__service__DISABLE_REGISTRATION: "true"
+    ports: ["3002:3000"]
+    volumes: [forgejo:/data]
+
+  # ----------------------------------------------------------------- on-demand tools
+  sim:
+    build: ./platform/sim
+    profiles: [tools]
+    environment: {KAFKA_BOOTSTRAP: "redpanda:9092"}
+    volumes: ["./data:/data"]
+
+  spark:
+    build: ./platform/spark
+    profiles: [tools]
+    environment:
+      <<: *s3-env
+      LAKE_NS: ${LAKE_NS:-bronze}                       # Iceberg namespace your jobs write to
+      KAFKA_BOOTSTRAP: redpanda:9092
+      KAFKA_TOPIC_CLEAN: ${KAFKA_TOPIC_CLEAN:-plant.readings.clean}
+      CHECKPOINT_BASE: ${CHECKPOINT_BASE:-s3a://warehouse/_checkpoints}
+      HISTORY_DIR: /data/history
+      AVAILABLE_NOW: ${AVAILABLE_NOW:-0}                # 1 = process what is pending and exit (useful for tests)
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes:
+      - ./pipelines/spark:/jobs
+      - ./data:/data
+
+volumes:
+  pgdata:
+  swdata:
+  forgejo:
