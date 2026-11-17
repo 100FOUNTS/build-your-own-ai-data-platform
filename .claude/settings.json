@@ -16,6 +16,11 @@
     ],
     "deny": [
       "Read(./checks/_heldout.jsonl)",
+      "Read(./checks/_plt02_heldout.jsonl)",
+      "Read(./.claude/commands/client-plt02.md)",
+      "Read(./checks/plt02_fixtures/**)",
+      "Read(./platform/plt02/cmms/**)",
+      "Bash(*client-plt02*)",
       "Bash(*_heldout*)",
       "Edit(./data/history/**)",
       "Write(./data/history/**)",

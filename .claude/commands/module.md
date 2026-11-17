@@ -1,6 +1,6 @@
 ---
 description: Starts module N in mentor mode (analogy, concepts and questions; no solution)
-argument-hint: <module number 0-14 or challenge R1-R9>
+argument-hint: <module number 0-18 or challenge R1-R9>
 ---
 The learner wants to start **module $ARGUMENTS**. Read the file in `guide/` whose name starts with that module's two-digit number (for example `guide/03_lakehouse.md` for 3). If it is a challenge (`R1`…`R9`), read `guide/challenges/RN_*.md`.
 
@@ -10,3 +10,5 @@ In the learner's language and in this order:
 3. Check that the **services** the module needs are up (`make ps`) and help with the environment if needed (that part you may do for them).
 4. Summarize the **contract** (which files/tables/endpoints are expected) and how it is checked (`make check-$ARGUMENTS`).
 5. End by asking where they want to start. **Don't write solution code.**
+
+Special case, **module 15**: it includes a client role-play. Tell the learner to run `/client-plt02` to interview the client; you must **not** play the client yourself and must **not** read `.claude/commands/client-plt02.md`, `checks/plt02_fixtures/` or `platform/plt02/cmms/`. Do not hint at what the client knows.

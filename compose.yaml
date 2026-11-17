@@ -6,7 +6,8 @@
 #   obs      OpenTelemetry Collector, Prometheus, Grafana, Loki, Tempo
 #   cloud    Floci (local AWS)
 #   git      Forgejo (Git + registry, for GitOps)
-# Shortcuts: make up-db, up-stream, up-lake, up-auth, up-obs, up-cloud, up-git · make down · make ps
+#   plt02    mock legacy CMMS of the second plant (module 15)
+# Shortcuts: make up-db, up-stream, up-lake, up-auth, up-obs, up-cloud, up-git, up-plt02 · make down · make ps
 # Local DEVELOPMENT credentials. Module 8 teaches you to get them out of the code.
 # Ollama runs on your machine (not in Docker) to use the GPU: containers see it as host.docker.internal:11434.
 
@@ -199,6 +200,14 @@ services:
       FORGEJO__service__DISABLE_REGISTRATION: "true"
     ports: ["3002:3000"]
     volumes: [forgejo:/data]
+
+  # ----------------------------------------------------------------- plt02 (module 15)
+  plt02-cmms:
+    # The second plant's legacy maintenance system (a fixture, like the simulator). Same server as `make plt02-cmms`, in a container.
+    # Base image pinned by digest in platform/plt02/cmms/Dockerfile. Keys for the learner: ro-demo-key / rw-demo-key.
+    build: {context: ./platform/plt02, dockerfile: cmms/Dockerfile}
+    profiles: [plt02, all]
+    ports: ["127.0.0.1:8702:8702"]
 
   # ----------------------------------------------------------------- on-demand tools
   sim:

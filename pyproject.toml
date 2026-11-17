@@ -54,9 +54,23 @@ dependencies = [
 [dependency-groups]
 dev = ["pytest>=8", "pytest-timeout>=2.3", "ruff>=0.7", "mypy>=1.13"]
 notebooks = ["jupyterlab>=4.2", "matplotlib>=3.9", "ipykernel>=6.29"]
+# Part 2, modules 16-17 (fine-tune a small LLM, serve it at the edge): `uv sync --group llm`.
+# mlx-lm only on Apple Silicon; everywhere else the PEFT (CPU) path is used. torch, httpx, fastapi, numpy and mlflow are base dependencies.
+llm = [
+    "mlx-lm==0.32.2; sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "peft==0.21.2",
+    "transformers==5.22.1",
+    "accelerate==1.15.0",
+    "gguf==0.19.0",
+    "sentencepiece==0.2.2",
+    "safetensors>=0.4",
+    "protobuf>=4",
+]
 
 [tool.uv]
 package = false
+# transitive dependencies of the `llm` group: keep them at versions that are at least two weeks old (no brand-new releases in the lock)
+constraint-dependencies = ["regex<=2026.9.29", "typer<=0.27.3"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

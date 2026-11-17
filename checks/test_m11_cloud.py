@@ -157,5 +157,5 @@ def test_notifier_kafka_to_sns_to_sqs(cloud):
     ok(good.returncode == 0, "The notifier failed with a valid topic:\n" + tail(good))
     got = drain(cloud["out"]["queue_url"], 3)
     ok(sorted(m["alert_id"] for m in got) == [101, 102, 103], f"After the failure and the retry, the 3 alerts should reach the queue (got {sorted(m.get('alert_id') for m in got)}). If you didn't commit the offset after the error, the retry recovers them: that is “at least once”.")
-    again = py(["-m", "services.notifier.notifier"], env={**base, "ALERTS_TOPIC_ARN": cloud["out"]["topic_arn"]}, timeout=120)
+    py(["-m", "services.notifier.notifier"], env={**base, "ALERTS_TOPIC_ARN": cloud["out"]["topic_arn"]}, timeout=120)
     ok(drain(cloud["out"]["queue_url"], 1, 6) == [], "Rerunning with the same group must not republish what was already notified (commit offsets).")

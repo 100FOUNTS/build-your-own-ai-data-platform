@@ -72,7 +72,7 @@ and a message outside the declared contract never gets past the door. The cheape
 - **Subjects**: the canonical v1 contract of a topic is `<topic>-value`. A foreign format accepted on the same topic is registered as **its own** subject, `<topic>-v2-value` for wire version 2
   (the wire version is the message's `schema_version`; no `schema_version` means 1).
 - **`python -m pipelines.stream.contract`** registers the v1 schema of `KAFKA_TOPIC_RAW` under `<topic>-value` and sets the subject's compatibility rule. It reads `KAFKA_TOPIC_RAW` and `SCHEMA_REGISTRY_URL`,
-  exits 0 and is **idempotent** (running it twice leaves one version). Run it for the real topic after `make topics` (`make contract`): the registry lives in the Redpanda container, so it starts empty after a `make down`.
+  exits 0 and is **idempotent** (running it twice leaves one version). Run it for the real topic after `make topics` (`make contract`): the registry lives in the Redpanda container (its data is not in a volume), so **every `make down` forgets all schemas and every topic**: after `make up-stream` run `make topics && make contract` again. That is exactly why the script must be idempotent.
 - **Compatibility rule**: yours to choose and justify (comprehension question 7), set **on the subject**, never `NONE`. What the check verifies is the *behavior*: the registry
   **rejects** the vendor's v2 as a new version of `<topic>-value` (HTTP 409) and **accepts** a compatible evolution (a new optional field).
 - **The consumer** (same command, same variables, plus `SCHEMA_REGISTRY_URL`): when the topic has a `<topic>-value` subject it is **governed**; the consumer reads the schemas **from the registry**

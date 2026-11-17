@@ -378,6 +378,29 @@ def test_signature_verifies_with_the_public_key(chain, keys):
     ok(payload[0]["critical"]["image"]["docker-manifest-digest"] == c["digest"], "The signature is valid but it covers a different digest than the image in the registry.")
 
 
+def new_bundle_problem(c: dict) -> str | None:
+    """Why the signature is NOT in the classic layout Kyverno 1.19 reads (cosign v3 writes a new bundle by default), or None."""
+    hexd = c["digest"].split(":", 1)[1]
+    try:
+        tags = httpx.get(f"http://{c['registry']}/v2/{c['name']}/tags/list", timeout=10).json().get("tags") or []
+        ref = httpx.get(f"http://{c['registry']}/v2/{c['name']}/referrers/{c['digest']}", headers={"Accept": "application/vnd.oci.image.index.v1+json"}, timeout=10)
+        referrers = ref.json().get("manifests", []) if ref.status_code == 200 else []
+    except (httpx.HTTPError, ValueError):
+        return None  # cannot tell: the other checks will show what is wrong
+    if f"sha256-{hexd}.sig" in tags:
+        return None
+    if f"sha256-{hexd}" in tags or any("sigstore" in m.get("artifactType", "") for m in referrers):
+        return ("The image was signed in cosign v3's NEW BUNDLE FORMAT (an OCI referrer, no `sha256-<digest>.sig` tag). `cosign verify` accepts it, but Kyverno 1.19 cannot read it: "
+                "the cluster would refuse your own image with “no signatures found”.\nRe-sign with `--new-bundle-format=false` in the `cosign sign` command of scripts/supply_chain.sh (and `--use-signing-config=false`, which cosign v3 needs to allow it).")
+    return None
+
+
+def test_signature_is_in_the_layout_kyverno_reads(chain):
+    c = signed(chain)
+    problem = new_bundle_problem(c)
+    ok(problem is None, problem or "")
+
+
 def test_verification_fails_with_another_key(chain, keys):
     c = signed(chain)
     v = cosign_verify(keys["other_pub"], f"{c['registry']}/{c['name']}@{c['digest']}")
@@ -984,7 +1007,10 @@ def learner_policy():
 
 @pytest.fixture(scope="module")
 def chain_signed(chain):
-    return signed(chain)  # the image YOUR script signed; resolved before any cluster is created
+    c = signed(chain)  # the image YOUR script signed; resolved before any cluster is created
+    problem = new_bundle_problem(c)  # fail early, with the real reason, instead of after installing Kyverno
+    ok(problem is None, problem or "")
+    return c
 
 
 @pytest.fixture(scope="module")
