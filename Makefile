@@ -4,7 +4,7 @@ include platform.env
 export
 export PYTHONPATH := $(CURDIR)
 DC = docker compose
-.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all check bonus challenges challenge-% sim-v2 contract kyverno-up rollouts-up doctor migrate consumer dbt train dagster ingest evals api gateway web
+.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all check bonus challenges challenge-% sim-v2 contract kyverno-up rollouts-up doctor migrate consumer dbt train dagster ingest evals api gateway web up-plt02 plt02-cmms plt02-sync plt02-mcp site-up site-down llm-data llm-train llm-eval edge-setup edge-export edge-serve edge-loadtest rollout
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z0-9_%-]+:.*?## ' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -45,6 +45,8 @@ kyverno-up:  ## Module 13: Kyverno (admission policies) on the kind cluster
 	bash checks/m13_fixtures/kyverno_up.sh kind-plant
 rollouts-up:  ## Module 13: Argo Rollouts (canary releases) on the kind cluster
 	bash checks/m13_fixtures/rollouts_up.sh kind-plant
+up-plt02:  ## Module 15: the mock legacy CMMS of PLT02 in Docker on :8702 (or `make plt02-cmms` without Docker)
+	$(DC) --profile plt02 up -d --build --wait plt02-cmms
 up-git:  ## Forgejo (local Git for GitOps) on :3002
 	$(DC) --profile git up -d --wait forgejo
 down:  ## Stop everything (keeps the data in the volumes)
@@ -79,7 +81,7 @@ challenges:  ## All industry challenges
 	$(UV) run pytest checks/test_r*.py -m challenge
 sim-v2:  ## Challenge 1: burst from the new gateway (v1+v2 mixed) on plant.readings.raw
 	$(UV) run python checks/vendor_v2.py --n 3000
-contract:  ## Challenge 1: register the raw topic's data contract in the Schema Registry
+contract:  ## Challenge 1: register the raw topic's data contract (idempotent; the registry is empty after every `make down`)
 	$(UV) run python -m pipelines.stream.contract
 
 # ------------------------------------------------------------------ shortcuts for your services and pipelines
@@ -105,3 +107,31 @@ gateway:  ## Module 7: Node.js gateway on :8010
 	cd services/gateway && npm run build && AUTH_DISABLED=$${AUTH_DISABLED:-1} npm start
 web:  ## Module 9: Next.js on http://localhost:3300
 	cd services/web && AUTH_DISABLED=$${AUTH_DISABLED:-1} npm run dev
+
+# ------------------------------------------------------------------ Part 2: the second plant (modules 15-18)
+plt02-cmms:  ## Module 15: the mock legacy CMMS of PLT02 on http://localhost:8702 (Ctrl+C to stop)
+	$(UV) run python platform/plt02/cmms/server.py --port 8702
+plt02-sync:  ## Module 15: run your PLT02 connector once
+	CMMS_URL=http://localhost:8702 CMMS_API_KEY=ro-demo-key $(UV) run python -m connectors.plt02.sync
+plt02-mcp:  ## Module 15: your read-only MCP server over the CMMS (stdio)
+	CMMS_URL=http://localhost:8702 CMMS_API_KEY=ro-demo-key $(UV) run python -m connectors.plt02.mcp_server
+site-up:  ## Module 15: the offline PLT02 site box (internal network, no egress)
+	docker compose -f deploy/site/compose.site.yaml up -d --build
+site-down:  ## Module 15: stop the site box (keeps its data)
+	docker compose -f deploy/site/compose.site.yaml down
+llm-data:  ## Module 16: train/dev files from the 300 labelled notes
+	$(UV) run python -m ml.notes_llm.data
+llm-train:  ## Module 16: LoRA fine-tune (mlx-lm on Apple Silicon, PEFT elsewhere; needs `uv sync --group llm`)
+	$(UV) run python -m ml.notes_llm.train
+llm-eval:  ## Module 16: score rules / few-shot / LoRA on your dev notes and log them to MLflow
+	for s in rules fewshot lora; do $(UV) run python -m ml.notes_llm.evaluate --system $$s || exit 1; done
+edge-setup:  ## Module 17: pinned llama.cpp into .tools/llama.cpp
+	bash platform/tools/llama_cpp_setup.sh
+edge-export:  ## Module 17: adapter -> fused model -> GGUF f16 -> Q8_0 + Q4_K_M
+	$(UV) run python -m services.edge.export
+edge-serve:  ## Module 17: llama-server on :8090 (QUANT=Q4_K_M by default)
+	bash services/edge/serve.sh
+edge-loadtest:  ## Module 17: 20 technicians against the server:  make edge-loadtest QUANT=Q4_K_M
+	$(UV) run python -m services.edge.loadtest --label $${QUANT:-Q4_K_M} --quality
+rollout:  ## Module 18: generate the staggered-rollout panel from data/rollout/design.json:  make rollout SEED=18
+	$(UV) run python platform/sim/rollout.py panel --design data/rollout/design.json --seed $${SEED:-18} --out data/rollout/panel.csv

@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PORTS = {"postgres": 5433, "valkey": 6380, "redpanda": 19092, "s3": 8333, "iceberg": 8181, "mlflow": 5001, "keycloak": 8089, "openbao": 8200,
-         "prometheus": 9090, "otlp": 4317, "floci": 4566, "forgejo": 3002, "ollama": 11434}
+         "prometheus": 9090, "otlp": 4317, "floci": 4566, "forgejo": 3002, "ollama": 11434, "edge": 8090}
 # (no., name, file, required services, slow)
 MODULES = [
     (0, "Engineering foundations", "test_m00_base.py", [], False),
@@ -29,6 +29,10 @@ MODULES = [
     (12, "Containers and K8s", "test_m12_containers_k8s.py", ["redpanda"], True),
     (13, "CI/CD and GitOps", "test_m13_cicd_gitops.py", ["forgejo"], True),
     (14, "Integration", "test_m14_integration.py", ["postgres", "valkey", "redpanda", "keycloak", "floci"], False),
+    (15, "Second plant", "test_m15_second_plant.py", ["postgres"], True),
+    (16, "Fine-tune a small LLM", "test_m16_finetuning.py", ["mlflow", "ollama"], True),
+    (17, "Serve it at the edge", "test_m17_edge_inference.py", ["edge"], True),
+    (18, "Experiments", "test_m18_experiments.py", [], True),
 ]
 
 

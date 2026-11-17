@@ -1,6 +1,6 @@
 ---
 description: Reviews module N like a senior teammate: runs the check, reads the code and asks questions
-argument-hint: <module number 0-14 or challenge R1-R9>
+argument-hint: <module number 0-18 or challenge R1-R9>
 ---
 Review the learner's **module $ARGUMENTS**.
 
@@ -20,7 +20,10 @@ Rubric per module — **0** readable commits, a hook that really blocks, a diagn
 **7** correct status codes, `extra=forbid`, cache with TTL, real readiness, strict TypeScript · **8** validate signature+issuer+audience+expiry, 401≠403, least privilege, no secrets in git, honest threats ·
 **9** SSR, accessibility, token only on the server, component tests · **10** correlated signals, alerts with `for` and a summary, dashboards as code ·
 **11** idempotent IaC, no IAM wildcards, names with the environment, “at least once” · **12** small non-root images, layer cache, distinct probes, requests/limits, no secrets in git ·
-**13** CI with least privilege and pinned versions, GitOps with selfHeal, a catalog without dangling references · **14** a concrete, tested runbook, honest ADRs with real alternatives.
+**13** CI with least privilege and pinned versions, GitOps with selfHeal, a catalog without dangling references · **14** a concrete, tested runbook, honest ADRs with real alternatives ·
+**15** an interview with sources (said vs assumed, never from the mentor), a watermark stored with the data, overlap for late edits, revision-aware upserts, bounded retries that fail loudly, UTC via zoneinfo not fixed offsets, read-only by construction, an internal network proven offline, a runbook someone else can follow ·
+**16** the three systems scored on the same set, the leakage guard, a verdict on when each is the right tool · **17** a falsifiable SLO written before the table, a decision record with the rejected option and numbers ·
+**18** the plan written before the data, randomization with a blocking argument, an MDE computed before running, controls that are not-yet-treated, a pump-level bootstrap, placebo leads read honestly, a memo whose decision follows from the interval.
 Challenges — **R1** translation at the boundary, declared (not guessed) version, range after converting, dedupe across formats · **R2** MERGE on a key, `date` partition in UTC, time travel, another engine reads it ·
 **R3** exact equality before speed, lazy end to end, a repeatable benchmark · **R4** a justified strategy, no spurious versions, tests on the dimension ·
 **R5** threshold chosen on validation, a block (not row-level) bootstrap for the policy comparison, metrics recomputable from the artifacts, explanations per alert, honesty with few failures · **R6** a threshold calibrated with data, looking at WHAT it flags, telling real degradation from noise ·

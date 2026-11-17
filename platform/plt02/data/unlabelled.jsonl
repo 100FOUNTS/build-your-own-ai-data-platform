@@ -1,0 +1,1050 @@
+{"wo_id": "WO-000001", "asset_tag": "B-12", "technician": "T09", "opened_at": "2025-01-01 06:08", "note": "b12 hot trip electrics changed"}
+{"wo_id": "WO-000002", "asset_tag": "B-07", "technician": "T13", "opened_at": "2025-01-01 17:22", "note": "running hot. found DE bearing shaft off. re-set"}
+{"wo_id": "WO-000003", "asset_tag": "B-02", "technician": "T04", "opened_at": "2025-01-01 17:48", "note": "put new, was flow dropped 108C, bad wheel."}
+{"wo_id": "WO-000004", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-01-02 09:46", "note": "B11; r&r shaft seal; was leak at shaft; cracked"}
+{"wo_id": "WO-000005", "asset_tag": "B-05", "technician": "T16", "opened_at": "2025-01-02 18:59", "note": "B05 / WARM 105C / IMPELLOR FINE / THERMAL TRIP DE BEARING / DE BEARING REPLACED"}
+{"wo_id": "WO-000006", "asset_tag": "B-09", "technician": "T08", "opened_at": "2025-01-03 02:35", "note": "low flow; r&r impeller vanes"}
+{"wo_id": "WO-000007", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-01-03 02:47", "note": "Pmp12 buzzing also gland wet around shaft no wear bad mtr mtr cleaned out"}
+{"wo_id": "WO-000008", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-01-03 05:40", "note": "running hot 46A. had it. DE brg new fitted"}
+{"wo_id": "WO-000009", "asset_tag": "B-09", "technician": "T08", "opened_at": "2025-01-04 00:48", "note": "noise; walked it walkdown"}
+{"wo_id": "WO-000010", "asset_tag": "B-11", "technician": "T06", "opened_at": "2025-01-04 08:34", "note": "drive motor regreased - drive motor faulty done"}
+{"wo_id": "WO-000011", "asset_tag": "B-01", "technician": "T12", "opened_at": "2025-01-04 10:14", "note": "B01. exchanged. was rough noise. worn out roller. checked gland packing ok. balance ok"}
+{"wo_id": "WO-000012", "asset_tag": "B-08", "technician": "T03", "opened_at": "2025-01-04 12:37", "note": "bomba 8, mud carbon face, new fitted carbon face"}
+{"wo_id": "WO-000013", "asset_tag": "B-04", "technician": "T04", "opened_at": "2025-01-04 14:04", "note": "pump 4, put new, was vibration high, bering water in oil."}
+{"wo_id": "WO-000014", "asset_tag": "B-06", "technician": "T18", "opened_at": "2025-01-05 12:57", "note": "B06, suction valve looks ok, drive end bearing water in oil, oil change done"}
+{"wo_id": "WO-000015", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-01-06 00:28", "note": "Gauge reads wrng 3.2mm/s suction strainer is mud cleared out"}
+{"wo_id": "WO-000016", "asset_tag": "B-05", "technician": "T17", "opened_at": "2025-01-06 00:29", "note": "Rttling 2.3 bar impeller vanes reworked"}
+{"wo_id": "WO-000017", "asset_tag": "B-11", "technician": "T02", "opened_at": "2025-01-06 01:07", "note": "low pressure. eyeballed walkdown"}
+{"wo_id": "WO-000018", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-01-06 05:43", "note": "Pmp9. low flow. strainer issue. descaled strainer"}
+{"wo_id": "WO-000019", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-01-06 08:45", "note": "bomba 7, off center, carbon face trimmed"}
+{"wo_id": "WO-000020", "asset_tag": "B-12", "technician": "T04", "opened_at": "2025-01-06 16:12", "note": "B-12, replaced, face: oertemp."}
+{"wo_id": "WO-000021", "asset_tag": "B-08", "technician": "T17", "opened_at": "2025-01-07 03:43", "note": "Pmp8 spraying ms u/s ms trimmed"}
+{"wo_id": "WO-000022", "asset_tag": "B-06", "technician": "T06", "opened_at": "2025-01-08 07:12", "note": "b-06 - bearing regreased - was growling 2.5mm/s - no grease done"}
+{"wo_id": "WO-000024", "asset_tag": "B-06", "technician": "T08", "opened_at": "2025-01-09 00:52", "note": "weeping; MS put new"}
+{"wo_id": "WO-000025", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-01-09 02:24", "note": "carbon fae is damaged. reworked carbon face"}
+{"wo_id": "WO-000026", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-01-09 03:08", "note": "Pmp12 rattling runner fitted new"}
+{"wo_id": "WO-000027", "asset_tag": "B-09", "technician": "T12", "opened_at": "2025-01-09 06:19", "note": "B09. bearing installed new. was noisy 4.6mm/s. bearing faultty. no issue w impeellor"}
+{"wo_id": "WO-000028", "asset_tag": "B-10", "technician": "T15", "opened_at": "2025-01-09 10:18", "note": "R&r gate valve; was stuck; gunk; also drive motor amps high"}
+{"wo_id": "WO-000029", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-01-09 10:40", "note": "changed - was rough noise - cracked brg done"}
+{"wo_id": "WO-000030", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-01-09 11:24", "note": "B11, weeping, wobbly, shaft seal patched up done"}
+{"wo_id": "WO-000031", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-01-09 14:34", "note": "B-11, triimmed flex, was rubber dust 80C."}
+{"wo_id": "WO-000033", "asset_tag": "B-04", "technician": "T09", "opened_at": "2025-01-10 07:47", "note": "b04 seal pack gone seal pack repacked"}
+{"wo_id": "WO-000034", "asset_tag": "B-01", "technician": "T06", "opened_at": "2025-01-10 13:23", "note": "regreased bearings - bearings dry done"}
+{"wo_id": "WO-000036", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-01-10 16:33", "note": "Pump 9; weeping; seal faulty; put new."}
+{"wo_id": "WO-000037", "asset_tag": "B-06", "technician": "T17", "opened_at": "2025-01-10 23:57", "note": "Humming loud 3.5mm/s mtr fan fine needs grease oil change brng"}
+{"wo_id": "WO-000038", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-01-11 02:54", "note": "Bomba 3. brng faulty. flushed oil brng"}
+{"wo_id": "WO-000039", "asset_tag": "B-12", "technician": "T04", "opened_at": "2025-01-11 18:31", "note": "B-12, needs replacing, parts ordered PM, PM."}
+{"wo_id": "WO-000040", "asset_tag": "B-08", "technician": "T20", "opened_at": "2025-01-11 23:08", "note": "B08; WOBBLY; RETORQUED SEAL"}
+{"wo_id": "WO-000042", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-01-13 01:32", "note": "pmp9. vibes 104C. trimmed runner"}
+{"wo_id": "WO-000043", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-01-13 12:51", "note": "repaired - impeller vanes isseu - no cavitation - no issue w spider done"}
+{"wo_id": "WO-000044", "asset_tag": "B-02", "technician": "T08", "opened_at": "2025-01-14 01:28", "note": "amps high; runner u/s; no sparees"}
+{"wo_id": "WO-000046", "asset_tag": "B-03", "technician": "T16", "opened_at": "2025-01-14 17:31", "note": "B03 / ELECTRICS HOT TRIP / ELECTRICS CLEANED"}
+{"wo_id": "WO-000047", "asset_tag": "B-01", "technician": "T01", "opened_at": "2025-01-14 21:18", "note": "P1; gauge reads wrong; no looseness; filter is starved suction; unblocked."}
+{"wo_id": "WO-000048", "asset_tag": "B-02", "technician": "T09", "opened_at": "2025-01-15 10:45", "note": "#2 vibes bad drive end bearing lubed"}
+{"wo_id": "WO-000049", "asset_tag": "B-03", "technician": "T05", "opened_at": "2025-01-16 02:56", "note": "b03 / leaking bad 13.1mm/s / de brg ok / wornout seal pack / seal pack new one fitted done"}
+{"wo_id": "WO-000050", "asset_tag": "B-06", "technician": "T02", "opened_at": "2025-01-16 04:30", "note": "pmp6. amps high. also suct valve stuck. impellor faulty. cleared impellor"}
+{"wo_id": "WO-000052", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-01-16 22:14", "note": "B01; TRIP ON OVERLOAD; ELECTRIC MOTOR: THERMAL TRIP; CLEARED ELECTRIC MOTOR"}
+{"wo_id": "WO-000053", "asset_tag": "B-08", "technician": "T17", "opened_at": "2025-01-16 22:20", "note": "Cant throttle 70c nrv issue re-set nrv"}
+{"wo_id": "WO-000054", "asset_tag": "B-06", "technician": "T20", "opened_at": "2025-01-16 22:59", "note": "B06; DP HIGH 74C; FUND SUCITON SCREEN CAV; SUCTION SCREEN CLEARED"}
+{"wo_id": "WO-000056", "asset_tag": "B-10", "technician": "T19", "opened_at": "2025-01-17 15:15", "note": "B-10; flow dropped; impellor is crakced; repacked"}
+{"wo_id": "WO-000057", "asset_tag": "B-03", "technician": "T19", "opened_at": "2025-01-17 17:45", "note": "shaking 68C; mtr fan ok; coupling align off; coupling re-aligned"}
+{"wo_id": "WO-000059", "asset_tag": "B-06", "technician": "T20", "opened_at": "2025-01-19 01:13", "note": "B06; AMPS HIGH; ELECTRICS END OF LIFE; PATCHED UP"}
+{"wo_id": "WO-000060", "asset_tag": "B-12", "technician": "T19", "opened_at": "2025-01-19 14:00", "note": "B-12; amps high; no wear; mtr fan: overload trip; rewound"}
+{"wo_id": "WO-000061", "asset_tag": "B-10", "technician": "T06", "opened_at": "2025-01-20 11:36", "note": "impeller vanes - keep an eye - was low pressure - found impeller vanes cavitating done"}
+{"wo_id": "WO-000062", "asset_tag": "B-05", "technician": "T13", "opened_at": "2025-01-20 16:35", "note": "pump 5. impelr faulty. impelr renewed"}
+{"wo_id": "WO-000064", "asset_tag": "B-01", "technician": "T01", "opened_at": "2025-01-21 19:40", "note": "Leaking; chewed; put new seal."}
+{"wo_id": "WO-000065", "asset_tag": "B-08", "technician": "T06", "opened_at": "2025-01-22 08:36", "note": "refilled oil - was trip on overload 12.4mm/s - drive motor: low oil done"}
+{"wo_id": "WO-000066", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-01-22 08:57", "note": "B11; shimmed gland; was spraying; bad gland; spider fine"}
+{"wo_id": "WO-000067", "asset_tag": "B-04", "technician": "T09", "opened_at": "2025-01-22 09:14", "note": "p4 also impeller vanes low pressure de bearing: hot trip exchanged"}
+{"wo_id": "WO-000068", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-01-22 18:18", "note": "PASSING / TWEAKED NON RETURN"}
+{"wo_id": "WO-000069", "asset_tag": "B-11", "technician": "T19", "opened_at": "2025-01-22 21:02", "note": "check valve not the problem; balance ok; cplg u/s; cplg realigned"}
+{"wo_id": "WO-000070", "asset_tag": "B-02", "technician": "T08", "opened_at": "2025-01-23 01:56", "note": "pmp2; leak at shaft; needs replacing, parts ordered gland"}
+{"wo_id": "WO-000071", "asset_tag": "B-02", "technician": "T15", "opened_at": "2025-01-23 12:40", "note": "Disch valve trimmed; was cnt throttle 13.4mm/s"}
+{"wo_id": "WO-000072", "asset_tag": "B-02", "technician": "T18", "opened_at": "2025-01-23 13:50", "note": "Pump 2, no looseness, impeller fine, electrics u/s, electrics rebuilt done"}
+{"wo_id": "WO-000073", "asset_tag": "B-10", "technician": "T01", "opened_at": "2025-01-23 14:12", "note": "Pump 10; rattling 11.5mm/s; starved suction vanes; vanes changed."}
+{"wo_id": "WO-000074", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-01-23 17:35", "note": "Pump 8; low flow; gate: had it; put new."}
+{"wo_id": "WO-000075", "asset_tag": "B-03", "technician": "T10", "opened_at": "2025-01-23 19:13", "note": "#3; descaled; dirty product m/seal"}
+{"wo_id": "WO-000076", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-01-23 22:23", "note": "Pump 11 vibes exchannged drive coupling"}
+{"wo_id": "WO-000077", "asset_tag": "B-07", "technician": "T14", "opened_at": "2025-01-24 02:26", "note": "Low pressure - vanes u/s - tweaked vanes"}
+{"wo_id": "WO-000078", "asset_tag": "B-03", "technician": "T06", "opened_at": "2025-01-24 07:09", "note": "stuffing box swapped - was weeping - stuffing box faulty - also drive end bearing growling done"}
+{"wo_id": "WO-000079", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-01-24 07:10", "note": "bomba 10, low flow 9.9mm/s, npsh problem, re-set runner"}
+{"wo_id": "WO-000080", "asset_tag": "B-04", "technician": "T04", "opened_at": "2025-01-24 17:31", "note": "wheel - keep an eye, was rattling 17A, found wheel cavitating."}
+{"wo_id": "WO-000081", "asset_tag": "B-08", "technician": "T19", "opened_at": "2025-01-24 19:57", "note": "B-08; rough noise; no looseness; no lube; brng installed new"}
+{"wo_id": "WO-000083", "asset_tag": "B-10", "technician": "T06", "opened_at": "2025-01-25 07:05", "note": "b-10 - bearings flushed oil - bearings contaminated grease done"}
+{"wo_id": "WO-000084", "asset_tag": "B-01", "technician": "T06", "opened_at": "2025-01-25 12:36", "note": "b-01 - drive motor flushed - was tripped - thermal trip drive motor - no debris done"}
+{"wo_id": "WO-000086", "asset_tag": "B-07", "technician": "T07", "opened_at": "2025-01-25 21:49", "note": "PMUP 7. M/SEAL CHANGED. WAS LEAKING BAD 106C. M/SEAL ISSUE. VLV IS OK"}
+{"wo_id": "WO-000087", "asset_tag": "B-10", "technician": "T11", "opened_at": "2025-01-26 02:55", "note": "Bomba 10. low pressure 7.3mm/s. also disch valve stuck. bad wheel. welded wheel"}
+{"wo_id": "WO-000088", "asset_tag": "B-08", "technician": "T09", "opened_at": "2025-01-27 08:26", "note": "b08 de bearing r&r"}
+{"wo_id": "WO-000090", "asset_tag": "B-12", "technician": "T13", "opened_at": "2025-01-27 17:13", "note": "pump 12. dripping 74C. MS is overload trip. new fitted"}
+{"wo_id": "WO-000092", "asset_tag": "B-08", "technician": "T19", "opened_at": "2025-01-29 14:49", "note": "pump 8; lube ok; suction strainer: npsh problem; cleaned"}
+{"wo_id": "WO-000093", "asset_tag": "B-05", "technician": "T17", "opened_at": "2025-01-29 22:43", "note": "Pmp5 dp high also gland dripping checked shift check"}
+{"wo_id": "WO-000094", "asset_tag": "B-12", "technician": "T02", "opened_at": "2025-01-29 22:50", "note": "leak at shaft 64C. checked gate valve ok. mech seal had it. rewound mech seal"}
+{"wo_id": "WO-000095", "asset_tag": "B-10", "technician": "T11", "opened_at": "2025-01-29 22:58", "note": "Bomba 10. low flow 90c. gravel noise. set up disch valve"}
+{"wo_id": "WO-000096", "asset_tag": "B-01", "technician": "T08", "opened_at": "2025-01-30 03:02", "note": "B-01; leakign; re-set MS"}
+{"wo_id": "WO-000098", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-01-30 07:59", "note": "new one fitted. was vibes. vnes: ibmalance"}
+{"wo_id": "WO-000099", "asset_tag": "B-02", "technician": "T15", "opened_at": "2025-01-30 11:52", "note": "Brng retorqued; was vibration high 79c; loose bolts"}
+{"wo_id": "WO-000100", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-01-31 06:44", "note": "B11; on hold; was flw drpped; impeller vanes is gravel noise; also gatte vaalve wont close"}
+{"wo_id": "WO-000102", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-02-01 03:14", "note": "B10; RUBBER DUST; ALSO SUCTION VAVE WONT CLOSE; BAD COUPLING; RETORQUED"}
+{"wo_id": "WO-000104", "asset_tag": "B-02", "technician": "T19", "opened_at": "2025-02-02 20:23", "note": "B-02; bolts loose; guard trimmed"}
+{"wo_id": "WO-000105", "asset_tag": "B-05", "technician": "T09", "opened_at": "2025-02-03 08:13", "note": "b05 rubber dust alo motor fan amps high checked mtr fan ok no issuue w motor fan out of align flex adjusted"}
+{"wo_id": "WO-000106", "asset_tag": "B-07", "technician": "T10", "opened_at": "2025-02-03 21:15", "note": "pmp7; seal pack exchanged; was weeping; found seal pack not in lnie"}
+{"wo_id": "WO-000107", "asset_tag": "B-12", "technician": "T08", "opened_at": "2025-02-04 00:43", "note": "P-12; noise 8.8mm/s; checked imp ok; shift check; will monitor shfit check"}
+{"wo_id": "WO-000108", "asset_tag": "B-04", "technician": "T10", "opened_at": "2025-02-04 17:53", "note": "#4; re-set; MS: align off; bolts ok"}
+{"wo_id": "WO-000110", "asset_tag": "B-08", "technician": "T06", "opened_at": "2025-02-05 06:00", "note": "b-08 - blown out - was wont start - drive motor u/s done"}
+{"wo_id": "WO-000111", "asset_tag": "B-05", "technician": "T02", "opened_at": "2025-02-06 00:44", "note": "stuffing box is dirty product. changed"}
+{"wo_id": "WO-000112", "asset_tag": "B-02", "technician": "T11", "opened_at": "2025-02-06 02:03", "note": "Bomba 2. leaking. toast. exchanged ms"}
+{"wo_id": "WO-000114", "asset_tag": "B-08", "technician": "T09", "opened_at": "2025-02-06 07:10", "note": "b08 bearing good de bearing is ok carbon face bad carbon face r&r"}
+{"wo_id": "WO-000115", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-02-06 12:46", "note": "p4 - re-set - was gauge reads wrong - baseplate failed - also suct valve leaking - alignment ok done"}
+{"wo_id": "WO-000116", "asset_tag": "B-08", "technician": "T10", "opened_at": "2025-02-06 17:14", "note": "#8; m/seal fixed; was leaking; no cav noise"}
+{"wo_id": "WO-000117", "asset_tag": "B-10", "technician": "T09", "opened_at": "2025-02-07 12:31", "note": "b10 oil clean stuffing box exchanged"}
+{"wo_id": "WO-000118", "asset_tag": "B-11", "technician": "T13", "opened_at": "2025-02-07 21:01", "note": "noisy. bad bering. greased up"}
+{"wo_id": "WO-000119", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-02-07 22:15", "note": "pmp1. starved of grease. drive end bearing lube done"}
+{"wo_id": "WO-000120", "asset_tag": "B-04", "technician": "T08", "opened_at": "2025-02-09 02:08", "note": "weeipng; pitted; seal new fitted"}
+{"wo_id": "WO-000122", "asset_tag": "B-10", "technician": "T13", "opened_at": "2025-02-09 15:54", "note": "low flow. imp starved suction. overhauled imp"}
+{"wo_id": "WO-000123", "asset_tag": "B-07", "technician": "T18", "opened_at": "2025-02-10 13:12", "note": "B07, noise, chewed, gauge glass exchanged done"}
+{"wo_id": "WO-000124", "asset_tag": "B-12", "technician": "T01", "opened_at": "2025-02-10 16:36", "note": "Pump 12; clunking; no cavitation; coupling issue; shimmed."}
+{"wo_id": "WO-000125", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-02-10 22:55", "note": "Pmp1 noise strainer clean pm checked all ok"}
+{"wo_id": "WO-000126", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-02-11 05:01", "note": "Pmp1 vibes bad 2.4mm/s end of life r&r ball race"}
+{"wo_id": "WO-000127", "asset_tag": "B-10", "technician": "T18", "opened_at": "2025-02-11 12:28", "note": "B10, out of align, re-aligned coupling rubber done"}
+{"wo_id": "WO-000130", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-02-12 00:43", "note": "Pump 4 low pressure also de brg growling impeller vanes is cavitation at suction r&r"}
+{"wo_id": "WO-000131", "asset_tag": "B-04", "technician": "T15", "opened_at": "2025-02-12 10:30", "note": "Gland r&r; was leaking bad; gunk gland; not worn"}
+{"wo_id": "WO-000132", "asset_tag": "B-12", "technician": "T19", "opened_at": "2025-02-12 16:41", "note": "bad seal; seal reworked"}
+{"wo_id": "WO-000134", "asset_tag": "B-06", "technician": "T08", "opened_at": "2025-02-13 00:01", "note": "B06; clunking; DE bearing is ok; coupling bad; adjusted"}
+{"wo_id": "WO-000135", "asset_tag": "B-11", "technician": "T03", "opened_at": "2025-02-13 12:40", "note": "bomba 11, amps high 58A, bolts ok, wheel off balance, tweaked"}
+{"wo_id": "WO-000137", "asset_tag": "B-08", "technician": "T18", "opened_at": "2025-02-14 12:10", "note": "B08, spraying, drive end bearing fine, gland packing is shot, gland packing rewound done"}
+{"wo_id": "WO-000138", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-02-14 16:19", "note": "B08; leak at shaft 80c; fae bad; changed."}
+{"wo_id": "WO-000140", "asset_tag": "B-01", "technician": "T04", "opened_at": "2025-02-14 19:22", "note": "B-01, face replaced, was leaking bad, overtemp."}
+{"wo_id": "WO-000141", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-02-14 19:52", "note": "Pump 8; hammering; nrv is wobby; retorqued."}
+{"wo_id": "WO-000142", "asset_tag": "B-08", "technician": "T13", "opened_at": "2025-02-14 19:56", "note": "running hot. bering failed. put new"}
+{"wo_id": "WO-000144", "asset_tag": "B-11", "technician": "T14", "opened_at": "2025-02-16 23:01", "note": "Running hot - shot - brng put new"}
+{"wo_id": "WO-000145", "asset_tag": "B-02", "technician": "T12", "opened_at": "2025-02-17 09:55", "note": "B-02. r&r. DE baering is end of life"}
+{"wo_id": "WO-000147", "asset_tag": "B-10", "technician": "T13", "opened_at": "2025-02-17 18:01", "note": "vibes. imp failed. new fitted imp"}
+{"wo_id": "WO-000148", "asset_tag": "B-05", "technician": "T05", "opened_at": "2025-02-17 22:18", "note": "vlv working loose / rewound done"}
+{"wo_id": "WO-000149", "asset_tag": "B-03", "technician": "T10", "opened_at": "2025-02-18 15:08", "note": "#3; runner re-set; out of balance; also motor fan smells burnt; alignment ok"}
+{"wo_id": "WO-000151", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-02-19 07:22", "note": "Repacked gate valve; was leaking 5.8 bar; drive motor looks ok"}
+{"wo_id": "WO-000153", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-02-20 01:17", "note": "Pmp11 noisy found de bearing needs grease oil change de bearing"}
+{"wo_id": "WO-000154", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-02-20 03:36", "note": "Rubber dust. scored. exchanged spider"}
+{"wo_id": "WO-000155", "asset_tag": "B-07", "technician": "T20", "opened_at": "2025-02-20 03:54", "note": "PMP7; RUBBER DUST; END OF LIFE; SPIDER NEW ONE FITTED"}
+{"wo_id": "WO-000156", "asset_tag": "B-01", "technician": "T12", "opened_at": "2025-02-20 13:43", "note": "B01. changed cpl. was nosie at coupling 2.3 bar. misaligned cpl"}
+{"wo_id": "WO-000157", "asset_tag": "B-02", "technician": "T01", "opened_at": "2025-02-20 15:34", "note": "Pump 2; wet around shaft; gate valve loiks ok; seal issue; changed."}
+{"wo_id": "WO-000158", "asset_tag": "B-11", "technician": "T09", "opened_at": "2025-02-21 08:14", "note": "b11 thermal trip gland r&r"}
+{"wo_id": "WO-000159", "asset_tag": "B-11", "technician": "T07", "opened_at": "2025-02-21 15:57", "note": "BLOWN OUT. IMPELLER VANES MUD"}
+{"wo_id": "WO-000160", "asset_tag": "B-02", "technician": "T07", "opened_at": "2025-02-21 20:55", "note": "PUMP 2. SNUGGED UP. WAS LEAK AT SHAFT 10.0MM/S. FOUND MECH SEAL WORKING LOOSE"}
+{"wo_id": "WO-000161", "asset_tag": "B-04", "technician": "T20", "opened_at": "2025-02-21 23:12", "note": "B04; KNOCKING; JAW IS MISALIGNED; RE-ALIGNED JAW"}
+{"wo_id": "WO-000162", "asset_tag": "B-03", "technician": "T17", "opened_at": "2025-02-22 02:39", "note": "Pmp3 leak at shaft end of life seal pack r&r"}
+{"wo_id": "WO-000163", "asset_tag": "B-05", "technician": "T05", "opened_at": "2025-02-22 03:57", "note": "stuffing box installed new done"}
+{"wo_id": "WO-000165", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-02-23 02:58", "note": "B01. cav. shimmed isolation"}
+{"wo_id": "WO-000166", "asset_tag": "B-06", "technician": "T12", "opened_at": "2025-02-24 13:15", "note": "B06. retorqued. was leaking. gate valve: loose"}
+{"wo_id": "WO-000167", "asset_tag": "B-05", "technician": "T13", "opened_at": "2025-02-24 19:19", "note": "pump 5. weeping. gland: sand. gland cleared out"}
+{"wo_id": "WO-000168", "asset_tag": "B-02", "technician": "T16", "opened_at": "2025-02-24 21:07", "note": "SHAKING / ALSO SHAFT SEAL LEAK AT SHAFT / COUPLING INSERT U/S / NEW ONE FITTED COUPLING INSERT"}
+{"wo_id": "WO-000170", "asset_tag": "B-08", "technician": "T18", "opened_at": "2025-02-25 10:21", "note": "B-08, fuled, unblocked suction screen done"}
+{"wo_id": "WO-000171", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-02-25 15:52", "note": "B09 / SPRAYING / WORN / INSTALLED NEW SHAFT SEAL"}
+{"wo_id": "WO-000172", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-02-26 19:37", "note": "#8 / STUCK / NPSH PROBLEM / PARTS ORDERED SUCTION VALVE"}
+{"wo_id": "WO-000173", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-02-26 21:52", "note": "Pump 5; wont start; mtr fan bad; mtr fan unblocked."}
+{"wo_id": "WO-000174", "asset_tag": "B-08", "technician": "T08", "opened_at": "2025-02-27 00:13", "note": "warm 1.7 bar; grease ok; no issue w gaate valve; grit in it bering; bering r&r"}
+{"wo_id": "WO-000175", "asset_tag": "B-12", "technician": "T02", "opened_at": "2025-02-27 01:45", "note": "bomba 12. align off DE housing. re-aligned DE housing"}
+{"wo_id": "WO-000176", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-02-27 14:56", "note": "Wont close 38a; nrv: wobbly; re-set."}
+{"wo_id": "WO-000177", "asset_tag": "B-07", "technician": "T04", "opened_at": "2025-02-27 15:53", "note": "B-07, trimmed roller, was vibes bad, align off."}
+{"wo_id": "WO-000180", "asset_tag": "B-03", "technician": "T12", "opened_at": "2025-02-28 09:25", "note": "B03. renewed. was dripping. gland packing bad. no cavitation"}
+{"wo_id": "WO-000181", "asset_tag": "B-08", "technician": "T07", "opened_at": "2025-02-28 14:02", "note": "GATE VALVE WELDED. PITTED"}
+{"wo_id": "WO-000182", "asset_tag": "B-04", "technician": "T13", "opened_at": "2025-02-28 15:46", "note": "vibes up. DE bearing is slime. changed"}
+{"wo_id": "WO-000183", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-03-01 11:27", "note": "bomba 9, check valve is ok, seal off center, seal new fitted"}
+{"wo_id": "WO-000185", "asset_tag": "B-04", "technician": "T18", "opened_at": "2025-03-02 13:15", "note": "P-04, aarm, inspection round, inspection round no fault found done"}
+{"wo_id": "WO-000187", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-03-03 09:17", "note": "bomba 9, windings bad, cleared out"}
+{"wo_id": "WO-000188", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-03-04 05:22", "note": "B10; HUMMING LOUD; NO GREASE; ROLLER OIL CHANGE"}
+{"wo_id": "WO-000189", "asset_tag": "B-11", "technician": "T01", "opened_at": "2025-03-04 16:57", "note": "Pump 11; low flow; seal good; align good; strainer issue; will watch strainer."}
+{"wo_id": "WO-000190", "asset_tag": "B-09", "technician": "T14", "opened_at": "2025-03-04 23:20", "note": "Pmp9 - chewed - mech seal installed new"}
+{"wo_id": "WO-000191", "asset_tag": "B-10", "technician": "T02", "opened_at": "2025-03-04 23:48", "note": "low flow. also mtr amps high. npsh problem impellor. rewound"}
+{"wo_id": "WO-000192", "asset_tag": "B-06", "technician": "T12", "opened_at": "2025-03-05 09:13", "note": "B-06. brg replaced. was hot. out of align brg"}
+{"wo_id": "WO-000193", "asset_tag": "B-06", "technician": "T01", "opened_at": "2025-03-05 20:30", "note": "Pump 6; running hot 85c; bad bearings; put new bearings."}
+{"wo_id": "WO-000194", "asset_tag": "B-04", "technician": "T11", "opened_at": "2025-03-06 02:18", "note": "Low flow 6.4mm/s. butterfly faulty. butterfly exchanged"}
+{"wo_id": "WO-000195", "asset_tag": "B-05", "technician": "T20", "opened_at": "2025-03-06 04:37", "note": "B05; DRIPPING; SEAL END OF LIFE; SWAPPED"}
+{"wo_id": "WO-000196", "asset_tag": "B-04", "technician": "T12", "opened_at": "2025-03-06 07:15", "note": "B04. trimmed impellor. was low flpw. impellor bad. balance ok"}
+{"wo_id": "WO-000197", "asset_tag": "B-05", "technician": "T09", "opened_at": "2025-03-06 10:01", "note": "p-05 dripping alignment fine r&r gland"}
+{"wo_id": "WO-000198", "asset_tag": "B-03", "technician": "T13", "opened_at": "2025-03-06 14:47", "note": "pmp3. humming loud. bering bad. shimmed"}
+{"wo_id": "WO-000199", "asset_tag": "B-08", "technician": "T11", "opened_at": "2025-03-07 04:38", "note": "Bomba 8. brng is scored. r&r brng"}
+{"wo_id": "WO-000200", "asset_tag": "B-10", "technician": "T19", "opened_at": "2025-03-07 15:01", "note": "low flow 91C; checked impellor ok; found suction strainer cavitation at suction; suction strainer cleaned out"}
+{"wo_id": "WO-000201", "asset_tag": "B-09", "technician": "T13", "opened_at": "2025-03-07 20:45", "note": "running hot 54A. bering bad. bering renewed"}
+{"wo_id": "WO-000202", "asset_tag": "B-07", "technician": "T16", "opened_at": "2025-03-08 17:47", "note": "B07 / HOT / WATER IN OIL / DE BRG CHANGED"}
+{"wo_id": "WO-000203", "asset_tag": "B-01", "technician": "T18", "opened_at": "2025-03-09 08:33", "note": "Pump 1, also de bearing growling, gland packing - kepe an eye done"}
+{"wo_id": "WO-000204", "asset_tag": "B-05", "technician": "T03", "opened_at": "2025-03-10 10:20", "note": "bomba 5, hot trp, mtr unit all good on visit"}
+{"wo_id": "WO-000205", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-03-10 14:22", "note": "B-11, face replaced, was leak at shaft 51A, muck."}
+{"wo_id": "WO-000206", "asset_tag": "B-11", "technician": "T13", "opened_at": "2025-03-10 16:06", "note": "pump 11. bearing eaten away. bearing - pending"}
+{"wo_id": "WO-000207", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-03-11 03:07", "note": "Pmp12 clunking disch valve ok cplg failed pending"}
+{"wo_id": "WO-000209", "asset_tag": "B-12", "technician": "T13", "opened_at": "2025-03-12 16:24", "note": "no wear. temp normal. shaft off bering. re-set bering"}
+{"wo_id": "WO-000211", "asset_tag": "B-07", "technician": "T04", "opened_at": "2025-03-13 17:51", "note": "B-07, put new roller, was growling, roller: end of life."}
+{"wo_id": "WO-000212", "asset_tag": "B-06", "technician": "T11", "opened_at": "2025-03-14 00:40", "note": "Amps high. bolts tight. bad runner. rebalanced"}
+{"wo_id": "WO-000215", "asset_tag": "B-11", "technician": "T10", "opened_at": "2025-03-14 16:27", "note": "P-11; ball race rewound; was running hot; found ball race pitted"}
+{"wo_id": "WO-000216", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-03-14 17:21", "note": "Bomba 9; noise; filter unblocked."}
+{"wo_id": "WO-000217", "asset_tag": "B-04", "technician": "T02", "opened_at": "2025-03-15 05:26", "note": "vibes. reworked impeller vanes"}
+{"wo_id": "WO-000218", "asset_tag": "B-04", "technician": "T03", "opened_at": "2025-03-16 07:45", "note": "bomba 4, checked impellor ok, oil clean, mtr unit gresed"}
+{"wo_id": "WO-000221", "asset_tag": "B-05", "technician": "T19", "opened_at": "2025-03-17 18:44", "note": "B-05; check valve looks ok; cracked; r&r impellor"}
+{"wo_id": "WO-000222", "asset_tag": "B-09", "technician": "T05", "opened_at": "2025-03-18 22:19", "note": "b09 / lekaing / gravel noise suction valve / trimmed done"}
+{"wo_id": "WO-000224", "asset_tag": "B-11", "technician": "T20", "opened_at": "2025-03-19 01:07", "note": "B11; ALSO BEARINGS VIBES BAD; SUCTION VALVE IS OK; FACE U/S; RETORQUED"}
+{"wo_id": "WO-000225", "asset_tag": "B-07", "technician": "T12", "opened_at": "2025-03-19 07:34", "note": "r&r seal. was leaking bad. wrn out"}
+{"wo_id": "WO-000226", "asset_tag": "B-04", "technician": "T16", "opened_at": "2025-03-19 14:49", "note": "B04 / TRIPPED / NO LOOSENESS / LOW OIL / ELECTRIC MOTOR ADDED GREASE"}
+{"wo_id": "WO-000227", "asset_tag": "B-03", "technician": "T10", "opened_at": "2025-03-19 16:07", "note": "#3; new one fitted motor unit; was wont start; hot trip"}
+{"wo_id": "WO-000228", "asset_tag": "B-02", "technician": "T16", "opened_at": "2025-03-19 20:20", "note": "B02 / TRIPPED / WORN / ELECTRIC MOTOR CHANGED"}
+{"wo_id": "WO-000229", "asset_tag": "B-02", "technician": "T01", "opened_at": "2025-03-19 20:44", "note": "Pump 2; humming loud; roller put new."}
+{"wo_id": "WO-000230", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-03-20 05:17", "note": "Noise full of debris suction strainer cleaned out"}
+{"wo_id": "WO-000231", "asset_tag": "B-08", "technician": "T18", "opened_at": "2025-03-20 13:04", "note": "B08, weeping, found gland packing damaged, r&r done"}
+{"wo_id": "WO-000233", "asset_tag": "B-07", "technician": "T16", "opened_at": "2025-03-20 21:46", "note": "B07 / HUMMING LOUD 4.6 BAR / COUPLING INSERT OK / BONE DRY / DE BRG ADDED GREASE"}
+{"wo_id": "WO-000234", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-03-20 22:33", "note": "Pump 1 no flow impelr: out of balance impelr trimmed"}
+{"wo_id": "WO-000235", "asset_tag": "B-12", "technician": "T09", "opened_at": "2025-03-21 08:12", "note": "pump 12 also coupling rubber knocking gone bering r&r"}
+{"wo_id": "WO-000238", "asset_tag": "B-04", "technician": "T16", "opened_at": "2025-03-22 17:26", "note": "B04 / VIBRATION HIGH / ALSO SHAFT SEAL DRIPPING / FOUND DE BEARING WORN / DE BEARING REPLACED"}
+{"wo_id": "WO-000239", "asset_tag": "B-09", "technician": "T04", "opened_at": "2025-03-22 18:35", "note": "bomba 9, replaced, spider faied, checked electric motor ok, no issue w mech seal."}
+{"wo_id": "WO-000240", "asset_tag": "B-05", "technician": "T08", "opened_at": "2025-03-23 01:02", "note": "B-05; low flow; screen issue; screen unblocked"}
+{"wo_id": "WO-000243", "asset_tag": "B-02", "technician": "T04", "opened_at": "2025-03-23 19:35", "note": "unblocked, was flwo dropped 29A, impellor is silt."}
+{"wo_id": "WO-000245", "asset_tag": "B-08", "technician": "T20", "opened_at": "2025-03-26 04:57", "note": "B08; VIBRATION HIGH; SUCTION VALVE GOOD; ELECTRIC MOTOR FINE; GREASED UP BEARINGS"}
+{"wo_id": "WO-000246", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-03-26 18:24", "note": "BRNG REPACKED. WAS RUNNING HOT 34A. EATEN AWAY"}
+{"wo_id": "WO-000247", "asset_tag": "B-10", "technician": "T10", "opened_at": "2025-03-26 19:13", "note": "#10; MS exchanged; was wet around shaft"}
+{"wo_id": "WO-000248", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-03-26 23:59", "note": "Bomba 3. weeping. m/seal r&r"}
+{"wo_id": "WO-000249", "asset_tag": "B-06", "technician": "T12", "opened_at": "2025-03-27 07:28", "note": "B06. brng gresed. was rouh noise. brng failed"}
+{"wo_id": "WO-000250", "asset_tag": "B-06", "technician": "T15", "opened_at": "2025-03-27 13:57", "note": "Bearings exchanged; was vibes up; strainer clean"}
+{"wo_id": "WO-000251", "asset_tag": "B-08", "technician": "T07", "opened_at": "2025-03-27 16:21", "note": "PUMP 8. EXCHANGED. WAS NOKSY. BERING: TOAST. CHECKED MTR OK"}
+{"wo_id": "WO-000253", "asset_tag": "B-10", "technician": "T14", "opened_at": "2025-03-29 03:50", "note": "B-10 - warm - also motor ams high - ball race failed - re-aligned ball race"}
+{"wo_id": "WO-000256", "asset_tag": "B-04", "technician": "T12", "opened_at": "2025-03-30 08:13", "note": "p4. gland packing installed new. was leak at shaft. glad packing fulty"}
+{"wo_id": "WO-000258", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-03-31 13:49", "note": "bomba 10, mud, runner unblocked"}
+{"wo_id": "WO-000259", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-03-31 23:50", "note": "Pump 1 leaking bad soft foot gland re-set"}
+{"wo_id": "WO-000261", "asset_tag": "B-05", "technician": "T16", "opened_at": "2025-04-01 14:37", "note": "B05 / GROWLING / CHECKED DRIVE MOTOR OK / DE BEARING IS SOFT FOOT / NO FAULT FOUND DE BEARING"}
+{"wo_id": "WO-000262", "asset_tag": "B-11", "technician": "T14", "opened_at": "2025-04-01 23:15", "note": "Vanes re-shimmed"}
+{"wo_id": "WO-000263", "asset_tag": "B-02", "technician": "T12", "opened_at": "2025-04-02 06:43", "note": "B02. valve trimmed. was wont close. vave faulty"}
+{"wo_id": "WO-000264", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-04-02 11:29", "note": "P-12. r&r. was wnot start. mtr issue"}
+{"wo_id": "WO-000265", "asset_tag": "B-12", "technician": "T04", "opened_at": "2025-04-02 16:59", "note": "drive end bearing put new, was vibration high, no gres."}
+{"wo_id": "WO-000266", "asset_tag": "B-09", "technician": "T10", "opened_at": "2025-04-02 17:59", "note": "#9; new one fitted DE brg; was warm; had it"}
+{"wo_id": "WO-000267", "asset_tag": "B-01", "technician": "T12", "opened_at": "2025-04-03 06:29", "note": "B01. gland packing installed new. was spraying. gland packing: worn out"}
+{"wo_id": "WO-000268", "asset_tag": "B-06", "technician": "T13", "opened_at": "2025-04-03 20:02", "note": "vibes bad. bering is grit in it. fludhed oil"}
+{"wo_id": "WO-000270", "asset_tag": "B-12", "technician": "T20", "opened_at": "2025-04-04 02:54", "note": "CLEARED ELECTRIC MOTOR"}
+{"wo_id": "WO-000271", "asset_tag": "B-02", "technician": "T04", "opened_at": "2025-04-04 21:03", "note": "B-02, gate valve welded, was low flow, had it."}
+{"wo_id": "WO-000272", "asset_tag": "B-10", "technician": "T18", "opened_at": "2025-04-05 09:19", "note": "B10, vibration high, also coupling rubber rubber dust, no gres, greased drive end bearing done"}
+{"wo_id": "WO-000274", "asset_tag": "B-04", "technician": "T08", "opened_at": "2025-04-05 23:56", "note": "B-04; low pressure; also DE bearing noisy; no looseness; walkdown; checked walkdown"}
+{"wo_id": "WO-000275", "asset_tag": "B-02", "technician": "T12", "opened_at": "2025-04-06 12:23", "note": "B02. DE bearnig lubed. was warm. lack of lube"}
+{"wo_id": "WO-000276", "asset_tag": "B-11", "technician": "T13", "opened_at": "2025-04-07 16:57", "note": "B-11. leaking. alignment ok. MS issue. overhauled MS"}
+{"wo_id": "WO-000277", "asset_tag": "B-10", "technician": "T05", "opened_at": "2025-04-07 22:12", "note": "suction screen bad / blown out suction screen done"}
+{"wo_id": "WO-000278", "asset_tag": "B-02", "technician": "T03", "opened_at": "2025-04-08 09:38", "note": "bomba 2, no issue w coupling rubber, brng renewed"}
+{"wo_id": "WO-000280", "asset_tag": "B-04", "technician": "T13", "opened_at": "2025-04-08 16:00", "note": "pump 4. leak at shaft. gland renewed"}
+{"wo_id": "WO-000281", "asset_tag": "B-09", "technician": "T08", "opened_at": "2025-04-08 23:02", "note": "B-09; smells burnt; overtemp; mtr unit patched up"}
+{"wo_id": "WO-000282", "asset_tag": "B-06", "technician": "T05", "opened_at": "2025-04-09 03:52", "note": "pmp6 / checked electric motor ok / wornout stuffing box / stuffing box installed new done"}
+{"wo_id": "WO-000285", "asset_tag": "B-06", "technician": "T03", "opened_at": "2025-04-09 13:47", "note": "bomba 6, hot, bone dry, refilled oil bering"}
+{"wo_id": "WO-000286", "asset_tag": "B-02", "technician": "T15", "opened_at": "2025-04-10 12:56", "note": "Drive motor r&r; chewed; also spider rubber dust; alignment ok"}
+{"wo_id": "WO-000287", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-04-10 19:18", "note": "Pump 9; rubber dust; bolts tight; wornout; coupling rubber changed."}
+{"wo_id": "WO-000288", "asset_tag": "B-07", "technician": "T16", "opened_at": "2025-04-10 19:56", "note": "B07 / ROUGH NOISE / WORNOUT / CHANGED BALL RACE"}
+{"wo_id": "WO-000289", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-04-11 03:39", "note": "B01; WEEKLY CHECK; INSPECTED"}
+{"wo_id": "WO-000290", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-04-11 03:42", "note": "Pmp4 leak at shaft grease ok gland failed exchanged gland"}
+{"wo_id": "WO-000292", "asset_tag": "B-03", "technician": "T19", "opened_at": "2025-04-12 14:18", "note": "B-03; also disch valve wont close; out of line cplg; r&r"}
+{"wo_id": "WO-000293", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-04-12 23:49", "note": "pmp1. vibes 45A. runner: npsh problem. runner put new"}
+{"wo_id": "WO-000294", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-04-13 03:46", "note": "B-01 leaking bad also impeller vanse rattling gland r&r"}
+{"wo_id": "WO-000295", "asset_tag": "B-04", "technician": "T18", "opened_at": "2025-04-14 10:39", "note": "B04, hot, de brg: misalign, de brg lined up done"}
+{"wo_id": "WO-000297", "asset_tag": "B-10", "technician": "T09", "opened_at": "2025-04-14 13:19", "note": "b10 stuk butterfly r&r"}
+{"wo_id": "WO-000298", "asset_tag": "B-03", "technician": "T03", "opened_at": "2025-04-15 13:13", "note": "bomba 3, seal u/s, re-set"}
+{"wo_id": "WO-000299", "asset_tag": "B-01", "technician": "T19", "opened_at": "2025-04-15 14:35", "note": "B-01; brg looks ok; motor fan not the problem; walkdown; no fault found"}
+{"wo_id": "WO-000302", "asset_tag": "B-03", "technician": "T08", "opened_at": "2025-04-15 22:49", "note": "warm; ball race faulty; r&r"}
+{"wo_id": "WO-000304", "asset_tag": "B-07", "technician": "T02", "opened_at": "2025-04-17 02:26", "note": "flow dropped 4.5 bar. runner: unbalanced. balanced"}
+{"wo_id": "WO-000305", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-04-17 02:37", "note": "Also impeller vanes low pressure. strainer clean. checked all ok round"}
+{"wo_id": "WO-000306", "asset_tag": "B-03", "technician": "T15", "opened_at": "2025-04-17 07:36", "note": "New one fitted stuffing box; was dripping; stuffing box bad"}
+{"wo_id": "WO-000307", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-04-17 16:53", "note": "shimmed gate valve, was wont close."}
+{"wo_id": "WO-000308", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-04-17 19:51", "note": "B09 / WEEPING / WORN / REPACKED SHAFT SEAL"}
+{"wo_id": "WO-000310", "asset_tag": "B-12", "technician": "T15", "opened_at": "2025-04-18 12:16", "note": "B12; checked walkown; was dp high; walkodwn; aslo drive motor hot; balance ok; gate valve not the problem"}
+{"wo_id": "WO-000311", "asset_tag": "B-10", "technician": "T01", "opened_at": "2025-04-18 21:25", "note": "P-10; leaking; bearings is ok; nrv changed."}
+{"wo_id": "WO-000312", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-04-18 23:21", "note": "Pmp4 noise oil clean routine round on hold"}
+{"wo_id": "WO-000313", "asset_tag": "B-03", "technician": "T20", "opened_at": "2025-04-18 23:23", "note": "B03; LEAK AT SHAFT; SEAL U/S; SEAL SWAPPED"}
+{"wo_id": "WO-000317", "asset_tag": "B-02", "technician": "T17", "opened_at": "2025-04-21 01:22", "note": "Pmp2 vibration high 3.5mm/s ball race: had it on hold"}
+{"wo_id": "WO-000318", "asset_tag": "B-02", "technician": "T12", "opened_at": "2025-04-21 06:36", "note": "pmp2. shimmed. was vibes up. DE bearing is loose bolts. lube ok"}
+{"wo_id": "WO-000321", "asset_tag": "B-01", "technician": "T09", "opened_at": "2025-04-22 13:33", "note": "b01 no grease bll race lubed"}
+{"wo_id": "WO-000322", "asset_tag": "B-10", "technician": "T13", "opened_at": "2025-04-22 17:14", "note": "B-10. indicator is eaten away. indicator new fitted"}
+{"wo_id": "WO-000323", "asset_tag": "B-11", "technician": "T11", "opened_at": "2025-04-23 00:41", "note": "Bomba 11. dripping 60c. shaft seal u/s. shaft seal welded"}
+{"wo_id": "WO-000324", "asset_tag": "B-10", "technician": "T18", "opened_at": "2025-04-23 11:20", "note": "Impeller vanes fine, exchanged drive end bearing done"}
+{"wo_id": "WO-000325", "asset_tag": "B-11", "technician": "T16", "opened_at": "2025-04-23 14:33", "note": "VIBES BAD / NDE BRG IS LOW OIL / NDE BRG ADDED GREASE"}
+{"wo_id": "WO-000326", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-04-23 17:49", "note": "Pump 9; electric motor fine; coupling rubber looks ok; impeller starved suction; impeller put new."}
+{"wo_id": "WO-000327", "asset_tag": "B-11", "technician": "T01", "opened_at": "2025-04-23 20:49", "note": "Pump 11; growling; balance ok; oil level ok; roller chewed; will watch roller."}
+{"wo_id": "WO-000330", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-04-25 00:25", "note": "Pmp11 wet around shaft mtr fan fine gland replaced"}
+{"wo_id": "WO-000331", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-04-25 02:04", "note": "#9. running hot. mech seal ok. misalign DE houssing. re-set"}
+{"wo_id": "WO-000332", "asset_tag": "B-10", "technician": "T06", "opened_at": "2025-04-25 08:49", "note": "b-10 - suction strainer flushed - was low flow 40a - cavitating - temp ok done"}
+{"wo_id": "WO-000333", "asset_tag": "B-06", "technician": "T07", "opened_at": "2025-04-25 21:10", "note": "PUMP 6. DE HOUSING REWORKED. WAS VIBES BAD 3.5MM/S. DE HOUSING IS PITTED. IMPELLER VANES FINE. CPL IS OK"}
+{"wo_id": "WO-000334", "asset_tag": "B-03", "technician": "T05", "opened_at": "2025-04-26 22:07", "note": "#3 / scored / exchanged ball race done"}
+{"wo_id": "WO-000335", "asset_tag": "B-01", "technician": "T19", "opened_at": "2025-04-27 16:05", "note": "B-01; wet around shaft 8.5mm/s; lubbe ok; seal: overload trip; changed"}
+{"wo_id": "WO-000336", "asset_tag": "B-07", "technician": "T05", "opened_at": "2025-04-28 05:43", "note": "b07 / no lube bearing / bearing regreased done"}
+{"wo_id": "WO-000337", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-04-28 07:50", "note": "bomba 7, no issue w check valve, keep an eye carbon face"}
+{"wo_id": "WO-000339", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-04-30 00:44", "note": "Bomba 9. humming loud 64c. ball race u/s. topped up oil balll race"}
+{"wo_id": "WO-000340", "asset_tag": "B-05", "technician": "T11", "opened_at": "2025-04-30 01:05", "note": "Vibes up. bad roller. roller checked all ok"}
+{"wo_id": "WO-000341", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-04-30 02:09", "note": "Pmp10 warm ball race: low oil ball race oil change"}
+{"wo_id": "WO-000342", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-04-30 06:18", "note": "bomba 9, checked coupling rubber ok, checked impellor ok, carbon face new fitted"}
+{"wo_id": "WO-000343", "asset_tag": "B-08", "technician": "T03", "opened_at": "2025-04-30 12:23", "note": "bomba 8, mtr is ok, non return reworked"}
+{"wo_id": "WO-000345", "asset_tag": "B-07", "technician": "T07", "opened_at": "2025-04-30 20:38", "note": "DE BEARING REPAIRED. WAS ROUGH NOISE. WORNOUT DE BEARING"}
+{"wo_id": "WO-000346", "asset_tag": "B-11", "technician": "T11", "opened_at": "2025-05-01 05:29", "note": "Cant throttle. butterfly issue. butterfly set up"}
+{"wo_id": "WO-000347", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-05-01 14:28", "note": "Pump 8; found bearings low oil; oiled bearings."}
+{"wo_id": "WO-000348", "asset_tag": "B-10", "technician": "T07", "opened_at": "2025-05-01 20:13", "note": "BLOWN OUT. WAS AMPS HIGH. THERMAL TRIP MTR"}
+{"wo_id": "WO-000349", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-05-02 01:57", "note": "B10; WONT CLOSE; SUCTION VALVE - PARTS ORDERED"}
+{"wo_id": "WO-000350", "asset_tag": "B-07", "technician": "T18", "opened_at": "2025-05-02 08:58", "note": "B07, suction valve is ok, misaligned, put new gladn paking done"}
+{"wo_id": "WO-000351", "asset_tag": "B-04", "technician": "T03", "opened_at": "2025-05-02 09:20", "note": "bomba 4, tripped, NDE brg ok, mtr fan reworked"}
+{"wo_id": "WO-000352", "asset_tag": "B-02", "technician": "T06", "opened_at": "2025-05-02 10:57", "note": "suction strainer descaled - bad suction strainer done"}
+{"wo_id": "WO-000354", "asset_tag": "B-07", "technician": "T08", "opened_at": "2025-05-03 02:39", "note": "passing; gate valve shimmed"}
+{"wo_id": "WO-000356", "asset_tag": "B-10", "technician": "T11", "opened_at": "2025-05-04 01:19", "note": "Boba 10. amps high. not worn. oil level ok. runner: heavy side. trimmed runner"}
+{"wo_id": "WO-000357", "asset_tag": "B-09", "technician": "T20", "opened_at": "2025-05-04 01:51", "note": "B09; LEAK AT SHAFT; DEBRIS AT FACES; SWAPPED SEAL"}
+{"wo_id": "WO-000358", "asset_tag": "B-11", "technician": "T01", "opened_at": "2025-05-04 18:24", "note": "Pump 11; passing; nrv trimmed."}
+{"wo_id": "WO-000359", "asset_tag": "B-10", "technician": "T04", "opened_at": "2025-05-05 21:15", "note": "B-10, shimmed flex, wobbly, also electric motor amps high."}
+{"wo_id": "WO-000360", "asset_tag": "B-04", "technician": "T03", "opened_at": "2025-05-06 11:39", "note": "P-04, wet around shaft, stuffing box bad, new fitted"}
+{"wo_id": "WO-000361", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-05-06 13:38", "note": "rough noise 15A, also check valve passing, brng gresed"}
+{"wo_id": "WO-000362", "asset_tag": "B-05", "technician": "T08", "opened_at": "2025-05-08 00:00", "note": "warm 103C; water in oil; flushed oil brg"}
+{"wo_id": "WO-000363", "asset_tag": "B-03", "technician": "T14", "opened_at": "2025-05-08 23:05", "note": "B-03 - buzzig - hosed elrctric motor"}
+{"wo_id": "WO-000366", "asset_tag": "B-05", "technician": "T02", "opened_at": "2025-05-11 02:57", "note": "pmp5. humming loud. bad DE brg. exchanged"}
+{"wo_id": "WO-000367", "asset_tag": "B-11", "technician": "T20", "opened_at": "2025-05-11 05:18", "note": "B11; STUCK; GATE IS DEBRIS; CLEARED"}
+{"wo_id": "WO-000368", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-05-11 10:41", "note": "B11; bearings r&r; was wram 80c; water in oil"}
+{"wo_id": "WO-000369", "asset_tag": "B-08", "technician": "T14", "opened_at": "2025-05-11 22:15", "note": "B-08 - noisy - water in oil - ball race oil change"}
+{"wo_id": "WO-000370", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-05-12 13:42", "note": "bomba 10, also coupling rubber knocking, mtr ok, checked mtr ok, cav, impellor - waiting spares"}
+{"wo_id": "WO-000372", "asset_tag": "B-05", "technician": "T08", "opened_at": "2025-05-13 02:49", "note": "hot; mtr issue; r&r"}
+{"wo_id": "WO-000373", "asset_tag": "B-05", "technician": "T15", "opened_at": "2025-05-13 06:56", "note": "Repacked drive motor; was amps high; overtemp"}
+{"wo_id": "WO-000374", "asset_tag": "B-02", "technician": "T09", "opened_at": "2025-05-14 10:57", "note": "b02 dripping snugged up mech sdal"}
+{"wo_id": "WO-000376", "asset_tag": "B-10", "technician": "T07", "opened_at": "2025-05-15 14:08", "note": "REPLACED M/SEAL. THERMAL TRIP"}
+{"wo_id": "WO-000377", "asset_tag": "B-05", "technician": "T10", "opened_at": "2025-05-15 17:28", "note": "B05; replaced MS; MS align off"}
+{"wo_id": "WO-000378", "asset_tag": "B-07", "technician": "T05", "opened_at": "2025-05-15 23:22", "note": "found face worn / needs replacing, parts ordered face done"}
+{"wo_id": "WO-000379", "asset_tag": "B-01", "technician": "T08", "opened_at": "2025-05-16 00:20", "note": "vibration high; ball race is damaged; ball rce fitted new"}
+{"wo_id": "WO-000380", "asset_tag": "B-12", "technician": "T08", "opened_at": "2025-05-16 02:25", "note": "working loose cpl; cpl shimmed"}
+{"wo_id": "WO-000382", "asset_tag": "B-12", "technician": "T15", "opened_at": "2025-05-16 12:39", "note": "R&r; was leak at shaft; seal pack u/s; also spider rubebr dust"}
+{"wo_id": "WO-000383", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-05-17 02:15", "note": "P-01. knocking 6.8mm/s. no wear. misalign. changed flex"}
+{"wo_id": "WO-000384", "asset_tag": "B-03", "technician": "T20", "opened_at": "2025-05-17 02:48", "note": "B03; VIBES; IMPELLER VANES BAD; IMPELLER VANES SWAPPED"}
+{"wo_id": "WO-000385", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-05-17 15:31", "note": "pump 1. wornout. overhauled MS"}
+{"wo_id": "WO-000387", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-05-19 09:34", "note": "bomba 7, new fitted mtr unit"}
+{"wo_id": "WO-000388", "asset_tag": "B-08", "technician": "T06", "opened_at": "2025-05-19 09:53", "note": "b-08 - mech seal changed - scored - impeller vanes is ok done"}
+{"wo_id": "WO-000389", "asset_tag": "B-02", "technician": "T07", "opened_at": "2025-05-19 16:07", "note": "ADJUSTED COUPLING RUBBER. OUT OF ALIGN"}
+{"wo_id": "WO-000391", "asset_tag": "B-06", "technician": "T18", "opened_at": "2025-05-20 08:15", "note": "#6, rough noise, also suction valve stuck, found drive end bearing wornout, exchanged done"}
+{"wo_id": "WO-000392", "asset_tag": "B-09", "technician": "T15", "opened_at": "2025-05-20 13:19", "note": "Mechanical seal put new; was dripping; cacked"}
+{"wo_id": "WO-000394", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-05-21 04:55", "note": "P-09. hot 13.8mm/s. temp ok. loose hold down. brg trimmed"}
+{"wo_id": "WO-000395", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-05-21 06:43", "note": "B11, brng is water in oil, changed brng done"}
+{"wo_id": "WO-000396", "asset_tag": "B-02", "technician": "T16", "opened_at": "2025-05-21 15:56", "note": "WEEPING / CHANGED MSEAL"}
+{"wo_id": "WO-000397", "asset_tag": "B-03", "technician": "T19", "opened_at": "2025-05-21 17:54", "note": "B-03; leaking bad 6.4mm/s; temp normal; bad seal; seal re-shimmed"}
+{"wo_id": "WO-000398", "asset_tag": "B-01", "technician": "T11", "opened_at": "2025-05-21 23:48", "note": "Clunking 13.4mm/s. scored. r&r lovejoy"}
+{"wo_id": "WO-000400", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-05-22 05:33", "note": "Leaking bad 5.1 bar - also check valve stuck - scored stuffing box - wlded"}
+{"wo_id": "WO-000401", "asset_tag": "B-07", "technician": "T12", "opened_at": "2025-05-22 07:55", "note": "#7. foundation bots re-set. losoe bolts"}
+{"wo_id": "WO-000402", "asset_tag": "B-08", "technician": "T18", "opened_at": "2025-05-22 10:38", "note": "B08, vibration high, not worn, de housing u/s, de housing r&r done"}
+{"wo_id": "WO-000403", "asset_tag": "B-10", "technician": "T15", "opened_at": "2025-05-22 13:58", "note": "Roller r&r; was noisy"}
+{"wo_id": "WO-000404", "asset_tag": "B-01", "technician": "T16", "opened_at": "2025-05-22 16:52", "note": "B01 / ALARM / BLOWN OUT SUCTION SCREEN"}
+{"wo_id": "WO-000405", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-05-22 21:22", "note": "P-01. no flow. wheel: imbalance. re-swt wheel"}
+{"wo_id": "WO-000406", "asset_tag": "B-03", "technician": "T05", "opened_at": "2025-05-22 22:23", "note": "warm / bad de brg / de brg changed done"}
+{"wo_id": "WO-000407", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-05-23 12:34", "note": "B11, found de housing chewed, repalced de housing done"}
+{"wo_id": "WO-000408", "asset_tag": "B-10", "technician": "T12", "opened_at": "2025-05-25 07:08", "note": "B10. topped up oil. was wont statr. electrics failed"}
+{"wo_id": "WO-000410", "asset_tag": "B-03", "technician": "T13", "opened_at": "2025-05-25 19:57", "note": "bering faulty. renewed bering"}
+{"wo_id": "WO-000411", "asset_tag": "B-07", "technician": "T14", "opened_at": "2025-05-26 02:22", "note": "Warm - lack of lube - oiled brg"}
+{"wo_id": "WO-000412", "asset_tag": "B-06", "technician": "T15", "opened_at": "2025-05-26 10:29", "note": "Flushed oil bearings; was vibes bad; muck; alignment fine"}
+{"wo_id": "WO-000413", "asset_tag": "B-02", "technician": "T06", "opened_at": "2025-05-26 11:54", "note": "b-02 - changed - was rubber dust - spider is end of life - also bearings vibes bad done"}
+{"wo_id": "WO-000414", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-05-26 21:54", "note": "Pump 9; low flow; aign good; shimmed vanees."}
+{"wo_id": "WO-000415", "asset_tag": "B-04", "technician": "T02", "opened_at": "2025-05-26 22:51", "note": "pmp4. low pressure. walkdown. walkdown - next PM"}
+{"wo_id": "WO-000416", "asset_tag": "B-07", "technician": "T05", "opened_at": "2025-05-27 00:03", "note": "b07 / de brg is low oil / new fitted done"}
+{"wo_id": "WO-000418", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-05-27 08:32", "note": "impeller new fitted"}
+{"wo_id": "WO-000419", "asset_tag": "B-04", "technician": "T12", "opened_at": "2025-05-27 11:03", "note": "B04. balannced impellor. was amps hkgh. impellor: imbalance"}
+{"wo_id": "WO-000420", "asset_tag": "B-03", "technician": "T01", "opened_at": "2025-05-27 20:45", "note": "Pump 3; vibes bad; also electric motor hot; bone dry bearings; oiled."}
+{"wo_id": "WO-000422", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-05-28 12:44", "note": "Brng re-shimmed; was viibes up; also impeller vanes low pressure"}
+{"wo_id": "WO-000423", "asset_tag": "B-09", "technician": "T05", "opened_at": "2025-05-28 22:26", "note": "p-09 / seal: wornnout / repaired done"}
+{"wo_id": "WO-000424", "asset_tag": "B-08", "technician": "T11", "opened_at": "2025-05-28 22:29", "note": "Bomba 8. low flow 3.8 bar. mud. exchanged disch valve"}
+{"wo_id": "WO-000425", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-05-29 05:32", "note": "Bomba 9. flow dropped 85c. runner bad. no spares runner"}
+{"wo_id": "WO-000426", "asset_tag": "B-05", "technician": "T18", "opened_at": "2025-05-29 07:15", "note": "B05, suction screen is starved suction, cleaned out done"}
+{"wo_id": "WO-000430", "asset_tag": "B-05", "technician": "T15", "opened_at": "2025-05-30 10:07", "note": "Blwon out strainer; was low pressure"}
+{"wo_id": "WO-000431", "asset_tag": "B-06", "technician": "T16", "opened_at": "2025-05-30 15:52", "note": "VIBES BAD / WORN / DE BEARING CHANGED"}
+{"wo_id": "WO-000434", "asset_tag": "B-06", "technician": "T08", "opened_at": "2025-05-31 01:21", "note": "B-06; leaking; gate valve cav; gtae valve - no spares"}
+{"wo_id": "WO-000436", "asset_tag": "B-11", "technician": "T02", "opened_at": "2025-06-01 01:59", "note": "pmp11. dp high 72C. anchor bolts u/s. snugged up"}
+{"wo_id": "WO-000437", "asset_tag": "B-01", "technician": "T01", "opened_at": "2025-06-02 17:00", "note": "Pump 1; wet around shaft; put new fcae."}
+{"wo_id": "WO-000438", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-06-02 18:34", "note": "PUMP 1. SHIMMED. WAS AMPS HIGH. VANES ISSUE"}
+{"wo_id": "WO-000439", "asset_tag": "B-05", "technician": "T10", "opened_at": "2025-06-03 21:17", "note": "#5; rewound motor fan; pitted"}
+{"wo_id": "WO-000440", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-06-04 14:32", "note": "ELECTRIC MOTOR NOT THE PROBLEM / COUPLING RUBBER OK / WEEKLY CHECK / NO FAULT FOUND WEEKLY CHECK"}
+{"wo_id": "WO-000441", "asset_tag": "B-11", "technician": "T05", "opened_at": "2025-06-05 01:25", "note": "pump 11 / dp high / suction strainer: gravel noise / blown out suction strainer done"}
+{"wo_id": "WO-000442", "asset_tag": "B-02", "technician": "T02", "opened_at": "2025-06-05 05:22", "note": "pmp2. running hot 9.7mm/s. DE hoising oiled"}
+{"wo_id": "WO-000444", "asset_tag": "B-09", "technician": "T10", "opened_at": "2025-06-05 14:00", "note": "#9; lube dne; was vibes bad 13.9mm/s; ran dry NDE brg"}
+{"wo_id": "WO-000445", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-06-06 17:07", "note": "Pump 8; shaking 11a; impeller looks ok; off center; put new coupling rubber."}
+{"wo_id": "WO-000446", "asset_tag": "B-07", "technician": "T14", "opened_at": "2025-06-08 03:01", "note": "B-07 - shot - de housing swapped"}
+{"wo_id": "WO-000450", "asset_tag": "B-06", "technician": "T16", "opened_at": "2025-06-09 19:14", "note": "SHAFT SEAL: WORN / REPACKED"}
+{"wo_id": "WO-000451", "asset_tag": "B-10", "technician": "T05", "opened_at": "2025-06-10 03:56", "note": "vibes / impeller vanes faulty / parts ordered done"}
+{"wo_id": "WO-000452", "asset_tag": "B-06", "technician": "T16", "opened_at": "2025-06-10 19:16", "note": "B06 / NOISE AT COUPLING / BEARINGS GOOD / WORN / COUPLING INSERT R&R"}
+{"wo_id": "WO-000453", "asset_tag": "B-05", "technician": "T13", "opened_at": "2025-06-11 17:49", "note": "also cpl knocking. DE housing faulty. exchanged DE housing"}
+{"wo_id": "WO-000454", "asset_tag": "B-05", "technician": "T17", "opened_at": "2025-06-11 23:41", "note": "Pmp5 running hot de bearing muck oil change de bearing"}
+{"wo_id": "WO-000455", "asset_tag": "B-09", "technician": "T09", "opened_at": "2025-06-12 13:00", "note": "b09 not wonr grit rinsed stuffing box"}
+{"wo_id": "WO-000456", "asset_tag": "B-04", "technician": "T08", "opened_at": "2025-06-14 05:49", "note": "bomba 4; apms high; cav; runner - keep an eye"}
+{"wo_id": "WO-000457", "asset_tag": "B-01", "technician": "T18", "opened_at": "2025-06-14 08:29", "note": "P1, hot, also drive end bearing vibration high, check valve goood, strainer clean, overtemp, motor fan cleared out done"}
+{"wo_id": "WO-000460", "asset_tag": "B-09", "technician": "T13", "opened_at": "2025-06-16 15:45", "note": "amps high. impelr bad. impelr tweaked"}
+{"wo_id": "WO-000461", "asset_tag": "B-11", "technician": "T06", "opened_at": "2025-06-17 09:09", "note": "b-11 - repaired - drive motor faulty - also discharge valve leaking - no cav noise done"}
+{"wo_id": "WO-000462", "asset_tag": "B-05", "technician": "T05", "opened_at": "2025-06-18 01:35", "note": "inspection round / nff done"}
+{"wo_id": "WO-000464", "asset_tag": "B-10", "technician": "T02", "opened_at": "2025-06-19 22:24", "note": "flow dropped 4.7 bar. suct vave looks ok. impeller vanes bad. impeller vanes tweaked"}
+{"wo_id": "WO-000465", "asset_tag": "B-02", "technician": "T17", "opened_at": "2025-06-20 03:41", "note": "P-02 gauge reads wrong 12.6mm/s nff pm"}
+{"wo_id": "WO-000466", "asset_tag": "B-03", "technician": "T04", "opened_at": "2025-06-20 18:53", "note": "put new mech seal, was leaking bad, had it."}
+{"wo_id": "WO-000468", "asset_tag": "B-12", "technician": "T14", "opened_at": "2025-06-21 03:20", "note": "Impeller vanes ok - check valve failed - tweaked check vlve"}
+{"wo_id": "WO-000470", "asset_tag": "B-11", "technician": "T03", "opened_at": "2025-06-22 13:55", "note": "bomba 11, renewed coupling rubber"}
+{"wo_id": "WO-000471", "asset_tag": "B-10", "technician": "T11", "opened_at": "2025-06-24 01:22", "note": "Bomba 10. rough nokse. brng u/s. brng topped up oil"}
+{"wo_id": "WO-000472", "asset_tag": "B-05", "technician": "T06", "opened_at": "2025-06-24 06:25", "note": "regreased motor fan - was trip on overload done"}
+{"wo_id": "WO-000474", "asset_tag": "B-06", "technician": "T02", "opened_at": "2025-06-24 22:48", "note": "end of life. next PM bering"}
+{"wo_id": "WO-000475", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-06-25 03:55", "note": "pmp9. spraying. mechanical seal u/s. changed"}
+{"wo_id": "WO-000480", "asset_tag": "B-01", "technician": "T10", "opened_at": "2025-06-27 14:36", "note": "#1; carbon face put new; pitted; aslo DE bearing noisy; motlr fan not the problem"}
+{"wo_id": "WO-000481", "asset_tag": "B-04", "technician": "T07", "opened_at": "2025-06-27 17:19", "note": "B-04. BLOWN OUT. WAS TRIP ON OVERLOAD. DRIVE MOTOR FOULED FAN"}
+{"wo_id": "WO-000483", "asset_tag": "B-10", "technician": "T12", "opened_at": "2025-06-28 07:43", "note": "re-aligned flex. was knocikng 68A. out of aign"}
+{"wo_id": "WO-000484", "asset_tag": "B-12", "technician": "T01", "opened_at": "2025-06-28 16:32", "note": "Pump 12; bearings failed; monitor."}
+{"wo_id": "WO-000485", "asset_tag": "B-06", "technician": "T19", "opened_at": "2025-06-28 17:12", "note": "#6; seal: overheated; seal r&r"}
+{"wo_id": "WO-000486", "asset_tag": "B-06", "technician": "T10", "opened_at": "2025-06-28 20:00", "note": "#6; unblocked screen; screen is full of debris; motor fan not the problem"}
+{"wo_id": "WO-000487", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-06-28 22:03", "note": "Workinng loose gland trimmed"}
+{"wo_id": "WO-000489", "asset_tag": "B-12", "technician": "T11", "opened_at": "2025-06-28 22:52", "note": "Bomba 12. tripped 6.1 bar. also impeller vanes vibes. grease ok. cooked. mtr unit blown out"}
+{"wo_id": "WO-000490", "asset_tag": "B-01", "technician": "T09", "opened_at": "2025-06-30 06:36", "note": "b01 low flpw 1.3 bar also impellor vibes temp normal basket failed on hold basket"}
+{"wo_id": "WO-000491", "asset_tag": "B-04", "technician": "T05", "opened_at": "2025-06-30 22:15", "note": "b-04 / vibration high / de brg worn out / de brg changed done"}
+{"wo_id": "WO-000492", "asset_tag": "B-02", "technician": "T11", "opened_at": "2025-07-01 00:41", "note": "Bomba 2. wet around shfat. checked spider ok. toast. left running ms"}
+{"wo_id": "WO-000493", "asset_tag": "B-08", "technician": "T08", "opened_at": "2025-07-01 02:41", "note": "weeping; gland changed"}
+{"wo_id": "WO-000494", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-07-01 06:29", "note": "B11, align good, wornout, de housing r&r done"}
+{"wo_id": "WO-000495", "asset_tag": "B-04", "technician": "T16", "opened_at": "2025-07-01 18:46", "note": "B04 / AMPS HIGH / WHEEL CHANGED"}
+{"wo_id": "WO-000496", "asset_tag": "B-08", "technician": "T04", "opened_at": "2025-07-01 21:44", "note": "needs replacing, parts ordered, was leaking bad 5.9mm/s, face is had it."}
+{"wo_id": "WO-000497", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-07-02 00:28", "note": "wet around shaft 9.2mm/s. face bad. face swapped"}
+{"wo_id": "WO-000499", "asset_tag": "B-04", "technician": "T16", "opened_at": "2025-07-02 19:42", "note": "B04 / HOT / NO DEBRIS / ELECTRICS OILED"}
+{"wo_id": "WO-000501", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-07-03 01:01", "note": "B10; ROUGH NOISE; FOUND BEARINGS DRY; BEARINGS LUBED"}
+{"wo_id": "WO-000502", "asset_tag": "B-06", "technician": "T12", "opened_at": "2025-07-04 13:47", "note": "gland packing retorqued. was dripping. gland packing bad. brgs looks ok"}
+{"wo_id": "WO-000504", "asset_tag": "B-12", "technician": "T10", "opened_at": "2025-07-04 15:47", "note": "#12; MS new one fitted; pitted MS"}
+{"wo_id": "WO-000505", "asset_tag": "B-03", "technician": "T07", "opened_at": "2025-07-04 16:01", "note": "PUMP 3. LOOKED. WALKDOWN"}
+{"wo_id": "WO-000506", "asset_tag": "B-03", "technician": "T10", "opened_at": "2025-07-04 17:42", "note": "B-03; trimmed; wobbling runner; m/seal ok"}
+{"wo_id": "WO-000507", "asset_tag": "B-01", "technician": "T05", "opened_at": "2025-07-04 22:20", "note": "b01 / vibes / no issue w cpl / electric motor ok / impeller vanes issue / impeller vanes cleared done"}
+{"wo_id": "WO-000509", "asset_tag": "B-03", "technician": "T09", "opened_at": "2025-07-05 07:18", "note": "b03 not cav electrics thermal trip electrics replaced"}
+{"wo_id": "WO-000510", "asset_tag": "B-07", "technician": "T13", "opened_at": "2025-07-05 14:22", "note": "smells burnt. motr fan cracked. changed motor fan"}
+{"wo_id": "WO-000512", "asset_tag": "B-12", "technician": "T20", "opened_at": "2025-07-05 22:13", "note": "B12; RUNNING HOT; ALSO IMPELLER VANES RATTLING; ROLLER FAULTY; SWAPPED ROLLER"}
+{"wo_id": "WO-000513", "asset_tag": "B-04", "technician": "T08", "opened_at": "2025-07-06 00:58", "note": "B-04; sttuck; bolts tight; electric motor not the problem; npwh problem; gage valve shimmed"}
+{"wo_id": "WO-000514", "asset_tag": "B-10", "technician": "T18", "opened_at": "2025-07-06 09:45", "note": "B10, drive end bearing wornout, exchanged drive end bearing done"}
+{"wo_id": "WO-000515", "asset_tag": "B-12", "technician": "T15", "opened_at": "2025-07-07 07:06", "note": "Mtr unti r&r; was hot; worn out; no debris"}
+{"wo_id": "WO-000516", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-07-07 21:44", "note": "MTR BLOWN OUT. WAS WONT START. BLOCKED FAN COVER MTR"}
+{"wo_id": "WO-000519", "asset_tag": "B-03", "technician": "T17", "opened_at": "2025-07-09 03:30", "note": "Pmp3 warm 94c needs grease ball race oil change"}
+{"wo_id": "WO-000521", "asset_tag": "B-09", "technician": "T04", "opened_at": "2025-07-09 21:57", "note": "electric motor fixed, was buzzing 85C, electric motor issue, also mech seal wet around shaft, temp ok."}
+{"wo_id": "WO-000522", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-07-09 23:01", "note": "Pmp10 no flow runner issue refurbished runner"}
+{"wo_id": "WO-000524", "asset_tag": "B-07", "technician": "T04", "opened_at": "2025-07-10 17:05", "note": "fixed mech seal, was dripping, end of life, drrive end bearing fine."}
+{"wo_id": "WO-000526", "asset_tag": "B-04", "technician": "T03", "opened_at": "2025-07-11 09:22", "note": "bomba 4, also impellor low flow, slime, unblocked non return"}
+{"wo_id": "WO-000528", "asset_tag": "B-10", "technician": "T16", "opened_at": "2025-07-11 17:20", "note": "SHAKING / OUT OF ALIGN / RE-ALIGNED COUPLING INSERT"}
+{"wo_id": "WO-000529", "asset_tag": "B-05", "technician": "T10", "opened_at": "2025-07-11 19:27", "note": "#5; descaled imp; clogged"}
+{"wo_id": "WO-000531", "asset_tag": "B-06", "technician": "T13", "opened_at": "2025-07-12 17:42", "note": "pump 6. rattling. impelr bad. impelr - no spares"}
+{"wo_id": "WO-000532", "asset_tag": "B-10", "technician": "T16", "opened_at": "2025-07-13 20:23", "note": "#10 / LOW PRESSURE / ADJUSTED IMPELLOR"}
+{"wo_id": "WO-000533", "asset_tag": "B-10", "technician": "T14", "opened_at": "2025-07-14 02:04", "note": "Also motor fan smells burnt - cleaned impellor"}
+{"wo_id": "WO-000534", "asset_tag": "B-11", "technician": "T09", "opened_at": "2025-07-14 07:11", "note": "b11 strainer basket blown out"}
+{"wo_id": "WO-000535", "asset_tag": "B-06", "technician": "T06", "opened_at": "2025-07-14 07:36", "note": "set up - was leaking - suction valve cavitating done"}
+{"wo_id": "WO-000537", "asset_tag": "B-06", "technician": "T18", "opened_at": "2025-07-14 10:40", "note": "Low flow, anchor bolts wobbly, re-set anchor bolts done"}
+{"wo_id": "WO-000538", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-07-14 20:39", "note": "Pump 5; wet around shaft; face u/s; retorqued."}
+{"wo_id": "WO-000541", "asset_tag": "B-11", "technician": "T02", "opened_at": "2025-07-15 03:20", "note": "#11. ball race changed"}
+{"wo_id": "WO-000543", "asset_tag": "B-10", "technician": "T04", "opened_at": "2025-07-15 15:42", "note": "B-10, face - keep an eye, was weeping."}
+{"wo_id": "WO-000544", "asset_tag": "B-01", "technician": "T10", "opened_at": "2025-07-16 18:17", "note": "#1; exchanged mseal; wornout"}
+{"wo_id": "WO-000545", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-07-16 21:08", "note": "Pump 9; alarm; bad strainer; will watch."}
+{"wo_id": "WO-000548", "asset_tag": "B-01", "technician": "T09", "opened_at": "2025-07-17 08:05", "note": "#1 low flw bad nrv exchanged"}
+{"wo_id": "WO-000551", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-07-17 21:35", "note": "TEMP NORMAL / NPSH PROBLEM / IMP - TO DO NEXT SHIFT"}
+{"wo_id": "WO-000552", "asset_tag": "B-02", "technician": "T03", "opened_at": "2025-07-18 07:20", "note": "bomba 2, leaking, mud, carbon face new fitted"}
+{"wo_id": "WO-000553", "asset_tag": "B-07", "technician": "T13", "opened_at": "2025-07-18 15:45", "note": "brgs bad. re-shimmed"}
+{"wo_id": "WO-000554", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-07-19 08:21", "note": "bomba 10, growling, brng bad, renewed brng"}
+{"wo_id": "WO-000555", "asset_tag": "B-05", "technician": "T06", "opened_at": "2025-07-19 12:17", "note": "installed new bearings - bad bearings done"}
+{"wo_id": "WO-000557", "asset_tag": "B-02", "technician": "T02", "opened_at": "2025-07-20 05:16", "note": "trippdd 1.5 bar. dust. descaled motor unit"}
+{"wo_id": "WO-000558", "asset_tag": "B-05", "technician": "T03", "opened_at": "2025-07-20 07:23", "note": "bomba 5, low flow 6.7 bar, NDE brg ok, runner: damaged, runner reworked"}
+{"wo_id": "WO-000560", "asset_tag": "B-10", "technician": "T01", "opened_at": "2025-07-21 16:25", "note": "Pump 10; leaking; seal is wobbly; shimmed."}
+{"wo_id": "WO-000561", "asset_tag": "B-12", "technician": "T04", "opened_at": "2025-07-21 19:00", "note": "B-12, mech seal welded, was leaking bad, had it mech seal."}
+{"wo_id": "WO-000563", "asset_tag": "B-04", "technician": "T10", "opened_at": "2025-07-22 16:25", "note": "pump 4; exchanged motor unit; was hot; thermal trip"}
+{"wo_id": "WO-000565", "asset_tag": "B-12", "technician": "T19", "opened_at": "2025-07-22 21:39", "note": "B-12; growling 10.5mm/s; balance ok; no cavitation; no lube; gresed brg"}
+{"wo_id": "WO-000566", "asset_tag": "B-08", "technician": "T11", "opened_at": "2025-07-25 00:01", "note": "Bomba 8. alarm 4.8mm/s. round. left running round"}
+{"wo_id": "WO-000567", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-07-25 21:37", "note": "shaking. found drive coupling alignment out. trimmed"}
+{"wo_id": "WO-000568", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-07-26 02:44", "note": "Vibes bad - bad ball race - re-set"}
+{"wo_id": "WO-000569", "asset_tag": "B-06", "technician": "T17", "opened_at": "2025-07-26 03:19", "note": "B-06 low pressure 1.2 bar mtr fan is ok gland ok transmitter chewed exchanged"}
+{"wo_id": "WO-000570", "asset_tag": "B-04", "technician": "T20", "opened_at": "2025-07-26 03:38", "note": "B04; VIBRATION HIGH; NO GRES; LUBED ROLLER"}
+{"wo_id": "WO-000571", "asset_tag": "B-04", "technician": "T20", "opened_at": "2025-07-26 04:33", "note": "B04; END OF LIFE; SEAL SWAPPED"}
+{"wo_id": "WO-000574", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-07-28 23:43", "note": "B01; BEARINGS BAD; SWAPPED BEARINGS"}
+{"wo_id": "WO-000576", "asset_tag": "B-11", "technician": "T01", "opened_at": "2025-07-29 19:23", "note": "Pump 11; knocking; also gate valve wont close; flex: wornout; changed."}
+{"wo_id": "WO-000577", "asset_tag": "B-07", "technician": "T14", "opened_at": "2025-07-29 23:52", "note": "Noise - shift check - shift check inspcted"}
+{"wo_id": "WO-000578", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-07-30 01:02", "note": "Pmp4 gauuge reads wrong pm pm checked all ok"}
+{"wo_id": "WO-000579", "asset_tag": "B-12", "technician": "T02", "opened_at": "2025-07-30 01:05", "note": "rough noise 6.8 bar. DE brg: end of life. DE brg reworked"}
+{"wo_id": "WO-000580", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-07-30 17:24", "note": "Pump 5; rubber dust; bearings ok; out of align; coupling rubber re-aligned."}
+{"wo_id": "WO-000581", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-07-31 04:23", "note": "bomba 9. low flow. inspected walkdown"}
+{"wo_id": "WO-000582", "asset_tag": "B-05", "technician": "T18", "opened_at": "2025-07-31 12:58", "note": "P5, leaking bad, wornout, seeal pack installed new done"}
+{"wo_id": "WO-000584", "asset_tag": "B-06", "technician": "T09", "opened_at": "2025-08-01 06:11", "note": "p-06 gone check valve patched up"}
+{"wo_id": "WO-000585", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-08-01 09:43", "note": "B11; nrv trimmed; was low flow"}
+{"wo_id": "WO-000586", "asset_tag": "B-01", "technician": "T03", "opened_at": "2025-08-01 12:54", "note": "B-01, keep an eye impellor"}
+{"wo_id": "WO-000587", "asset_tag": "B-05", "technician": "T07", "opened_at": "2025-08-01 15:43", "note": "SHIMMED. WAS VIBES BAD. BEARINGS: OUT OF ALIGN"}
+{"wo_id": "WO-000588", "asset_tag": "B-04", "technician": "T20", "opened_at": "2025-08-01 23:54", "note": "B04; FLOW METER: END OF LIFE; PATCHED UP"}
+{"wo_id": "WO-000589", "asset_tag": "B-06", "technician": "T03", "opened_at": "2025-08-03 07:26", "note": "bomba 6, warm 5.3mm/s, also check valve leaking, mud, brgs new fitted"}
+{"wo_id": "WO-000592", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-08-05 09:40", "note": "adjusted - bearings: align off - impeller fine done"}
+{"wo_id": "WO-000593", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-08-05 11:41", "note": "B11; gland tightened; was dripping; loose gland"}
+{"wo_id": "WO-000594", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-08-05 16:04", "note": "Pump 8; hammering; nrv: cavitating; will watch."}
+{"wo_id": "WO-000595", "asset_tag": "B-04", "technician": "T19", "opened_at": "2025-08-05 17:30", "note": "#4; mtr fan ok; impellor is starved suction; swapped"}
+{"wo_id": "WO-000596", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-08-05 22:42", "note": "Bomba 3. leaking bad. overtemp. exchanged m/seal"}
+{"wo_id": "WO-000598", "asset_tag": "B-06", "technician": "T17", "opened_at": "2025-08-06 03:10", "note": "Pmp6 weepiing gland issue r&r gland"}
+{"wo_id": "WO-000599", "asset_tag": "B-08", "technician": "T17", "opened_at": "2025-08-06 05:27", "note": "P-08 stuck gland fine disch valve trimmed"}
+{"wo_id": "WO-000600", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-08-07 21:53", "note": "Pump 8; nrv is loose; retorqued nrv."}
+{"wo_id": "WO-000601", "asset_tag": "B-03", "technician": "T12", "opened_at": "2025-08-08 07:26", "note": "P-03. left running. was dripping. found stuffing box end of life"}
+{"wo_id": "WO-000602", "asset_tag": "B-10", "technician": "T13", "opened_at": "2025-08-08 14:03", "note": "low pressure 61C. foundation bolts issue. foundation bolts trimmed"}
+{"wo_id": "WO-000603", "asset_tag": "B-06", "technician": "T12", "opened_at": "2025-08-09 06:24", "note": "B06. left running. was rattling. found impellor cavitating. balance ok"}
+{"wo_id": "WO-000604", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-08-09 21:30", "note": "Pump 8; flow dropped; no issue w electric motor; vanes is wornout; changed vanes."}
+{"wo_id": "WO-000605", "asset_tag": "B-12", "technician": "T08", "opened_at": "2025-08-09 22:57", "note": "pmp12; rubber dust; no debris; jaw: align off; shimmed"}
+{"wo_id": "WO-000606", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-08-10 01:38", "note": "B-01 - leak at shaft - re-aligned face"}
+{"wo_id": "WO-000608", "asset_tag": "B-02", "technician": "T19", "opened_at": "2025-08-10 18:24", "note": "B-02; wet around shaft; impellor looks ok; seal rewound"}
+{"wo_id": "WO-000609", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-08-11 01:30", "note": "Pmp10 warm burnt out ball race new one fitted"}
+{"wo_id": "WO-000610", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-08-11 02:34", "note": "B10; END OF LIFE; SWAPPED DE BEARING"}
+{"wo_id": "WO-000611", "asset_tag": "B-12", "technician": "T03", "opened_at": "2025-08-11 08:27", "note": "bomba 12, eaten away, brng new fitted"}
+{"wo_id": "WO-000612", "asset_tag": "B-06", "technician": "T01", "opened_at": "2025-08-11 21:01", "note": "Pump 6; found roller ran dry; lubed."}
+{"wo_id": "WO-000613", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-08-12 05:30", "note": "Pmp12 gauge reads wrong suction strainer issue suction strainer cleaned out"}
+{"wo_id": "WO-000614", "asset_tag": "B-06", "technician": "T18", "opened_at": "2025-08-12 12:40", "note": "B06, mtr unit thermal trip, mtr unit descaled done"}
+{"wo_id": "WO-000615", "asset_tag": "B-06", "technician": "T06", "opened_at": "2025-08-12 13:38", "note": "b-06 - brg changed - brg issue done"}
+{"wo_id": "WO-000616", "asset_tag": "B-06", "technician": "T19", "opened_at": "2025-08-12 18:52", "note": "#6; noise at coupling 39A; cplg toast; r&r"}
+{"wo_id": "WO-000617", "asset_tag": "B-03", "technician": "T14", "opened_at": "2025-08-13 05:02", "note": "B-03 - weeping - tweaked face"}
+{"wo_id": "WO-000618", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-08-13 12:47", "note": "Put new gland; was dripping 13a; overtemp; checked impeller vanes ok; impeller vanes god"}
+{"wo_id": "WO-000620", "asset_tag": "B-01", "technician": "T11", "opened_at": "2025-08-14 02:12", "note": "Bomba 1. growling 9.0mm/s. motor not the problem. no lube. brng r&r"}
+{"wo_id": "WO-000622", "asset_tag": "B-06", "technician": "T10", "opened_at": "2025-08-14 15:06", "note": "#6; left running; found brng eaten away"}
+{"wo_id": "WO-000623", "asset_tag": "B-05", "technician": "T07", "opened_at": "2025-08-14 21:37", "note": "MOTOR UNIT REWOUND. WAS BUZZING. HOT TRIP"}
+{"wo_id": "WO-000624", "asset_tag": "B-08", "technician": "T20", "opened_at": "2025-08-16 02:01", "note": "B08; BEARINGS IS END OF LIFE; SWAPPED"}
+{"wo_id": "WO-000625", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-08-16 02:14", "note": "Bomba 3. rubber dust 40a. exchanged spider"}
+{"wo_id": "WO-000626", "asset_tag": "B-08", "technician": "T20", "opened_at": "2025-08-16 05:11", "note": "B08; LOW FLOW; SUCTION SCREEN CLOGGED; CLEARED"}
+{"wo_id": "WO-000627", "asset_tag": "B-02", "technician": "T01", "opened_at": "2025-08-16 19:29", "note": "Pump 2; amps high; balance ok; cooked electric motor; electric motor cleared."}
+{"wo_id": "WO-000628", "asset_tag": "B-10", "technician": "T01", "opened_at": "2025-08-16 21:05", "note": "Pump 10; wet around shaft 8.8mm/s; face faulty; swapped."}
+{"wo_id": "WO-000629", "asset_tag": "B-09", "technician": "T05", "opened_at": "2025-08-17 04:06", "note": "bad stuffing box / monitor done"}
+{"wo_id": "WO-000631", "asset_tag": "B-04", "technician": "T02", "opened_at": "2025-08-18 03:43", "note": "pmp4. mud. strainer cleared"}
+{"wo_id": "WO-000632", "asset_tag": "B-03", "technician": "T09", "opened_at": "2025-08-18 12:25", "note": "b03 weeping carbon face loose fixed"}
+{"wo_id": "WO-000633", "asset_tag": "B-10", "technician": "T03", "opened_at": "2025-08-18 13:29", "note": "vibes 32A, check valve fine, cav, reworked runner"}
+{"wo_id": "WO-000634", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-08-18 15:49", "note": "Pump 5; weeping; cooked seal; put new."}
+{"wo_id": "WO-000635", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-08-19 10:00", "note": "Drive motor inspected; was amps high 2.5 bar; cooked; bearings ok"}
+{"wo_id": "WO-000636", "asset_tag": "B-11", "technician": "T07", "opened_at": "2025-08-19 19:52", "note": "P11. NFF. WAS LOW PRESSURE 73C. WALKDOWN"}
+{"wo_id": "WO-000637", "asset_tag": "B-07", "technician": "T04", "opened_at": "2025-08-19 20:05", "note": "put new, was no flow, found wheel end of life, also mech seal dripping, bolts ok."}
+{"wo_id": "WO-000638", "asset_tag": "B-11", "technician": "T20", "opened_at": "2025-08-19 22:22", "note": "B11; WET AROUND SHAFT; END OF LIFE; GLAND SWAPPED"}
+{"wo_id": "WO-000639", "asset_tag": "B-07", "technician": "T17", "opened_at": "2025-08-20 02:40", "note": "Pmp7 hummnig loud wateer in oil flushed oil de bearing"}
+{"wo_id": "WO-000640", "asset_tag": "B-03", "technician": "T09", "opened_at": "2025-08-20 06:13", "note": "b03 worn out exchanged ms"}
+{"wo_id": "WO-000641", "asset_tag": "B-03", "technician": "T12", "opened_at": "2025-08-20 09:51", "note": "flushed oil. was hot. electics faulty. balance ok. alignment fine"}
+{"wo_id": "WO-000643", "asset_tag": "B-11", "technician": "T19", "opened_at": "2025-08-20 16:31", "note": "seal is ok; brg is lack of lube; greased"}
+{"wo_id": "WO-000644", "asset_tag": "B-05", "technician": "T18", "opened_at": "2025-08-21 13:46", "note": "B05, vibes bad, driive end bearing dry, drive end bearing oil change done"}
+{"wo_id": "WO-000645", "asset_tag": "B-02", "technician": "T13", "opened_at": "2025-08-21 17:14", "note": "pump 2. rattling. impeller vanes issue. repacked impeller vanes"}
+{"wo_id": "WO-000647", "asset_tag": "B-03", "technician": "T13", "opened_at": "2025-08-21 19:37", "note": "pump 3. impeller vanes faulty. impeller vanes cleared"}
+{"wo_id": "WO-000648", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-08-21 22:03", "note": "pmp9. wet around shaft. bad carbon face. changed carbon face"}
+{"wo_id": "WO-000649", "asset_tag": "B-07", "technician": "T17", "opened_at": "2025-08-22 01:30", "note": "P7 warm oil clean temp ok ball race oil change"}
+{"wo_id": "WO-000651", "asset_tag": "B-01", "technician": "T18", "opened_at": "2025-08-22 09:15", "note": "No issue w gland packing, wornout, pressure gauge swapped done"}
+{"wo_id": "WO-000652", "asset_tag": "B-12", "technician": "T06", "opened_at": "2025-08-22 10:18", "note": "changed - was weeping - glland failed - suction valve good done"}
+{"wo_id": "WO-000653", "asset_tag": "B-04", "technician": "T15", "opened_at": "2025-08-22 13:41", "note": "Impeller vaanes - monitor; was no flow; cav"}
+{"wo_id": "WO-000655", "asset_tag": "B-10", "technician": "T04", "opened_at": "2025-08-22 18:11", "note": "B-10, checked shift check, was alarm 12A, shift check."}
+{"wo_id": "WO-000658", "asset_tag": "B-06", "technician": "T02", "opened_at": "2025-08-25 03:35", "note": "pmp6. changed stuffing box"}
+{"wo_id": "WO-000659", "asset_tag": "B-05", "technician": "T13", "opened_at": "2025-08-25 15:47", "note": "rubber dust 60A. cpl slack. re-ste"}
+{"wo_id": "WO-000660", "asset_tag": "B-10", "technician": "T07", "opened_at": "2025-08-25 17:59", "note": "EXCHANGED M/SEAL. EATEN AWAY. ALSO COUPLING RUBBER RUBBER DUST"}
+{"wo_id": "WO-000662", "asset_tag": "B-07", "technician": "T01", "opened_at": "2025-08-25 20:57", "note": "Pump 7; roller wornout; changed roller."}
+{"wo_id": "WO-000663", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-08-25 23:49", "note": "leaking. shot. exchanged face"}
+{"wo_id": "WO-000664", "asset_tag": "B-06", "technician": "T05", "opened_at": "2025-08-26 05:05", "note": "pmp6 / dp high / blown out suction strainer done"}
+{"wo_id": "WO-000665", "asset_tag": "B-06", "technician": "T08", "opened_at": "2025-08-26 05:13", "note": "smells burnt; DE bearing fine; blocked fan cover; windings ceared out"}
+{"wo_id": "WO-000666", "asset_tag": "B-01", "technician": "T10", "opened_at": "2025-08-26 19:38", "note": "bomba 1; m/seal overhauled; was spraying; sand; checked cpl ok"}
+{"wo_id": "WO-000667", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-08-26 20:01", "note": "replaced drive end bearing, was humming loud, found drive end bearing end of life."}
+{"wo_id": "WO-000670", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-08-27 08:38", "note": "Bomba 11, mech seal good, suction valve ok, overtemp, electrics refurbished done"}
+{"wo_id": "WO-000671", "asset_tag": "B-07", "technician": "T15", "opened_at": "2025-08-27 13:54", "note": "Fitted new bering; wornout"}
+{"wo_id": "WO-000672", "asset_tag": "B-05", "technician": "T18", "opened_at": "2025-08-28 12:03", "note": "B05, sction valve fine, chewed drive end baering, drive end bearing - waiing spares done"}
+{"wo_id": "WO-000674", "asset_tag": "B-05", "technician": "T09", "opened_at": "2025-08-28 13:33", "note": "b05 amps hiigh cooked moor unit r&r"}
+{"wo_id": "WO-000677", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-08-29 02:20", "note": "Bomba 3. mud butterfly. blown out butterfly"}
+{"wo_id": "WO-000679", "asset_tag": "B-01", "technician": "T19", "opened_at": "2025-08-29 17:57", "note": "B-01; hot 13A; brg failed; brg trimmed"}
+{"wo_id": "WO-000680", "asset_tag": "B-11", "technician": "T10", "opened_at": "2025-08-29 21:52", "note": "#11; suction strainer descaled; was dp high 4.8mm/s; fouled"}
+{"wo_id": "WO-000681", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-08-30 04:18", "note": "Align good - overtemp - motor fan patched up"}
+{"wo_id": "WO-000682", "asset_tag": "B-08", "technician": "T15", "opened_at": "2025-08-30 13:00", "note": "De housing r&r; was running hot 3.3mm/s; wornout de housing"}
+{"wo_id": "WO-000683", "asset_tag": "B-11", "technician": "T18", "opened_at": "2025-08-30 13:27", "note": "B11, hot, out of align, re-set bering done"}
+{"wo_id": "WO-000684", "asset_tag": "B-06", "technician": "T06", "opened_at": "2025-09-01 08:57", "note": "p6 - installed new mech seal - was wet around shaft - found mech seal align off done"}
+{"wo_id": "WO-000685", "asset_tag": "B-08", "technician": "T12", "opened_at": "2025-09-01 11:39", "note": "B08. cleared gland packing. was wet around shat. gland packing failed. also gate valve stuck"}
+{"wo_id": "WO-000686", "asset_tag": "B-12", "technician": "T01", "opened_at": "2025-09-01 15:30", "note": "Pump 12; wont close; nrv faulty; nrv shimmed."}
+{"wo_id": "WO-000687", "asset_tag": "B-11", "technician": "T01", "opened_at": "2025-09-01 17:20", "note": "Pump 11; trip on overload; found electric motor overtemp; checked."}
+{"wo_id": "WO-000689", "asset_tag": "B-09", "technician": "T09", "opened_at": "2025-09-02 07:07", "note": "b09 noise at coupling 3.0 bar also de bearing growling coupling rubber failed fitted new"}
+{"wo_id": "WO-000690", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-09-02 10:30", "note": "bomba 7, flushed oil NDE brg"}
+{"wo_id": "WO-000692", "asset_tag": "B-10", "technician": "T08", "opened_at": "2025-09-03 01:58", "note": "alarm; wakdown; walkdown checked all ok"}
+{"wo_id": "WO-000693", "asset_tag": "B-03", "technician": "T03", "opened_at": "2025-09-03 08:13", "note": "bomba 3, soft foot, re-set non return"}
+{"wo_id": "WO-000696", "asset_tag": "B-08", "technician": "T05", "opened_at": "2025-09-05 02:20", "note": "pump 8 / disch valve issue / disch valve flushed done"}
+{"wo_id": "WO-000697", "asset_tag": "B-07", "technician": "T02", "opened_at": "2025-09-06 02:24", "note": "vibes bad 96C. DE brg had it. exchanged DE brg"}
+{"wo_id": "WO-000698", "asset_tag": "B-03", "technician": "T03", "opened_at": "2025-09-06 06:40", "note": "bomba 3, rough noise, eaten away, renewed brng"}
+{"wo_id": "WO-000699", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-09-06 08:58", "note": "pmup 12. reworked. was amps high. bad ipmeller"}
+{"wo_id": "WO-000700", "asset_tag": "B-09", "technician": "T18", "opened_at": "2025-09-06 11:02", "note": "Noise at coupling, impeller vanes not the problem, coupling rubber faluty, re-set coupling rubber done"}
+{"wo_id": "WO-000701", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-09-06 11:20", "note": "resealed - electrics end of life done"}
+{"wo_id": "WO-000702", "asset_tag": "B-07", "technician": "T06", "opened_at": "2025-09-07 09:08", "note": "installed new ball race - was humming loud - ball race is scored done"}
+{"wo_id": "WO-000703", "asset_tag": "B-08", "technician": "T04", "opened_at": "2025-09-07 14:56", "note": "replaced drive end bearing, was humming loud, had it."}
+{"wo_id": "WO-000704", "asset_tag": "B-12", "technician": "T13", "opened_at": "2025-09-07 15:47", "note": "B12. dripping 2.6 bar. eaten away. gland new fitted"}
+{"wo_id": "WO-000705", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-09-07 17:19", "note": "put new mech seal, was weeping, end of life."}
+{"wo_id": "WO-000706", "asset_tag": "B-03", "technician": "T14", "opened_at": "2025-09-08 04:20", "note": "Running hot - bearing faulty - bearing swapped"}
+{"wo_id": "WO-000707", "asset_tag": "B-08", "technician": "T08", "opened_at": "2025-09-08 05:41", "note": "P-08; running hot; ball race is grit in it; ball race r&r"}
+{"wo_id": "WO-000710", "asset_tag": "B-09", "technician": "T06", "opened_at": "2025-09-09 07:40", "note": "flushed - windings is fouled fan done"}
+{"wo_id": "WO-000711", "asset_tag": "B-07", "technician": "T04", "opened_at": "2025-09-09 16:09", "note": "B-07, roller - needs replacing, parts ordered, was ruogh noise 7.7mm/s, roller is worn, coupling is ok."}
+{"wo_id": "WO-000712", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-09-09 18:05", "note": "bzzing 5.1 bar. motor fan: mud. cleared out motor fan"}
+{"wo_id": "WO-000714", "asset_tag": "B-03", "technician": "T12", "opened_at": "2025-09-10 07:36", "note": "pump 3. re-set suct valve. was hammering"}
+{"wo_id": "WO-000715", "asset_tag": "B-05", "technician": "T12", "opened_at": "2025-09-10 08:47", "note": "B05. impellor - left running. was no flow. impellor issue"}
+{"wo_id": "WO-000716", "asset_tag": "B-03", "technician": "T13", "opened_at": "2025-09-10 14:59", "note": "noise. strainer basket: muck. cleaned strainer basket"}
+{"wo_id": "WO-000717", "asset_tag": "B-02", "technician": "T08", "opened_at": "2025-09-11 03:37", "note": "NDE brg good; gunk; vaes cleared out"}
+{"wo_id": "WO-000719", "asset_tag": "B-06", "technician": "T16", "opened_at": "2025-09-11 19:53", "note": "SHAKING / RE-ALIGNED COUPLING INSERT"}
+{"wo_id": "WO-000720", "asset_tag": "B-03", "technician": "T20", "opened_at": "2025-09-12 01:30", "note": "B03; WEEPING; IMPELLER VANES IS OK; NO ISSUE W BEARINGS; SEAL FAILED; INSTALLED NEW"}
+{"wo_id": "WO-000722", "asset_tag": "B-05", "technician": "T04", "opened_at": "2025-09-13 18:19", "note": "replaced roller, was rough noise, muck, bolts tight."}
+{"wo_id": "WO-000723", "asset_tag": "B-04", "technician": "T01", "opened_at": "2025-09-13 19:27", "note": "B-04; spraying; face changed."}
+{"wo_id": "WO-000724", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-09-13 22:39", "note": "Bomba 3. no flow. heavy side. runner adjusted"}
+{"wo_id": "WO-000726", "asset_tag": "B-09", "technician": "T08", "opened_at": "2025-09-16 03:33", "note": "B-09; alarrm 9.6mm/s; also DE brg vbes bad; strainer basket bad; descaled"}
+{"wo_id": "WO-000727", "asset_tag": "B-11", "technician": "T12", "opened_at": "2025-09-16 06:04", "note": "bomba 11. installed new. was warm. bad DE bearng"}
+{"wo_id": "WO-000728", "asset_tag": "B-10", "technician": "T09", "opened_at": "2025-09-16 09:14", "note": "bomba 10 loose bolts re-set stuffing box"}
+{"wo_id": "WO-000729", "asset_tag": "B-11", "technician": "T12", "opened_at": "2025-09-16 10:15", "note": "pmp11. cleared. was leakking 19A. found gate valve silt"}
+{"wo_id": "WO-000731", "asset_tag": "B-05", "technician": "T07", "opened_at": "2025-09-16 15:56", "note": "FITTED NEW DE HOUSING. WAS NOISSY. DE HOUSING: CRACKED"}
+{"wo_id": "WO-000732", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-09-16 17:04", "note": "FLEX FAILED / CHANGED FLEX"}
+{"wo_id": "WO-000733", "asset_tag": "B-09", "technician": "T08", "opened_at": "2025-09-16 22:28", "note": "low flow; impeller issue; impeller exchanged"}
+{"wo_id": "WO-000734", "asset_tag": "B-05", "technician": "T20", "opened_at": "2025-09-16 23:00", "note": "B05; NO WEAR; SUCTION VALVE ISSUE; SWAPPED"}
+{"wo_id": "WO-000736", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-09-17 13:53", "note": "B12, impeller vanes: cavitation, no spares done"}
+{"wo_id": "WO-000737", "asset_tag": "B-01", "technician": "T08", "opened_at": "2025-09-18 03:58", "note": "vibration high; bearing gone; needs replacing, parts ordered bearing"}
+{"wo_id": "WO-000739", "asset_tag": "B-11", "technician": "T08", "opened_at": "2025-09-19 05:54", "note": "B-11; rough noise 80C; found brng damaged; excjanged brng"}
+{"wo_id": "WO-000740", "asset_tag": "B-04", "technician": "T05", "opened_at": "2025-09-20 00:37", "note": "pump 4 / temp ok / mech seal faulty / changed mech seal done"}
+{"wo_id": "WO-000745", "asset_tag": "B-08", "technician": "T05", "opened_at": "2025-09-20 23:39", "note": "b08 / cant throttle / isolation clogged / isolatuon fitted new done"}
+{"wo_id": "WO-000747", "asset_tag": "B-02", "technician": "T08", "opened_at": "2025-09-22 01:36", "note": "bomba 2; rogh noise; bolts tight; motor fan good; gunk; exchanged DE housing"}
+{"wo_id": "WO-000748", "asset_tag": "B-12", "technician": "T20", "opened_at": "2025-09-22 23:14", "note": "B12; LEAKING; HAD IT; CARBON FACE - PARTS ORDERED"}
+{"wo_id": "WO-000749", "asset_tag": "B-10", "technician": "T11", "opened_at": "2025-09-22 23:21", "note": "Bomba 10. amps high. also brgs growling. no lube. topped up oil mtr"}
+{"wo_id": "WO-000750", "asset_tag": "B-04", "technician": "T10", "opened_at": "2025-09-23 17:24", "note": "pmp4; lube done motor unit; was tripped 9.4mm/s; no gres"}
+{"wo_id": "WO-000751", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-09-23 19:14", "note": "HUMMING LOUD / ALSO SHAFT SEAL LEAK AT SHAFT / REBUILT BALL RACE"}
+{"wo_id": "WO-000752", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-09-24 02:04", "note": "Cant throttle gladn is ok soft foot disch valve set up"}
+{"wo_id": "WO-000753", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-09-24 03:40", "note": "Bomba 9. sprayying 55a. scored. seal pack exchanged"}
+{"wo_id": "WO-000754", "asset_tag": "B-07", "technician": "T18", "opened_at": "2025-09-24 07:28", "note": "B07, vibes up, wornout, replaced de housing done"}
+{"wo_id": "WO-000755", "asset_tag": "B-11", "technician": "T03", "opened_at": "2025-09-24 12:28", "note": "bomba 11, rattling, clogged, cleared impellor"}
+{"wo_id": "WO-000756", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-09-24 12:52", "note": "pmp12. r&r non return. bad non return"}
+{"wo_id": "WO-000757", "asset_tag": "B-02", "technician": "T16", "opened_at": "2025-09-24 20:20", "note": "TRIP ON OVERLOAD / MUCK / HOSED MOTOR"}
+{"wo_id": "WO-000758", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-09-24 23:53", "note": "#1; IMPELLER VANES BLOCKED; IMPELLER VANES CLEARED"}
+{"wo_id": "WO-000759", "asset_tag": "B-07", "technician": "T05", "opened_at": "2025-09-25 00:09", "note": "noisy 68a / suction valve is ok / balance ok / bad bearing / bearing trimmed done"}
+{"wo_id": "WO-000762", "asset_tag": "B-03", "technician": "T18", "opened_at": "2025-09-25 10:24", "note": "B03, vibes, bfgs loks ok, re-st runner done"}
+{"wo_id": "WO-000764", "asset_tag": "B-10", "technician": "T19", "opened_at": "2025-09-25 14:37", "note": "P-10; wet around shaft 1.6 bar; seal failed; r&r"}
+{"wo_id": "WO-000765", "asset_tag": "B-12", "technician": "T10", "opened_at": "2025-09-25 20:20", "note": "drive coupling new one fitted; impeller vanes good"}
+{"wo_id": "WO-000769", "asset_tag": "B-07", "technician": "T10", "opened_at": "2025-09-26 18:05", "note": "p7; ball race rewound; was vibration high; ball race: pitted; m/seal good; motor fan not the problem"}
+{"wo_id": "WO-000770", "asset_tag": "B-04", "technician": "T17", "opened_at": "2025-09-26 22:58", "note": "Pmp4 rough noise also disch valve wont close bad ball race ball race new fitted"}
+{"wo_id": "WO-000771", "asset_tag": "B-09", "technician": "T14", "opened_at": "2025-09-28 03:21", "note": "Rattling - silt - eyeballed vanes"}
+{"wo_id": "WO-000772", "asset_tag": "B-06", "technician": "T02", "opened_at": "2025-09-28 04:16", "note": "pmp6. DE brg is silt. DE brg renewed"}
+{"wo_id": "WO-000773", "asset_tag": "B-04", "technician": "T15", "opened_at": "2025-09-28 06:55", "note": "B04; retorqued sal pack; was leaking bad; no debris"}
+{"wo_id": "WO-000774", "asset_tag": "B-08", "technician": "T15", "opened_at": "2025-09-28 11:57", "note": "Jaw re-aligned; was knocking; also bearings noisy"}
+{"wo_id": "WO-000775", "asset_tag": "B-09", "technician": "T20", "opened_at": "2025-09-29 01:52", "note": "B09; HUMMING LOUD; ALIGNMENT FINE; SWAPPED BEARINGS"}
+{"wo_id": "WO-000777", "asset_tag": "B-08", "technician": "T03", "opened_at": "2025-09-29 09:50", "note": "bomba 8, motor unit is eaten away, new fitted"}
+{"wo_id": "WO-000778", "asset_tag": "B-01", "technician": "T01", "opened_at": "2025-09-29 14:05", "note": "Pump 1; leaking 78c; bolts tight; off center; face shimmed."}
+{"wo_id": "WO-000780", "asset_tag": "B-11", "technician": "T05", "opened_at": "2025-09-29 22:32", "note": "b11 / cant throttle / found non return gravel noise / set up non return done"}
+{"wo_id": "WO-000781", "asset_tag": "B-02", "technician": "T20", "opened_at": "2025-09-30 00:46", "note": "B02; INSPECTED WEEKLY CHECK"}
+{"wo_id": "WO-000783", "asset_tag": "B-05", "technician": "T05", "opened_at": "2025-10-01 00:50", "note": "b05 / motor bad / repaired done"}
+{"wo_id": "WO-000786", "asset_tag": "B-10", "technician": "T12", "opened_at": "2025-10-01 11:28", "note": "B10. impellor balanced. was no flow"}
+{"wo_id": "WO-000788", "asset_tag": "B-02", "technician": "T11", "opened_at": "2025-10-02 04:38", "note": "Bomba 2. leak at shaft 77c. bad m/seal. m/seal re-shimmed"}
+{"wo_id": "WO-000790", "asset_tag": "B-03", "technician": "T20", "opened_at": "2025-10-02 05:28", "note": "B03; VIBES BAD; BEARINGS BAD; REPACKED"}
+{"wo_id": "WO-000791", "asset_tag": "B-12", "technician": "T15", "opened_at": "2025-10-02 08:10", "note": "Mseal new fitted; was weeping; mseal u/s"}
+{"wo_id": "WO-000792", "asset_tag": "B-08", "technician": "T19", "opened_at": "2025-10-02 18:16", "note": "B-08; hammering; stuck w debirs; cleaned out check valve"}
+{"wo_id": "WO-000793", "asset_tag": "B-12", "technician": "T02", "opened_at": "2025-10-03 01:41", "note": "pmp12. vibes bad. bad DE brg. DE brg changed"}
+{"wo_id": "WO-000796", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-10-03 13:05", "note": "B-12. instlaled new. was noisy 67A. water in oil brng"}
+{"wo_id": "WO-000797", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-10-03 21:00", "note": "low flow. gauge eaten away. gauge new fitted"}
+{"wo_id": "WO-000798", "asset_tag": "B-06", "technician": "T20", "opened_at": "2025-10-03 23:35", "note": "B06; SUCTION VALVE IS CAV; TRIMMED"}
+{"wo_id": "WO-000799", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-10-04 05:12", "note": "Pmp11 low pressure starved suction impeller vanes set up"}
+{"wo_id": "WO-000800", "asset_tag": "B-12", "technician": "T04", "opened_at": "2025-10-04 16:32", "note": "B-12, put new, was rattling, wheel cavitating."}
+{"wo_id": "WO-000801", "asset_tag": "B-10", "technician": "T19", "opened_at": "2025-10-05 14:18", "note": "P-10; no issue w cpl; motor fan u/s; motor fan unblocked"}
+{"wo_id": "WO-000803", "asset_tag": "B-02", "technician": "T08", "opened_at": "2025-10-06 23:47", "note": "low pressure; cav; runner exchanged"}
+{"wo_id": "WO-000804", "asset_tag": "B-10", "technician": "T14", "opened_at": "2025-10-07 00:07", "note": "Jaw: out of line - re-set"}
+{"wo_id": "WO-000805", "asset_tag": "B-04", "technician": "T15", "opened_at": "2025-10-07 10:13", "note": "B04; electrics greased up; was amps high; low oil"}
+{"wo_id": "WO-000806", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-10-07 14:18", "note": "PUMP 1. PUT NEW. WAS AMPS HIGH. EATEN AWAY MTR"}
+{"wo_id": "WO-000807", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-10-07 14:49", "note": "AMPS HIGH / BLOWN OUT WHEEL"}
+{"wo_id": "WO-000808", "asset_tag": "B-11", "technician": "T13", "opened_at": "2025-10-07 21:50", "note": "motor fan is eaten away. overhauled"}
+{"wo_id": "WO-000809", "asset_tag": "B-10", "technician": "T14", "opened_at": "2025-10-07 22:47", "note": "Weeping 31a - installed new stuffing box"}
+{"wo_id": "WO-000810", "asset_tag": "B-03", "technician": "T20", "opened_at": "2025-10-08 05:41", "note": "B03; WOBBLY; RETORQUED SEAL"}
+{"wo_id": "WO-000811", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-10-08 07:47", "note": "P12, vibes bad, de housing wornout, de housing exchanged done"}
+{"wo_id": "WO-000812", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-10-08 08:52", "note": "B12. reworked non return. was leaking. non return is end of life"}
+{"wo_id": "WO-000813", "asset_tag": "B-04", "technician": "T09", "opened_at": "2025-10-08 13:28", "note": "b04 no flow balanec ok tekp ok impelr exchanged"}
+{"wo_id": "WO-000814", "asset_tag": "B-01", "technician": "T05", "opened_at": "2025-10-08 22:35", "note": "b01 / low pressure / temp normal / walkdown / nff done"}
+{"wo_id": "WO-000815", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-10-09 02:40", "note": "B01; SUCTION VALVE LOOSE; SUCTION VALVE RETORQUED"}
+{"wo_id": "WO-000816", "asset_tag": "B-07", "technician": "T08", "opened_at": "2025-10-09 05:27", "note": "smells burnt; bad motor fan; cleared out motor fan"}
+{"wo_id": "WO-000817", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-10-09 20:55", "note": "B08 / CLUNKING / IMPELLOR FINE / FOUND COUPLING INSERT WORN / COUPLING INSERT CHANGED"}
+{"wo_id": "WO-000818", "asset_tag": "B-10", "technician": "T09", "opened_at": "2025-10-10 13:53", "note": "b10 nrv is silt descaled nrv"}
+{"wo_id": "WO-000819", "asset_tag": "B-10", "technician": "T07", "opened_at": "2025-10-10 18:24", "note": "CHANGED. WAS WET AROUND SHAFT 11.0MM/S. M/SEAL: SAND"}
+{"wo_id": "WO-000820", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-10-11 09:58", "note": "B12, low pressure, suction valve looks ok, imbalance, vanes re-set done"}
+{"wo_id": "WO-000821", "asset_tag": "B-01", "technician": "T16", "opened_at": "2025-10-11 16:09", "note": "B01 / VIBES BAD / FLUHED OIL DE BEARING"}
+{"wo_id": "WO-000822", "asset_tag": "B-07", "technician": "T17", "opened_at": "2025-10-12 02:45", "note": "Pmp7 shaking 6.7mm/s drive coupling bad drive coupling re-est"}
+{"wo_id": "WO-000825", "asset_tag": "B-06", "technician": "T08", "opened_at": "2025-10-13 01:38", "note": "B-06; vibes; mtr fan fine; impeller vanes u/s; no fault found"}
+{"wo_id": "WO-000827", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-10-14 07:25", "note": "B-12, out of align, drive end beariing re-set done"}
+{"wo_id": "WO-000828", "asset_tag": "B-11", "technician": "T13", "opened_at": "2025-10-14 19:40", "note": "amps high. impelr bad. impelr installed new"}
+{"wo_id": "WO-000830", "asset_tag": "B-08", "technician": "T08", "opened_at": "2025-10-15 03:13", "note": "spider exchanged"}
+{"wo_id": "WO-000831", "asset_tag": "B-02", "technician": "T03", "opened_at": "2025-10-15 11:17", "note": "bomba 2, impellor failed, descaled"}
+{"wo_id": "WO-000832", "asset_tag": "B-02", "technician": "T05", "opened_at": "2025-10-16 00:56", "note": "bomba 2 / valve good / found de brg dirt in oil / changed done"}
+{"wo_id": "WO-000833", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-10-16 01:08", "note": "B10; RATTLING; SUCTION VALVE OK; TRIMMED VANES"}
+{"wo_id": "WO-000834", "asset_tag": "B-12", "technician": "T05", "opened_at": "2025-10-16 01:21", "note": "b12 / vibration high / low oil brg / regreased done"}
+{"wo_id": "WO-000835", "asset_tag": "B-12", "technician": "T20", "opened_at": "2025-10-16 02:14", "note": "B12; GROWLING; BEARINGS - PARTS ORDERED"}
+{"wo_id": "WO-000836", "asset_tag": "B-09", "technician": "T20", "opened_at": "2025-10-16 02:38", "note": "B09; LOW PRESSURE; WEEKLY CHECK; PARTS ORDERED WEEKLY CHECK"}
+{"wo_id": "WO-000837", "asset_tag": "B-07", "technician": "T18", "opened_at": "2025-10-16 09:20", "note": "Hot, found de housinng low oil, greased up de housing done"}
+{"wo_id": "WO-000839", "asset_tag": "B-02", "technician": "T19", "opened_at": "2025-10-16 19:09", "note": "B-02; brg bad; put new"}
+{"wo_id": "WO-000840", "asset_tag": "B-04", "technician": "T14", "opened_at": "2025-10-16 22:27", "note": "P4 - strainer clean - bad motor unit - exchanged motor unit"}
+{"wo_id": "WO-000841", "asset_tag": "B-06", "technician": "T11", "opened_at": "2025-10-17 00:03", "note": "Humming loud 2.2 bar. checked impeller vanes ok. no lube. gresed brg"}
+{"wo_id": "WO-000842", "asset_tag": "B-01", "technician": "T13", "opened_at": "2025-10-17 20:05", "note": "rough noise 60C. bad DE bearing. DE bearing new fitted"}
+{"wo_id": "WO-000843", "asset_tag": "B-12", "technician": "T02", "opened_at": "2025-10-19 03:10", "note": "motor unit reworked"}
+{"wo_id": "WO-000844", "asset_tag": "B-09", "technician": "T06", "opened_at": "2025-10-19 08:56", "note": "changed - was spraying - gland packing issue done"}
+{"wo_id": "WO-000845", "asset_tag": "B-12", "technician": "T01", "opened_at": "2025-10-19 14:07", "note": "Pump 12; leaking; face faulty; retorqued."}
+{"wo_id": "WO-000846", "asset_tag": "B-05", "technician": "T13", "opened_at": "2025-10-19 21:48", "note": "warm 11.5mm/s. bering: grit in it. new fitted"}
+{"wo_id": "WO-000847", "asset_tag": "B-05", "technician": "T15", "opened_at": "2025-10-20 09:09", "note": "Shimmed; was low pressure 66a; found foundation bolts loose bolts"}
+{"wo_id": "WO-000848", "asset_tag": "B-03", "technician": "T04", "opened_at": "2025-10-20 21:34", "note": "B-03, blown out, was amps high, silt wheel."}
+{"wo_id": "WO-000849", "asset_tag": "B-06", "technician": "T11", "opened_at": "2025-10-21 00:45", "note": "Leaking bad 77c. mud. r&r m/seal"}
+{"wo_id": "WO-000850", "asset_tag": "B-03", "technician": "T08", "opened_at": "2025-10-21 22:38", "note": "bomba 3; leak at shaft; no cavitaation; seal: dirty product; exchanged seal"}
+{"wo_id": "WO-000851", "asset_tag": "B-05", "technician": "T02", "opened_at": "2025-10-22 03:39", "note": "low flow. weekly check. looked over weekly check"}
+{"wo_id": "WO-000852", "asset_tag": "B-08", "technician": "T03", "opened_at": "2025-10-22 09:48", "note": "bomba 8, rubber dust, alin good, no issue w mtr, flex issue, re-set"}
+{"wo_id": "WO-000853", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-10-24 13:27", "note": "stuffing box changed - was weeping - stuffing box scored - no looseness done"}
+{"wo_id": "WO-000854", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-10-25 06:20", "note": "B12. r&r mtr. was trip on overload. overheeated"}
+{"wo_id": "WO-000855", "asset_tag": "B-10", "technician": "T12", "opened_at": "2025-10-25 07:41", "note": "B10. rebuilt seal. was wet around shaft"}
+{"wo_id": "WO-000856", "asset_tag": "B-11", "technician": "T06", "opened_at": "2025-10-26 06:49", "note": "b-11 - adjusted de brg - was rough noise - de brg failed - also electric motor hot done"}
+{"wo_id": "WO-000857", "asset_tag": "B-08", "technician": "T16", "opened_at": "2025-10-26 18:59", "note": "B08 / GROWLING / WORKING LOOSE / DE BEARING TWEAKED"}
+{"wo_id": "WO-000859", "asset_tag": "B-10", "technician": "T04", "opened_at": "2025-10-27 18:53", "note": "B-10, replaced, was rattling 95C, impellor is starved suction."}
+{"wo_id": "WO-000860", "asset_tag": "B-06", "technician": "T17", "opened_at": "2025-10-27 23:23", "note": "Pmp6 running hot also mseal wet around shaft bearing is water in oil exchanged bearing"}
+{"wo_id": "WO-000862", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-10-28 05:47", "note": "Not in line - brgs lined up"}
+{"wo_id": "WO-000864", "asset_tag": "B-04", "technician": "T12", "opened_at": "2025-10-28 13:27", "note": "B04. strainer basekt cleared. was alarm. strainer basket fauty"}
+{"wo_id": "WO-000865", "asset_tag": "B-06", "technician": "T13", "opened_at": "2025-10-28 19:43", "note": "weeping. mseal u/s. installed new"}
+{"wo_id": "WO-000866", "asset_tag": "B-09", "technician": "T11", "opened_at": "2025-10-29 01:59", "note": "#9. vibration high. ran dry. topped up oil brng"}
+{"wo_id": "WO-000868", "asset_tag": "B-02", "technician": "T01", "opened_at": "2025-10-29 21:32", "note": "Bomba 2; humming loud; bearings re-aligned."}
+{"wo_id": "WO-000869", "asset_tag": "B-01", "technician": "T06", "opened_at": "2025-10-30 12:07", "note": "retorqued baseplate - found baseplate working loose done"}
+{"wo_id": "WO-000870", "asset_tag": "B-04", "technician": "T07", "opened_at": "2025-10-30 21:57", "note": "BRNG - ON HOLD. WAS NOISY 8.4MM/S. WORN OUT"}
+{"wo_id": "WO-000871", "asset_tag": "B-12", "technician": "T16", "opened_at": "2025-10-31 15:00", "note": "P-12 / CLUNKING 98C / CHECKED SHAFT SEAL OK / RE-ALIGNED COUPLING INSERT"}
+{"wo_id": "WO-000874", "asset_tag": "B-02", "technician": "T13", "opened_at": "2025-11-01 19:18", "note": "p2. buzzing. motor unit is burnt. motor unit cleared"}
+{"wo_id": "WO-000875", "asset_tag": "B-06", "technician": "T16", "opened_at": "2025-11-01 20:58", "note": "VIBRATION HIGH / FOUND DE BEARING LOW OIL / DE BEARING ADDED GREASE"}
+{"wo_id": "WO-000876", "asset_tag": "B-02", "technician": "T20", "opened_at": "2025-11-02 04:14", "note": "END OF LIFE; SWAPPED JAW"}
+{"wo_id": "WO-000877", "asset_tag": "B-02", "technician": "T03", "opened_at": "2025-11-03 07:59", "note": "bomba 2, leaking bad, also mtr smells burnt, carbon face unblocked"}
+{"wo_id": "WO-000879", "asset_tag": "B-03", "technician": "T10", "opened_at": "2025-11-03 17:35", "note": "installed new bearing; was noisy; eaten awway"}
+{"wo_id": "WO-000880", "asset_tag": "B-03", "technician": "T11", "opened_at": "2025-11-03 22:55", "note": "Bomba 3. wet around shaft. toast. seal - left running"}
+{"wo_id": "WO-000881", "asset_tag": "B-12", "technician": "T11", "opened_at": "2025-11-04 00:15", "note": "Bomba 12. warm 13a. found brg contaminated grease. r&r"}
+{"wo_id": "WO-000882", "asset_tag": "B-11", "technician": "T17", "opened_at": "2025-11-04 02:11", "note": "Pmp11 amps higgh cavitation impeller vaes - pending"}
+{"wo_id": "WO-000883", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-11-04 10:50", "note": "B12. btng - on hold. beng failed. no issue w spider"}
+{"wo_id": "WO-000885", "asset_tag": "B-10", "technician": "T18", "opened_at": "2025-11-05 06:36", "note": "Spraying, debris at faces, exchanged shaft seal done"}
+{"wo_id": "WO-000886", "asset_tag": "B-09", "technician": "T02", "opened_at": "2025-11-06 04:31", "note": "low flow. runer u/s. fitted new runner"}
+{"wo_id": "WO-000887", "asset_tag": "B-06", "technician": "T11", "opened_at": "2025-11-06 05:07", "note": "Bomba 6. round. round checked all ok"}
+{"wo_id": "WO-000888", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-11-06 05:52", "note": "Pmp1 alarm also cplg knocking balance ok temp ok cavitation at suction cleaned out strainer basket"}
+{"wo_id": "WO-000891", "asset_tag": "B-03", "technician": "T14", "opened_at": "2025-11-07 05:02", "note": "Wet around shaft - bad carbon face - replaced"}
+{"wo_id": "WO-000892", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-11-07 18:31", "note": "M/SEAL BLOWN OUT. WAS WET AROUND SHAFT 4.3 BAR. GRIT"}
+{"wo_id": "WO-000893", "asset_tag": "B-10", "technician": "T20", "opened_at": "2025-11-07 23:20", "note": "B10; DP HIGH; TEMP NORMAL; SUCTION VALVE FINE; BASEPLATE RETORQUED"}
+{"wo_id": "WO-000894", "asset_tag": "B-11", "technician": "T02", "opened_at": "2025-11-08 00:25", "note": "wrm. DE brg bad. DE brg changed"}
+{"wo_id": "WO-000895", "asset_tag": "B-07", "technician": "T20", "opened_at": "2025-11-08 04:52", "note": "B07; ROUGH NOISE; ROLLER ISSUE; TWEAKED"}
+{"wo_id": "WO-000896", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-11-08 05:50", "note": "Pmp12 leaking checked disch valve ok face: loose bols face tightened"}
+{"wo_id": "WO-000897", "asset_tag": "B-04", "technician": "T06", "opened_at": "2025-11-08 06:15", "note": "changed gland - was dripping - gland is align off done"}
+{"wo_id": "WO-000898", "asset_tag": "B-11", "technician": "T15", "opened_at": "2025-11-08 10:34", "note": "Fixed gland; was weeping; gland bad; not won; checked gate valve ok"}
+{"wo_id": "WO-000899", "asset_tag": "B-05", "technician": "T02", "opened_at": "2025-11-09 01:28", "note": "pmp5. shaking 2.8 bar. retorqued spider"}
+{"wo_id": "WO-000900", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-11-09 09:49", "note": "bomba 7, brng fitted new"}
+{"wo_id": "WO-000902", "asset_tag": "B-11", "technician": "T10", "opened_at": "2025-11-09 16:46", "note": "#11; m/seal re-set; m/seal bad"}
+{"wo_id": "WO-000903", "asset_tag": "B-03", "technician": "T18", "opened_at": "2025-11-10 06:41", "note": "B03, hot, bad mottor fan, motor fan fitted new done"}
+{"wo_id": "WO-000905", "asset_tag": "B-03", "technician": "T17", "opened_at": "2025-11-11 00:04", "note": "Pmp3 vibration high ball race: working loose retorqued ball race"}
+{"wo_id": "WO-000906", "asset_tag": "B-12", "technician": "T05", "opened_at": "2025-11-11 00:27", "note": "pump 12 / checked electric motor ok / impeller vanes fine / found nde brg wornout / nde brg changed done"}
+{"wo_id": "WO-000908", "asset_tag": "B-09", "technician": "T20", "opened_at": "2025-11-11 03:08", "note": "B09; TRIPPED; ELECTRICS REPACKED"}
+{"wo_id": "WO-000909", "asset_tag": "B-03", "technician": "T17", "opened_at": "2025-11-11 04:46", "note": "Leaking gland flushed"}
+{"wo_id": "WO-000910", "asset_tag": "B-07", "technician": "T18", "opened_at": "2025-11-11 12:35", "note": "B07, de housing is slime, de hosing oil change done"}
+{"wo_id": "WO-000911", "asset_tag": "B-09", "technician": "T18", "opened_at": "2025-11-11 12:39", "note": "Bomba 9, no flow, mseal looks ok, gland packing loos ok, found runner chewed, runner changed done"}
+{"wo_id": "WO-000912", "asset_tag": "B-09", "technician": "T12", "opened_at": "2025-11-11 12:53", "note": "B09. installed new. was buzzing. mtr: end of lofe"}
+{"wo_id": "WO-000914", "asset_tag": "B-05", "technician": "T20", "opened_at": "2025-11-12 05:31", "note": "B05; LOW PRESSURE; IMPELLER VANES BAD; SWAPPED IMPELLER VANES"}
+{"wo_id": "WO-000915", "asset_tag": "B-06", "technician": "T11", "opened_at": "2025-11-12 05:44", "note": "P-06. low flow 10.7mm/s. tweaked disch valve"}
+{"wo_id": "WO-000916", "asset_tag": "B-11", "technician": "T09", "opened_at": "2025-11-12 07:39", "note": "b11 gone flow meter r&r"}
+{"wo_id": "WO-000917", "asset_tag": "B-10", "technician": "T17", "opened_at": "2025-11-13 00:11", "note": "Pmp10 amps high wobbling runner exchanged"}
+{"wo_id": "WO-000918", "asset_tag": "B-10", "technician": "T06", "opened_at": "2025-11-13 08:33", "note": "isolation repaired - checked spider ok done"}
+{"wo_id": "WO-000920", "asset_tag": "B-10", "technician": "T15", "opened_at": "2025-11-13 12:02", "note": "B10; exchanged gauge; was alarm; wornout"}
+{"wo_id": "WO-000921", "asset_tag": "B-12", "technician": "T07", "opened_at": "2025-11-13 19:08", "note": "DE BEARING CHANGED. WAS VIBRATION HIGH. PITTED"}
+{"wo_id": "WO-000922", "asset_tag": "B-07", "technician": "T20", "opened_at": "2025-11-14 02:16", "note": "B-07; ELECTRIC MOTOR IS OK; NO CAV NOISE; BEARINGS GREASED UP"}
+{"wo_id": "WO-000923", "asset_tag": "B-02", "technician": "T04", "opened_at": "2025-11-14 19:05", "note": "B-02, patched up windings, was tripped, cooked."}
+{"wo_id": "WO-000924", "asset_tag": "B-01", "technician": "T14", "opened_at": "2025-11-15 01:33", "note": "P1 - hosed check valve"}
+{"wo_id": "WO-000925", "asset_tag": "B-01", "technician": "T07", "opened_at": "2025-11-15 15:51", "note": "ALL GOOD ON VISIT PM. WAS ALARM. PM"}
+{"wo_id": "WO-000926", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-11-15 19:00", "note": "Alarm; flow meter faulty; changed."}
+{"wo_id": "WO-000927", "asset_tag": "B-11", "technician": "T12", "opened_at": "2025-11-17 07:48", "note": "pmp11. changed. was humming lodu. NDE brg is watre in oil"}
+{"wo_id": "WO-000929", "asset_tag": "B-04", "technician": "T01", "opened_at": "2025-11-17 18:32", "note": "Pump 4; dripping; muck seal; changed."}
+{"wo_id": "WO-000931", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-11-18 04:23", "note": "B01. also impellor vibes. changed carbon face"}
+{"wo_id": "WO-000934", "asset_tag": "B-12", "technician": "T06", "opened_at": "2025-11-18 12:53", "note": "b-12 - changed impeller vanes - was vibes done"}
+{"wo_id": "WO-000935", "asset_tag": "B-03", "technician": "T19", "opened_at": "2025-11-18 16:18", "note": "pump 3; leaking 9.4mm/s; balance ok; pitted; gland packing r&r"}
+{"wo_id": "WO-000936", "asset_tag": "B-08", "technician": "T04", "opened_at": "2025-11-18 17:04", "note": "B-08, NRV welded, was hammering, end of life."}
+{"wo_id": "WO-000939", "asset_tag": "B-03", "technician": "T06", "opened_at": "2025-11-19 11:31", "note": "drive motor regreased - was amps high - no gres - bearings looks ok done"}
+{"wo_id": "WO-000940", "asset_tag": "B-05", "technician": "T03", "opened_at": "2025-11-19 12:40", "note": "bomba 5, knocking 83C, flex bad, re-set"}
+{"wo_id": "WO-000941", "asset_tag": "B-11", "technician": "T06", "opened_at": "2025-11-20 08:59", "note": "cleared bearings - bearings bad done"}
+{"wo_id": "WO-000942", "asset_tag": "B-02", "technician": "T06", "opened_at": "2025-11-20 09:16", "note": "regreased - was rough noise - bearings bad done"}
+{"wo_id": "WO-000943", "asset_tag": "B-04", "technician": "T04", "opened_at": "2025-11-20 14:41", "note": "wheel tweaked, was no flow 67C."}
+{"wo_id": "WO-000944", "asset_tag": "B-09", "technician": "T13", "opened_at": "2025-11-20 18:41", "note": "also m/seal dripping. non return bad. re-shimmed"}
+{"wo_id": "WO-000945", "asset_tag": "B-04", "technician": "T07", "opened_at": "2025-11-20 20:02", "note": "EXCHANGED M/SEAL. WAS SPRAYING. FOUND M/SEAL MUCK"}
+{"wo_id": "WO-000946", "asset_tag": "B-01", "technician": "T08", "opened_at": "2025-11-21 04:15", "note": "bzuzing; electrics: no gres; greased up"}
+{"wo_id": "WO-000947", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-11-21 10:58", "note": "bomba 9, hot trip seal, seal renewed"}
+{"wo_id": "WO-000948", "asset_tag": "B-09", "technician": "T10", "opened_at": "2025-11-21 16:27", "note": "#9; ball race new one fitted; was vibes up; found ball race alignment out"}
+{"wo_id": "WO-000949", "asset_tag": "B-11", "technician": "T04", "opened_at": "2025-11-21 16:43", "note": "roller blown out, was warm 11A, water in oil."}
+{"wo_id": "WO-000950", "asset_tag": "B-10", "technician": "T01", "opened_at": "2025-11-21 18:50", "note": "Pump 10; alarm; bad filter; cleraed."}
+{"wo_id": "WO-000953", "asset_tag": "B-09", "technician": "T15", "opened_at": "2025-11-24 06:51", "note": "Spider fitted new; was shaking; wornout; no debris"}
+{"wo_id": "WO-000954", "asset_tag": "B-12", "technician": "T10", "opened_at": "2025-11-24 21:46", "note": "#12; motor unit gresed; ran dry"}
+{"wo_id": "WO-000955", "asset_tag": "B-04", "technician": "T11", "opened_at": "2025-11-25 00:26", "note": "P4. wet around shaft 12.5mm/s. found m/seal scored. r&r m/seal"}
+{"wo_id": "WO-000958", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-11-28 15:12", "note": "NOISY / BALL RACE OIL CHANGE"}
+{"wo_id": "WO-000960", "asset_tag": "B-01", "technician": "T18", "opened_at": "2025-11-29 08:14", "note": "Bomba 1, electric motor: overload trip, no fault found electric motor done"}
+{"wo_id": "WO-000961", "asset_tag": "B-01", "technician": "T03", "opened_at": "2025-12-01 08:16", "note": "bomba 1, brng u/s, keep an eye"}
+{"wo_id": "WO-000963", "asset_tag": "B-08", "technician": "T04", "opened_at": "2025-12-01 21:42", "note": "trimmed pipe support, was dp high, lose."}
+{"wo_id": "WO-000964", "asset_tag": "B-09", "technician": "T14", "opened_at": "2025-12-01 22:07", "note": "Tripped - electrics u/s - electrics installed new"}
+{"wo_id": "WO-000966", "asset_tag": "B-04", "technician": "T18", "opened_at": "2025-12-02 08:44", "note": "P4, coupling rubber retorqued done"}
+{"wo_id": "WO-000967", "asset_tag": "B-10", "technician": "T10", "opened_at": "2025-12-02 14:00", "note": "#10; lefft running imp; was amps high"}
+{"wo_id": "WO-000968", "asset_tag": "B-10", "technician": "T13", "opened_at": "2025-12-02 15:43", "note": "gland u/s. glaand overhauled"}
+{"wo_id": "WO-000970", "asset_tag": "B-05", "technician": "T20", "opened_at": "2025-12-03 00:30", "note": "B05; IMPELLER VANES CLEARED"}
+{"wo_id": "WO-000971", "asset_tag": "B-12", "technician": "T12", "opened_at": "2025-12-04 10:37", "note": "imstalled new. was noise at coupling. cpl bad"}
+{"wo_id": "WO-000972", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-12-04 15:44", "note": "Pump 9; dripping; impeller ok; wornout; rewound seal."}
+{"wo_id": "WO-000973", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-12-05 01:37", "note": "B01; HUMMING LOUD; FLUSHED OIL BEARINGS"}
+{"wo_id": "WO-000974", "asset_tag": "B-04", "technician": "T02", "opened_at": "2025-12-05 04:04", "note": "pmp4. alarm. walkdown. eyeballed"}
+{"wo_id": "WO-000975", "asset_tag": "B-10", "technician": "T15", "opened_at": "2025-12-06 12:57", "note": "Installed new gland; was leaking; chewed gland"}
+{"wo_id": "WO-000976", "asset_tag": "B-04", "technician": "T14", "opened_at": "2025-12-06 22:49", "note": "B-04 - also mehc seal leaking - silt - cleaned out impellor"}
+{"wo_id": "WO-000977", "asset_tag": "B-05", "technician": "T08", "opened_at": "2025-12-07 05:57", "note": "pmp5; dripping; patched up seal"}
+{"wo_id": "WO-000979", "asset_tag": "B-03", "technician": "T15", "opened_at": "2025-12-08 09:56", "note": "Seal blown out; was leaking 12a; gunk; no wear"}
+{"wo_id": "WO-000981", "asset_tag": "B-06", "technician": "T05", "opened_at": "2025-12-09 03:31", "note": "also coupling insert rubber dust / balance ok / de brg fine / found electric motor overtemp / electric motor swapped done"}
+{"wo_id": "WO-000982", "asset_tag": "B-07", "technician": "T15", "opened_at": "2025-12-09 08:44", "note": "Regreaed bearings; was vibration high 62a; low oil"}
+{"wo_id": "WO-000983", "asset_tag": "B-08", "technician": "T01", "opened_at": "2025-12-09 14:13", "note": "Pump 8; wont start; mtr unit failed; unblocked mtr unit."}
+{"wo_id": "WO-000984", "asset_tag": "B-04", "technician": "T10", "opened_at": "2025-12-09 17:39", "note": "p4; flushed oil DE brg; thermal trip; cplg is ok"}
+{"wo_id": "WO-000985", "asset_tag": "B-08", "technician": "T04", "opened_at": "2025-12-10 21:25", "note": "fixed, was leak at shaft 33A, mech seal issue."}
+{"wo_id": "WO-000986", "asset_tag": "B-12", "technician": "T10", "opened_at": "2025-12-11 18:45", "note": "#12; changed runner; was no flow; runner pitted"}
+{"wo_id": "WO-000987", "asset_tag": "B-12", "technician": "T17", "opened_at": "2025-12-11 23:55", "note": "Pmp12 buzzing align good checked suction valve ok refurbished electrics"}
+{"wo_id": "WO-000988", "asset_tag": "B-06", "technician": "T15", "opened_at": "2025-12-12 11:13", "note": "Re-set bearings; was humming loud 6.8 bar"}
+{"wo_id": "WO-000989", "asset_tag": "B-01", "technician": "T09", "opened_at": "2025-12-12 11:40", "note": "b01 not worn vanes u/s re-set vanes"}
+{"wo_id": "WO-000990", "asset_tag": "B-09", "technician": "T10", "opened_at": "2025-12-12 16:36", "note": "#9; re-set MS; bolts loose"}
+{"wo_id": "WO-000991", "asset_tag": "B-02", "technician": "T09", "opened_at": "2025-12-13 10:34", "note": "b02 m/seal is backed off re-set"}
+{"wo_id": "WO-000993", "asset_tag": "B-04", "technician": "T18", "opened_at": "2025-12-15 08:08", "note": "#4, chewed, swapped mseal done"}
+{"wo_id": "WO-000994", "asset_tag": "B-10", "technician": "T04", "opened_at": "2025-12-15 15:56", "note": "B-10, keep an eye gate valve, was wont close, starved suction."}
+{"wo_id": "WO-000995", "asset_tag": "B-02", "technician": "T19", "opened_at": "2025-12-15 17:37", "note": "B-02; oil clean; impellor off balance; installeed new"}
+{"wo_id": "WO-000997", "asset_tag": "B-08", "technician": "T13", "opened_at": "2025-12-15 19:05", "note": "pmp8. growling. brng failed. new fitted"}
+{"wo_id": "WO-000998", "asset_tag": "B-02", "technician": "T07", "opened_at": "2025-12-15 20:12", "note": "RE-SHIMMED. WAS NOISE. FOUND PIPE SUPPORT WORKING LOOSE"}
+{"wo_id": "WO-000999", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-12-16 06:15", "note": "B12, impeller vanes issue, unblocked impeller vanes done"}
+{"wo_id": "WO-001000", "asset_tag": "B-02", "technician": "T06", "opened_at": "2025-12-16 13:01", "note": "#2 - changed spider - spider failed - no cav noise done"}
+{"wo_id": "WO-001001", "asset_tag": "B-06", "technician": "T07", "opened_at": "2025-12-16 20:08", "note": "M/SEAL CHANGED. WAS LEAKING 2.3 BAR. M/SEAL IS THERMAL TRIP"}
+{"wo_id": "WO-001002", "asset_tag": "B-11", "technician": "T10", "opened_at": "2025-12-16 21:13", "note": "#11; m/seal new one fitted; was dripping; eaten away"}
+{"wo_id": "WO-001004", "asset_tag": "B-04", "technician": "T19", "opened_at": "2025-12-17 20:08", "note": "mtr fan ok; water in oil; brg r&r"}
+{"wo_id": "WO-001005", "asset_tag": "B-06", "technician": "T05", "opened_at": "2025-12-18 00:37", "note": "hot / imp looks ok / low oil / regreased bearings done"}
+{"wo_id": "WO-001006", "asset_tag": "B-01", "technician": "T17", "opened_at": "2025-12-18 01:55", "note": "Pmp1 growling 2.6 bar mtr fan looks ok impeller vanes good ball race lube done"}
+{"wo_id": "WO-001007", "asset_tag": "B-01", "technician": "T20", "opened_at": "2025-12-18 03:36", "note": "B01; PARTS ORDERED SEAL"}
+{"wo_id": "WO-001008", "asset_tag": "B-12", "technician": "T08", "opened_at": "2025-12-18 03:55", "note": "pump 12; no debrris; found impeller vanes starved suction; re-shimmed impeller vanes"}
+{"wo_id": "WO-001009", "asset_tag": "B-11", "technician": "T03", "opened_at": "2025-12-18 10:47", "note": "bomba 11, NDE brg gresed"}
+{"wo_id": "WO-001010", "asset_tag": "B-12", "technician": "T18", "opened_at": "2025-12-18 13:20", "note": "B12, amps high, impellor faulty, impellor re-set done"}
+{"wo_id": "WO-001011", "asset_tag": "B-09", "technician": "T07", "opened_at": "2025-12-18 14:25", "note": "IMPELLER VANES - WILL WATCH. WAS VIBES. CAV. ALIGN GOOD"}
+{"wo_id": "WO-001012", "asset_tag": "B-04", "technician": "T10", "opened_at": "2025-12-18 16:08", "note": "#4; non return re-set; was wont close; found non return gravel noise"}
+{"wo_id": "WO-001013", "asset_tag": "B-05", "technician": "T15", "opened_at": "2025-12-19 06:18", "note": "B05; on hold stuffing box; was spraying 94c"}
+{"wo_id": "WO-001014", "asset_tag": "B-07", "technician": "T03", "opened_at": "2025-12-19 07:57", "note": "bomba 7, wet around shaft, carbon face is damaged, renewed"}
+{"wo_id": "WO-001015", "asset_tag": "B-03", "technician": "T07", "opened_at": "2025-12-19 21:37", "note": "PUMP 3. ON HOLD M/SEAL. WAS LEAKING BAD. EATEN AWAY"}
+{"wo_id": "WO-001016", "asset_tag": "B-05", "technician": "T10", "opened_at": "2025-12-20 14:02", "note": "#5; descaled drive moyor; was tripped"}
+{"wo_id": "WO-001018", "asset_tag": "B-01", "technician": "T02", "opened_at": "2025-12-21 22:23", "note": "leaking bad. mud. mechanical seal changed"}
+{"wo_id": "WO-001019", "asset_tag": "B-08", "technician": "T02", "opened_at": "2025-12-22 22:11", "note": "P-08. noise. walkdown. eyeballed"}
+{"wo_id": "WO-001020", "asset_tag": "B-05", "technician": "T11", "opened_at": "2025-12-23 02:20", "note": "Rattling. mtr good. scored. overhauled impellor"}
+{"wo_id": "WO-001022", "asset_tag": "B-09", "technician": "T09", "opened_at": "2025-12-23 07:25", "note": "b09 rattling heavy sdie twaked impeller vanes"}
+{"wo_id": "WO-001023", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-12-23 12:33", "note": "bomba 9, rough noise, thermal trip brng, flushed oil"}
+{"wo_id": "WO-001025", "asset_tag": "B-05", "technician": "T01", "opened_at": "2025-12-23 15:23", "note": "Pump 5; leak at shaft; electric motor looks ok; seal issue; scraepd."}
+{"wo_id": "WO-001026", "asset_tag": "B-06", "technician": "T20", "opened_at": "2025-12-24 00:57", "note": "B06; IMPELLER VANES ISSUE; IMPELLER VANES BALANCED"}
+{"wo_id": "WO-001027", "asset_tag": "B-05", "technician": "T14", "opened_at": "2025-12-24 01:37", "note": "Weeping - parts ordered stuffing box"}
+{"wo_id": "WO-001028", "asset_tag": "B-08", "technician": "T15", "opened_at": "2025-12-25 11:41", "note": "Repacked butterfly; was low flow"}
+{"wo_id": "WO-001029", "asset_tag": "B-03", "technician": "T15", "opened_at": "2025-12-25 12:20", "note": "Shimmed m/seal; was wet around shaft; loose; also motor ammps high"}
+{"wo_id": "WO-001030", "asset_tag": "B-09", "technician": "T16", "opened_at": "2025-12-25 21:15", "note": "SPRAYING / TEMP NORMAL / SHAFT SEL REPACKED"}
+{"wo_id": "WO-001031", "asset_tag": "B-04", "technician": "T04", "opened_at": "2025-12-25 21:58", "note": "B-04, needs replacing, parts ordered PM, was gauge reads wrong 55A, PM."}
+{"wo_id": "WO-001032", "asset_tag": "B-09", "technician": "T03", "opened_at": "2025-12-26 12:26", "note": "rattling 64C, also mtr smells burnt, cav runner, runner exchanged"}
+{"wo_id": "WO-001033", "asset_tag": "B-06", "technician": "T01", "opened_at": "2025-12-26 15:41", "note": "Pump 6; running hot 46a; bearings failed; bearings changed."}
+{"wo_id": "WO-001034", "asset_tag": "B-06", "technician": "T19", "opened_at": "2025-12-26 18:18", "note": "B-06; vibes bad 48A; mtr fan looks ok; brg is overload trip; oil change brg"}
+{"wo_id": "WO-001035", "asset_tag": "B-01", "technician": "T10", "opened_at": "2025-12-26 20:22", "note": "#1; walked it; was low flow 2.4 bar; round; strainer clean"}
+{"wo_id": "WO-001036", "asset_tag": "B-10", "technician": "T14", "opened_at": "2025-12-29 00:39", "note": "B-10 - hot - bad electrics - electrics repaired"}
+{"wo_id": "WO-001037", "asset_tag": "B-04", "technician": "T16", "opened_at": "2025-12-29 20:16", "note": "B04 / NO FLW 82C / NO WEAR / CLOGGED / IMPELLOR BLOWN OUT"}
+{"wo_id": "WO-001038", "asset_tag": "B-12", "technician": "T10", "opened_at": "2025-12-29 20:18", "note": "#12; next PM ball race"}
+{"wo_id": "WO-001039", "asset_tag": "B-07", "technician": "T02", "opened_at": "2025-12-29 22:30", "note": "shaking. flex faulty. re-set"}
+{"wo_id": "WO-001041", "asset_tag": "B-04", "technician": "T20", "opened_at": "2025-12-30 04:15", "note": "B04; IMPELLER VANES END OF LIFE; REPACKED"}
+{"wo_id": "WO-001042", "asset_tag": "B-09", "technician": "T15", "opened_at": "2025-12-30 06:44", "note": "B09; exchanged bearings; was running hot"}
+{"wo_id": "WO-001043", "asset_tag": "B-05", "technician": "T18", "opened_at": "2025-12-30 11:31", "note": "B05, low flow, coupling rubber fine, working loose discharge valve, re-set done"}
+{"wo_id": "WO-001045", "asset_tag": "B-09", "technician": "T09", "opened_at": "2025-12-31 07:24", "note": "b09 noise at coupling bad coupling rubbber coupling rubbber adjuwted"}
+{"wo_id": "WO-001047", "asset_tag": "B-07", "technician": "T19", "opened_at": "2025-12-31 14:40", "note": "B-07; growling 92C; brg water in oil; r&r"}
+{"wo_id": "WO-001048", "asset_tag": "B-09", "technician": "T01", "opened_at": "2025-12-31 18:38", "note": "Pump 9; wet around shaft; face failed; face put new."}
+{"wo_id": "WO-001049", "asset_tag": "B-06", "technician": "T01", "opened_at": "2025-12-31 19:04", "note": "Pmup 6; vibes; seal not the problem; bearings is ok; impeller faulty; shimmed."}
+{"wo_id": "WO-001050", "asset_tag": "B-05", "technician": "T08", "opened_at": "2025-12-31 22:41", "note": "warm; discharge valve fine; NDE brg falty; NDE brg swapped"}
+{"wo_id": "WO-001051", "asset_tag": "B-07", "technician": "T20", "opened_at": "2025-12-31 23:59", "note": "B07; VIBRATION HIGH; BEARINGS LUBED"}
+{"wo_id": "WO-001052", "asset_tag": "B-03", "technician": "T08", "opened_at": "2026-01-01 00:05", "note": "vibes; bad rubber; rubber re-set"}
+{"wo_id": "WO-001053", "asset_tag": "B-10", "technician": "T05", "opened_at": "2026-01-01 02:20", "note": "leak at shaft / de brg ok / seal had it / reworked done"}
+{"wo_id": "WO-001054", "asset_tag": "B-01", "technician": "T02", "opened_at": "2026-01-01 03:10", "note": "pmp1. temp normal. new fited DE brg"}
+{"wo_id": "WO-001055", "asset_tag": "B-11", "technician": "T04", "opened_at": "2026-01-01 15:26", "note": "unblocked windings, cooked."}
+{"wo_id": "WO-001056", "asset_tag": "B-07", "technician": "T01", "opened_at": "2026-01-01 19:18", "note": "Punp 7; growling 1.6 bar; also gate valve passing; roller is had it; changed."}
+{"wo_id": "WO-001058", "asset_tag": "B-01", "technician": "T08", "opened_at": "2026-01-01 22:08", "note": "no issue w mootr fan; motor fan good; jaw shaft off; jaw adjusted"}
+{"wo_id": "WO-001059", "asset_tag": "B-07", "technician": "T08", "opened_at": "2026-01-02 00:41", "note": "B-07; wet around shaft; coupling rubber looks ok; out of align; MS adjusted"}
+{"wo_id": "WO-001061", "asset_tag": "B-05", "technician": "T18", "opened_at": "2026-01-02 12:56", "note": "B05, drive motor fine, discharge valve cavitating, discharge valve - keep an eye done"}
+{"wo_id": "WO-001063", "asset_tag": "B-01", "technician": "T04", "opened_at": "2026-01-02 16:05", "note": "B-01, checked inspection round, was low flw 79C."}
+{"wo_id": "WO-001064", "asset_tag": "B-01", "technician": "T11", "opened_at": "2026-01-03 02:24", "note": "Bomba 1. amps high 94c. also brg noisy. cavit. impeller vanes set up"}
+{"wo_id": "WO-001065", "asset_tag": "B-01", "technician": "T09", "opened_at": "2026-01-03 10:22", "note": "b01 de bearing good bad motir fan motor fan exchanged"}
+{"wo_id": "WO-001066", "asset_tag": "B-09", "technician": "T08", "opened_at": "2026-01-04 04:12", "note": "B-09; vibes bad; ball race exchanged"}
+{"wo_id": "WO-001067", "asset_tag": "B-04", "technician": "T01", "opened_at": "2026-01-04 15:49", "note": "Low flow; no isue w bearings; no cav noise; found vanes heavy side; vanes changed."}
+{"wo_id": "WO-001068", "asset_tag": "B-05", "technician": "T05", "opened_at": "2026-01-04 22:49", "note": "b05 / weepimg 12.6mm/s / also electric motor hot / mseal faulty / changed done"}
+{"wo_id": "WO-001069", "asset_tag": "B-01", "technician": "T15", "opened_at": "2026-01-07 09:15", "note": "B01; monitor imeller vanes; was low flow 100c; npsh problem; balance ok"}
+{"wo_id": "WO-001070", "asset_tag": "B-08", "technician": "T08", "opened_at": "2026-01-08 03:06", "note": "bomba 8; alarm; found filter slime; fitler flushed"}
+{"wo_id": "WO-001071", "asset_tag": "B-09", "technician": "T17", "opened_at": "2026-01-09 03:53", "note": "Pmp9 rough noise mud new fitted drive end bearing"}
+{"wo_id": "WO-001072", "asset_tag": "B-04", "technician": "T11", "opened_at": "2026-01-09 04:52", "note": "Bomba 4. warm 4.4mm/s. temp normal. mtr looks ok. gresed brg"}
+{"wo_id": "WO-001073", "asset_tag": "B-04", "technician": "T06", "opened_at": "2026-01-09 06:20", "note": "nff weekly check - weekly check done"}
+{"wo_id": "WO-001074", "asset_tag": "B-10", "technician": "T03", "opened_at": "2026-01-09 07:39", "note": "bomba 10, also mtr amps high, check valve not the problem, carbon face: eaten away, renewed"}
+{"wo_id": "WO-001075", "asset_tag": "B-02", "technician": "T03", "opened_at": "2026-01-09 09:00", "note": "bobma 2, noisy 69A, thermal trip, oil change brng"}
+{"wo_id": "WO-001076", "asset_tag": "B-09", "technician": "T19", "opened_at": "2026-01-09 15:23", "note": "B-09; leaking; strainer clean; not in line seal; seal r&r"}
+{"wo_id": "WO-001077", "asset_tag": "B-09", "technician": "T04", "opened_at": "2026-01-09 20:26", "note": "B-09, vanes put new, was low flow."}
+{"wo_id": "WO-001080", "asset_tag": "B-06", "technician": "T11", "opened_at": "2026-01-11 04:02", "note": "Bomba 6. m/seal is ok. cavit. set up butterfly"}
+{"wo_id": "WO-001081", "asset_tag": "B-05", "technician": "T07", "opened_at": "2026-01-11 18:23", "note": "P-05. R&R. WAS WET AROUD SAHFT 65A. FOUND SEAL EATEN AWAY"}
+{"wo_id": "WO-001083", "asset_tag": "B-09", "technician": "T13", "opened_at": "2026-01-12 21:23", "note": "wet around shaft. carbon face cleared out"}
+{"wo_id": "WO-001084", "asset_tag": "B-05", "technician": "T02", "opened_at": "2026-01-13 02:59", "note": "pmp5. alarm 32A. also DE brg vibration high. eaten away pressure gauge. exchanged"}
+{"wo_id": "WO-001085", "asset_tag": "B-05", "technician": "T18", "opened_at": "2026-01-13 11:30", "note": "Running hot, strainer clean, no looseness, drive end baering faulty, drive end bearing re-aligned done"}
+{"wo_id": "WO-001086", "asset_tag": "B-01", "technician": "T12", "opened_at": "2026-01-13 13:54", "note": "B01. vlv cleared. was cant thrttle. vlv issue"}
+{"wo_id": "WO-001087", "asset_tag": "B-09", "technician": "T10", "opened_at": "2026-01-13 21:45", "note": "#9; suct valve - left running; was stuck; npsh problem"}
+{"wo_id": "WO-001088", "asset_tag": "B-02", "technician": "T20", "opened_at": "2026-01-14 04:48", "note": "B02; SPIDER SWAPPED"}
+{"wo_id": "WO-001089", "asset_tag": "B-01", "technician": "T18", "opened_at": "2026-01-14 09:27", "note": "B01, warm, mseal fine, de housing off center, de housing re-aligned done"}
+{"wo_id": "WO-001090", "asset_tag": "B-03", "technician": "T08", "opened_at": "2026-01-15 05:20", "note": "pmp3; smells burnt; drive motor issue; drive motor walked it"}
+{"wo_id": "WO-001091", "asset_tag": "B-06", "technician": "T13", "opened_at": "2026-01-15 16:27", "note": "low flow. inspection round. inspection round nff"}
+{"wo_id": "WO-001092", "asset_tag": "B-10", "technician": "T16", "opened_at": "2026-01-15 21:39", "note": "B-10 / DRIPPING / FOUND SEAL PACK OUT OF ALIGN / RE-ALIGNED SEAL PACK"}
+{"wo_id": "WO-001094", "asset_tag": "B-09", "technician": "T01", "opened_at": "2026-01-17 21:04", "note": "Pump 9; dripping; face: debris at faces; face changed."}
+{"wo_id": "WO-001095", "asset_tag": "B-05", "technician": "T04", "opened_at": "2026-01-18 15:07", "note": "B-05, electric motor greased, was tripped."}
+{"wo_id": "WO-001097", "asset_tag": "B-10", "technician": "T05", "opened_at": "2026-01-20 01:42", "note": "smells burnt / de brg fine / electric motor faulty / blown out done"}
+{"wo_id": "WO-001098", "asset_tag": "B-05", "technician": "T07", "opened_at": "2026-01-20 17:47", "note": "BOMBA 5. BLOWN OUT. CAV STRAINER BASKET"}
+{"wo_id": "WO-001100", "asset_tag": "B-06", "technician": "T13", "opened_at": "2026-01-21 18:33", "note": "weeping. pitted MS. rewound MS"}
+{"wo_id": "WO-001107", "asset_tag": "B-05", "technician": "T01", "opened_at": "2026-01-26 18:44", "note": "Smells burnt; no weaar; overtemp; electrics cleared."}
+{"wo_id": "WO-001108", "asset_tag": "B-11", "technician": "T20", "opened_at": "2026-01-26 22:00", "note": "B11; AMPS HIGH; ELECTIRCS FAULTY; ELECTRICS INSPECTED"}
+{"wo_id": "WO-001109", "asset_tag": "B-12", "technician": "T05", "opened_at": "2026-01-27 04:46", "note": "thermal trip roller / flushed oil done"}
+{"wo_id": "WO-001110", "asset_tag": "B-06", "technician": "T03", "opened_at": "2026-01-27 10:34", "note": "bomba 6, checked check valve ok, impellor: rag stuck, unblocked"}
+{"wo_id": "WO-001111", "asset_tag": "B-11", "technician": "T16", "opened_at": "2026-01-27 18:53", "note": "RATTLING 2.4 BAR / CAV / SWAPPED IMPELLOR"}
+{"wo_id": "WO-001112", "asset_tag": "B-05", "technician": "T12", "opened_at": "2026-01-28 10:53", "note": "flushed oil. was vibes bad. muck roller"}
+{"wo_id": "WO-001113", "asset_tag": "B-02", "technician": "T06", "opened_at": "2026-01-28 11:39", "note": "impeller vanes cleaned out - found impeller vanes fouled - grease ok done"}
+{"wo_id": "WO-001115", "asset_tag": "B-03", "technician": "T07", "opened_at": "2026-01-28 20:58", "note": "EXCHANGED. WAS VIBES. IMPELLER VANES IS CAVITATION"}
+{"wo_id": "WO-001116", "asset_tag": "B-01", "technician": "T03", "opened_at": "2026-01-29 07:20", "note": "B01, noise 4.8mm/s, no issue w check valve, PM all good on visit"}
+{"wo_id": "WO-001117", "asset_tag": "B-11", "technician": "T15", "opened_at": "2026-01-29 07:43", "note": "Exchanged brng; was vibes up"}
+{"wo_id": "WO-001118", "asset_tag": "B-10", "technician": "T15", "opened_at": "2026-01-29 08:28", "note": "B10; r&r brg; was vibes up; balance ok; cpl not the problem"}
+{"wo_id": "WO-001119", "asset_tag": "B-12", "technician": "T18", "opened_at": "2026-01-30 06:41", "note": "Bomba 12, roigh noise, no grees de housing, swapped de housing done"}
+{"wo_id": "WO-001120", "asset_tag": "B-09", "technician": "T04", "opened_at": "2026-02-01 16:09", "note": "face - needs replacing, parts ordered, was dripping, also spider vibes, gate valve is ok."}
+{"wo_id": "WO-001121", "asset_tag": "B-01", "technician": "T08", "opened_at": "2026-02-02 04:38", "note": "low flow; baseplate: loose; baseplate tweaked"}
+{"wo_id": "WO-001122", "asset_tag": "B-06", "technician": "T07", "opened_at": "2026-02-03 14:21", "note": "PUMP 6. CHANGED VANES. WAS VIBES. OUT OF BALANCE"}
+{"wo_id": "WO-001123", "asset_tag": "B-06", "technician": "T04", "opened_at": "2026-02-03 20:47", "note": "shimmed non return, was wont close, also eletcric moror amps high."}
+{"wo_id": "WO-001125", "asset_tag": "B-10", "technician": "T14", "opened_at": "2026-02-05 00:37", "note": "Bomba 10 - electfics hosed"}
+{"wo_id": "WO-001126", "asset_tag": "B-04", "technician": "T18", "opened_at": "2026-02-05 13:12", "note": "P4, smells bunt, drive end bearing is ok, fouled fan motor, scraped motor done"}
+{"wo_id": "WO-001127", "asset_tag": "B-06", "technician": "T10", "opened_at": "2026-02-05 18:53", "note": "#6; pipe support trimmed; was alarm; bolts loose"}
+{"wo_id": "WO-001129", "asset_tag": "B-01", "technician": "T05", "opened_at": "2026-02-06 03:45", "note": "p1 / wont close / clogged / suction valve bown out done"}
+{"wo_id": "WO-001130", "asset_tag": "B-08", "technician": "T06", "opened_at": "2026-02-06 08:20", "note": "b-08 - impeller vanes re-shimmed - fund impeller vanes imbalance done"}
+{"wo_id": "WO-001131", "asset_tag": "B-11", "technician": "T14", "opened_at": "2026-02-07 05:55", "note": "B-11 - low flow - also motor fan amps high - cavitation - impeller vanes - no spares"}
+{"wo_id": "WO-001132", "asset_tag": "B-02", "technician": "T07", "opened_at": "2026-02-07 20:52", "note": "WELDED MTR. WAS AMPS HIGH 6.4 BAR. MTR THERMAL TRIP"}
+{"wo_id": "WO-001133", "asset_tag": "B-12", "technician": "T17", "opened_at": "2026-02-08 02:57", "note": "Bomna 12 no flw 3.4 bar out of balance impellor re-set"}
+{"wo_id": "WO-001134", "asset_tag": "B-07", "technician": "T06", "opened_at": "2026-02-08 12:03", "note": "pmp7 - changed bearings done"}
+{"wo_id": "WO-001136", "asset_tag": "B-06", "technician": "T11", "opened_at": "2026-02-09 04:38", "note": "Bomba 6. vibes bad 3.9mm/s. scored. no spares brg"}
+{"wo_id": "WO-001137", "asset_tag": "B-05", "technician": "T12", "opened_at": "2026-02-09 09:05", "note": "B05. spider r&r. was rubber dust. strainer clean"}
+{"wo_id": "WO-001138", "asset_tag": "B-10", "technician": "T07", "opened_at": "2026-02-09 21:53", "note": "REGREASED. WAS VIBES UP. FOUND DE BEARING NO LUBE"}
+{"wo_id": "WO-001139", "asset_tag": "B-12", "technician": "T05", "opened_at": "2026-02-09 23:07", "note": "b12 / working loose check valve / check valve trimmed done"}
+{"wo_id": "WO-001141", "asset_tag": "B-02", "technician": "T03", "opened_at": "2026-02-10 13:07", "note": "bomba 2, found brng eaten away, new fitted"}
+{"wo_id": "WO-001142", "asset_tag": "B-06", "technician": "T01", "opened_at": "2026-02-10 20:52", "note": "Pump 6; humming loud; bone dry; bearings lubed."}
+{"wo_id": "WO-001143", "asset_tag": "B-07", "technician": "T09", "opened_at": "2026-02-11 08:43", "note": "pmp7 thermal trip de beraing r&r"}
+{"wo_id": "WO-001144", "asset_tag": "B-07", "technician": "T08", "opened_at": "2026-02-12 03:30", "note": "B-07; vibration high; bering issue; bering flushed oil"}
+{"wo_id": "WO-001145", "asset_tag": "B-06", "technician": "T09", "opened_at": "2026-02-12 11:36", "note": "b06 worrn out swapped ball race"}
+{"wo_id": "WO-001146", "asset_tag": "B-04", "technician": "T04", "opened_at": "2026-02-12 14:28", "note": "oil change drive end beaaring, was running hot, found drive end bearing slime, also mech seal leak at shaft."}
+{"wo_id": "WO-001147", "asset_tag": "B-04", "technician": "T01", "opened_at": "2026-02-12 15:25", "note": "Pump 4; running hot; seal not the problem; roller failed; roller chabged."}
+{"wo_id": "WO-001148", "asset_tag": "B-07", "technician": "T10", "opened_at": "2026-02-12 21:23", "note": "#7; shimmed flex; alignment out"}
+{"wo_id": "WO-001150", "asset_tag": "B-09", "technician": "T02", "opened_at": "2026-02-13 04:34", "note": "vibration high 4.1mm/s. ran dry. lube done DE housing"}
+{"wo_id": "WO-001151", "asset_tag": "B-03", "technician": "T06", "opened_at": "2026-02-13 06:21", "note": "#3 - drive end bearing re-shimmed - found drive end bearing align off done"}
+{"wo_id": "WO-001152", "asset_tag": "B-05", "technician": "T12", "opened_at": "2026-02-13 06:53", "note": "r&r stuffing box. was wet around shaft. stuffing box: end of lfie"}
+{"wo_id": "WO-001154", "asset_tag": "B-11", "technician": "T01", "opened_at": "2026-02-13 21:50", "note": "Pump 11; not cav; found runner gunnk; cleared."}
+{"wo_id": "WO-001156", "asset_tag": "B-02", "technician": "T20", "opened_at": "2026-02-14 04:26", "note": "HAMMERING; TWEAKED SUCTION VALVE"}
+{"wo_id": "WO-001157", "asset_tag": "B-08", "technician": "T04", "opened_at": "2026-02-14 18:22", "note": "bomba 8, replaced, was low pressure 4.1mm/s, cavitating impellor, no wear."}
+{"wo_id": "WO-001158", "asset_tag": "B-08", "technician": "T11", "opened_at": "2026-02-15 04:11", "note": "Pump 8. temp normal. brg u/s. brg topped up oil"}
+{"wo_id": "WO-001159", "asset_tag": "B-03", "technician": "T18", "opened_at": "2026-02-16 13:37", "note": "P3, chewed de housing, de housing r&r done"}
+{"wo_id": "WO-001160", "asset_tag": "B-12", "technician": "T01", "opened_at": "2026-02-16 17:25", "note": "Pump 12; wont start; no issue w seal; low oil; lubed electrics."}
+{"wo_id": "WO-001161", "asset_tag": "B-11", "technician": "T16", "opened_at": "2026-02-16 20:43", "note": "B11 / SHAKING / REPLACED FLEX"}
+{"wo_id": "WO-001162", "asset_tag": "B-04", "technician": "T17", "opened_at": "2026-02-16 23:33", "note": "Pmp4 hot electrics issue cleaned out"}
+{"wo_id": "WO-001163", "asset_tag": "B-01", "technician": "T20", "opened_at": "2026-02-17 03:13", "note": "B01; REPACKED ELECTRIC MOTOR"}
+{"wo_id": "WO-001165", "asset_tag": "B-11", "technician": "T09", "opened_at": "2026-02-17 13:01", "note": "b11 low flow loose bolts adjusted foundation bolts"}
+{"wo_id": "WO-001167", "asset_tag": "B-04", "technician": "T17", "opened_at": "2026-02-18 02:25", "note": "Pmp4 buzzing 2.0 bar motor fan cleaned out"}
+{"wo_id": "WO-001168", "asset_tag": "B-07", "technician": "T02", "opened_at": "2026-02-18 04:55", "note": "B-07. mtr unit is hot trip. eyeballed"}
+{"wo_id": "WO-001169", "asset_tag": "B-06", "technician": "T09", "opened_at": "2026-02-18 09:38", "note": "b06 impeeller vanes looks ok de bearing is ok pm eeyballed"}
+{"wo_id": "WO-001170", "asset_tag": "B-11", "technician": "T01", "opened_at": "2026-02-18 19:35", "note": "Pump 11; low flow; weekly check; all good on visit."}
+{"wo_id": "WO-001172", "asset_tag": "B-06", "technician": "T04", "opened_at": "2026-02-19 15:25", "note": "trimmed piipe support, was dp high, loose."}
+{"wo_id": "WO-001173", "asset_tag": "B-07", "technician": "T05", "opened_at": "2026-02-20 05:17", "note": "bearing low oil / greased bearing done"}
+{"wo_id": "WO-001174", "asset_tag": "B-04", "technician": "T07", "opened_at": "2026-02-20 16:09", "note": "FLOW METER FITTED NEW. WAS GAUGE READS WRONG. EATEN AWAY FLOW METER. ALSO SPIDER CLUNKING. OIL LEVEL OK"}
+{"wo_id": "WO-001175", "asset_tag": "B-12", "technician": "T17", "opened_at": "2026-02-20 22:37", "note": "Pmp12 wet around shaft gland is sand gland r&r"}
+{"wo_id": "WO-001176", "asset_tag": "B-06", "technician": "T12", "opened_at": "2026-02-21 12:21", "note": "re-aligned. was hot. found brng out of align. coupling good. temp ok"}
+{"wo_id": "WO-001177", "asset_tag": "B-01", "technician": "T20", "opened_at": "2026-02-22 02:12", "note": "B01; SPRAYING; FOUND SEAL END OF LIFE; INSTALLED NEW"}
+{"wo_id": "WO-001178", "asset_tag": "B-04", "technician": "T07", "opened_at": "2026-02-22 18:07", "note": "SUCTION STRAINER UNBLOCKED. WAS ALARM. MUD. ALSO MECHANICAL SEAL DRIPPING. MTR FAN OK"}
+{"wo_id": "WO-001179", "asset_tag": "B-11", "technician": "T05", "opened_at": "2026-02-23 03:07", "note": "also electric motor hot / worn out / parts ordered nde brg done"}
+{"wo_id": "WO-001180", "asset_tag": "B-11", "technician": "T02", "opened_at": "2026-02-24 02:00", "note": "growling. gone DE brg. DE brg swapled"}
+{"wo_id": "WO-001181", "asset_tag": "B-07", "technician": "T20", "opened_at": "2026-02-24 02:08", "note": "B07; BEARINGS REPACKED"}
+{"wo_id": "WO-001183", "asset_tag": "B-06", "technician": "T01", "opened_at": "2026-02-24 15:14", "note": "Pump 6; oil clean; gate valve issue; gate valve shimmed."}
+{"wo_id": "WO-001184", "asset_tag": "B-04", "technician": "T05", "opened_at": "2026-02-26 01:44", "note": "b04 / also coupling insert vibes / impellor: gravel noise / changed impellor done"}
+{"wo_id": "WO-001185", "asset_tag": "B-03", "technician": "T03", "opened_at": "2026-02-26 09:36", "note": "bomba 3, carbon face is hot trip, renewed"}
+{"wo_id": "WO-001187", "asset_tag": "B-07", "technician": "T01", "opened_at": "2026-02-26 19:18", "note": "Pump 7; humming looud; changed bearings."}
+{"wo_id": "WO-001188", "asset_tag": "B-08", "technician": "T05", "opened_at": "2026-02-27 02:47", "note": "no cav noise / coupling insert out of line / trimmed done"}
+{"wo_id": "WO-001189", "asset_tag": "B-01", "technician": "T12", "opened_at": "2026-02-27 12:45", "note": "B01. re-set spider. was knocking"}
+{"wo_id": "WO-001191", "asset_tag": "B-04", "technician": "T08", "opened_at": "2026-02-28 00:56", "note": "rough noise; not in line; DE bearing shimmed"}
+{"wo_id": "WO-001192", "asset_tag": "B-12", "technician": "T20", "opened_at": "2026-02-28 04:05", "note": "B12; SEAL FINE; SWAPPED SUCTION VALVE"}
+{"wo_id": "WO-001195", "asset_tag": "B-07", "technician": "T08", "opened_at": "2026-03-01 01:29", "note": "B-07; growling; bolts tight; bad ball race; adjusted ball race"}
+{"wo_id": "WO-001196", "asset_tag": "B-12", "technician": "T16", "opened_at": "2026-03-01 19:54", "note": "B12 / RATTLING / NPSH PROBLEM / IMPELLOR - WILL MONITOR"}
+{"wo_id": "WO-001199", "asset_tag": "B-10", "technician": "T10", "opened_at": "2026-03-02 19:24", "note": "#10; topped up oil DE brg; DE brg lack of lube"}
+{"wo_id": "WO-001200", "asset_tag": "B-01", "technician": "T11", "opened_at": "2026-03-02 23:03", "note": "P-01. rubber dust. also m/seal dripping. lined up jaw"}
+{"wo_id": "WO-001201", "asset_tag": "B-08", "technician": "T07", "opened_at": "2026-03-04 17:43", "note": "BLOWN OUT. WAS HOT. MTR BAD. M/SEAL OK"}
+{"wo_id": "WO-001203", "asset_tag": "B-08", "technician": "T19", "opened_at": "2026-03-05 21:09", "note": "B-08; growling 4.5 bar; found DE bearing cracked; DE bearing r&r"}
+{"wo_id": "WO-001204", "asset_tag": "B-05", "technician": "T15", "opened_at": "2026-03-06 06:10", "note": "B05; vanes renewed; was rattling; cav"}
+{"wo_id": "WO-001205", "asset_tag": "B-12", "technician": "T15", "opened_at": "2026-03-06 11:01", "note": "Motor refilled oil; was buzzing"}
+{"wo_id": "WO-001206", "asset_tag": "B-04", "technician": "T10", "opened_at": "2026-03-06 16:26", "note": "bomba 4; MS new one fitted; was wet around shaft; eaten away"}
+{"wo_id": "WO-001208", "asset_tag": "B-06", "technician": "T06", "opened_at": "2026-03-07 08:32", "note": "b-06 - spider re-shimmed - was clunking - align off done"}
+{"wo_id": "WO-001209", "asset_tag": "B-08", "technician": "T17", "opened_at": "2026-03-09 22:03", "note": "Pmp8 low flow walked it pm"}
+{"wo_id": "WO-001210", "asset_tag": "B-08", "technician": "T18", "opened_at": "2026-03-10 06:01", "note": "B-08, motor fam: overtemp, motor fan patched up done"}
+{"wo_id": "WO-001211", "asset_tag": "B-01", "technician": "T03", "opened_at": "2026-03-10 13:44", "note": "bomba 1, eaten away, brng new fitted"}
+{"wo_id": "WO-001212", "asset_tag": "B-04", "technician": "T01", "opened_at": "2026-03-10 16:09", "note": "Pump 4; low flow; vanes failed; vanes changed."}
+{"wo_id": "WO-001213", "asset_tag": "B-03", "technician": "T19", "opened_at": "2026-03-10 20:15", "note": "#3; mud; check valve unblocked"}
+{"wo_id": "WO-001216", "asset_tag": "B-03", "technician": "T11", "opened_at": "2026-03-11 22:01", "note": "Leak at shaft 78c. bad ms. snugged up"}
+{"wo_id": "WO-001217", "asset_tag": "B-03", "technician": "T11", "opened_at": "2026-03-12 05:51", "note": "Noisy. ran dry. brng gresed"}
+{"wo_id": "WO-001219", "asset_tag": "B-11", "technician": "T03", "opened_at": "2026-03-12 11:37", "note": "bomba 11, wont start 86C, mud, mtr cleared"}
+{"wo_id": "WO-001220", "asset_tag": "B-10", "technician": "T02", "opened_at": "2026-03-13 01:07", "note": "pmp10. stuck. no wear. suct valve re-shimmed"}
+{"wo_id": "WO-001221", "asset_tag": "B-11", "technician": "T17", "opened_at": "2026-03-13 05:54", "note": "Pmp11 clunking bolts tight drive coupling align off re-set drive coupling"}
+{"wo_id": "WO-001222", "asset_tag": "B-04", "technician": "T12", "opened_at": "2026-03-13 07:32", "note": "NDE brg - left running. was rough noise 1.8 bar. NDE brg failed"}
+{"wo_id": "WO-001223", "asset_tag": "B-12", "technician": "T15", "opened_at": "2026-03-13 13:01", "note": "Blown out; mtr unt fouled fan; cpl looks ok"}
+{"wo_id": "WO-001224", "asset_tag": "B-03", "technician": "T13", "opened_at": "2026-03-15 18:04", "note": "leak at shaft. MS bad. MS tweaked"}
+{"wo_id": "WO-001225", "asset_tag": "B-06", "technician": "T14", "opened_at": "2026-03-16 23:01", "note": "Low pressure - also check valve stuck - starved suction - installed new runner"}
+{"wo_id": "WO-001226", "asset_tag": "B-12", "technician": "T20", "opened_at": "2026-03-16 23:19", "note": "B12; LEAKING; CARBON FACE THERMAL TRIP; SWAPPED"}
+{"wo_id": "WO-001227", "asset_tag": "B-12", "technician": "T19", "opened_at": "2026-03-17 14:52", "note": "B-12; dripping 96C; check valve is ok; overheated seal; r&r"}
+{"wo_id": "WO-001228", "asset_tag": "B-06", "technician": "T17", "opened_at": "2026-03-18 04:43", "note": "Pmp6 noisy 3.7mm/s not worn r&r ball race"}
+{"wo_id": "WO-001229", "asset_tag": "B-09", "technician": "T18", "opened_at": "2026-03-18 06:51", "note": "B09, no cav noise, gland packing not the problem, brgs is toast, next pm brgs done"}
+{"wo_id": "WO-001231", "asset_tag": "B-08", "technician": "T14", "opened_at": "2026-03-18 23:40", "note": "B-08 - vibration high - wtaer in oil - cleaned ball race"}
+{"wo_id": "WO-001232", "asset_tag": "B-08", "technician": "T16", "opened_at": "2026-03-19 15:20", "note": "RUNNING HOT / CHECKED IMPELLOR OK / DE BEARING OIL CHANGE"}
+{"wo_id": "WO-001233", "asset_tag": "B-11", "technician": "T06", "opened_at": "2026-03-20 08:04", "note": "b-11 - mtr fan changed - was tripped 5.3 bar - scored - impeller vanes ok - mech seal good done"}
+{"wo_id": "WO-001234", "asset_tag": "B-07", "technician": "T06", "opened_at": "2026-03-20 08:12", "note": "renewed - drive end bearing issue - no issue w mseal - checked suction valve ok done"}
+{"wo_id": "WO-001235", "asset_tag": "B-02", "technician": "T03", "opened_at": "2026-03-20 13:18", "note": "bomba 2, carbon face - keep an eye"}
+{"wo_id": "WO-001236", "asset_tag": "B-03", "technician": "T10", "opened_at": "2026-03-20 15:12", "note": "#3; changed non return; stuck w debris"}
+{"wo_id": "WO-001237", "asset_tag": "B-11", "technician": "T01", "opened_at": "2026-03-20 17:25", "note": "Pump 11; face faulty; changed."}
+{"wo_id": "WO-001238", "asset_tag": "B-04", "technician": "T10", "opened_at": "2026-03-20 18:11", "note": "pump 4; drive coupling trimmed; was noise at coupling; soft foot"}
+{"wo_id": "WO-001239", "asset_tag": "B-02", "technician": "T02", "opened_at": "2026-03-20 22:42", "note": "misalifn drive coupling. lined up drive coupling"}
+{"wo_id": "WO-001240", "asset_tag": "B-02", "technician": "T14", "opened_at": "2026-03-20 23:45", "note": "Bad brng - brng exchanged"}
+{"wo_id": "WO-001243", "asset_tag": "B-11", "technician": "T15", "opened_at": "2026-03-23 11:32", "note": "Baseplate set up; was dp high; strainer clean"}
+{"wo_id": "WO-001244", "asset_tag": "B-10", "technician": "T01", "opened_at": "2026-03-23 16:34", "note": "Pump 10; amps high; strainer clean; electric motor is ok; vanes bad; vanes trimmed."}
+{"wo_id": "WO-001245", "asset_tag": "B-12", "technician": "T07", "opened_at": "2026-03-23 19:22", "note": "BLOWN OUT. WAS LOW FLOW 93C. FOUND BUTTERFLY FOULED SEAT"}
+{"wo_id": "WO-001246", "asset_tag": "B-03", "technician": "T11", "opened_at": "2026-03-24 05:22", "note": "Bomba 3. buzzing. cooked. eyeballed mtr unit"}
+{"wo_id": "WO-001247", "asset_tag": "B-06", "technician": "T19", "opened_at": "2026-03-24 14:00", "note": "B-06; rough noise; no issue w check valve; bad roller; roller r&r"}
+{"wo_id": "WO-001248", "asset_tag": "B-10", "technician": "T06", "opened_at": "2026-03-25 06:14", "note": "p-10 - imp changed - cavitating imp - strainer clean done"}
+{"wo_id": "WO-001249", "asset_tag": "B-10", "technician": "T03", "opened_at": "2026-03-25 11:47", "note": "bomba 10, buzzing, mud, unblocked mtr unit"}
+{"wo_id": "WO-001250", "asset_tag": "B-10", "technician": "T16", "opened_at": "2026-03-25 17:01", "note": "B10 / CAV / ISOLATION TRIMMED"}
+{"wo_id": "WO-001251", "asset_tag": "B-01", "technician": "T05", "opened_at": "2026-03-25 23:05", "note": "b01 / wont start / also impeller vanes low pressure / electric motor faulty / electric motor blown out done"}
+{"wo_id": "WO-001252", "asset_tag": "B-12", "technician": "T05", "opened_at": "2026-03-26 05:41", "note": "no cavitation / electric motor faild / welded electric motor done"}
+{"wo_id": "WO-001253", "asset_tag": "B-04", "technician": "T15", "opened_at": "2026-03-26 06:56", "note": "B04; drive motor added grease; was tripped"}
+{"wo_id": "WO-001254", "asset_tag": "B-05", "technician": "T01", "opened_at": "2026-03-26 21:37", "note": "Pump 5; humming loud; bearings: gunk; changed."}
+{"wo_id": "WO-001255", "asset_tag": "B-12", "technician": "T02", "opened_at": "2026-03-27 04:24", "note": "pmp12. hot. looked over DE bearing"}
+{"wo_id": "WO-001256", "asset_tag": "B-07", "technician": "T18", "opened_at": "2026-03-27 13:25", "note": "B07, drive end bearing fine, temp normal, gate soft foot, retorqued gate done"}
+{"wo_id": "WO-001257", "asset_tag": "B-01", "technician": "T12", "opened_at": "2026-03-27 13:28", "note": "pump 1. rebuilt flow mter. was dp hiigh. found flow meter end of life. oil level ok. temp normaal"}
+{"wo_id": "WO-001259", "asset_tag": "B-04", "technician": "T15", "opened_at": "2026-03-28 11:21", "note": "Brng new fitted; was noisy; cracked"}
+{"wo_id": "WO-001260", "asset_tag": "B-12", "technician": "T06", "opened_at": "2026-03-29 10:11", "note": "re-shimmed - was leaking bad - shaft seal failed done"}
+{"wo_id": "WO-001261", "asset_tag": "B-05", "technician": "T11", "opened_at": "2026-03-30 03:21", "note": "Bomba 5. leaking bad. bad ms. blown out ms"}
+{"wo_id": "WO-001262", "asset_tag": "B-04", "technician": "T18", "opened_at": "2026-03-30 07:31", "note": "Nde brg not the problem, cavit, waiting spares impeller vanes done"}
+{"wo_id": "WO-001264", "asset_tag": "B-09", "technician": "T02", "opened_at": "2026-03-30 22:27", "note": "knocking. also DE brg growling. shaft off. flex tweaked"}
+{"wo_id": "WO-001265", "asset_tag": "B-01", "technician": "T06", "opened_at": "2026-03-31 10:43", "note": "refilled oil drive end bearing - was vibes up - drive end bearing: dry - also drive motor smells burnt done"}
+{"wo_id": "WO-001266", "asset_tag": "B-01", "technician": "T13", "opened_at": "2026-03-31 20:39", "note": "alarm. suction screen is mud. rinsed suction screen"}
+{"wo_id": "WO-001267", "asset_tag": "B-09", "technician": "T07", "opened_at": "2026-04-01 18:12", "note": "NEW ONE FITTED. WAS WEEPING. SEAL PACK IS PITTED"}
+{"wo_id": "WO-001268", "asset_tag": "B-12", "technician": "T10", "opened_at": "2026-04-02 17:05", "note": "runner new one fitted; was vibes; eaten away"}
+{"wo_id": "WO-001269", "asset_tag": "B-09", "technician": "T17", "opened_at": "2026-04-03 02:26", "note": "P9 rattling found impeller end of life impeller replaced"}
+{"wo_id": "WO-001270", "asset_tag": "B-11", "technician": "T17", "opened_at": "2026-04-03 02:27", "note": "Pmp11 leak at shaft soft foot reworked gland"}
+{"wo_id": "WO-001272", "asset_tag": "B-05", "technician": "T04", "opened_at": "2026-04-03 14:24", "note": "B-05, gauge put new, was noise 86C."}
+{"wo_id": "WO-001273", "asset_tag": "B-08", "technician": "T13", "opened_at": "2026-04-03 16:06", "note": "gauge reads wrong 4.8 bar. gauge glass is damaged. gauge glass renewed"}
+{"wo_id": "WO-001274", "asset_tag": "B-03", "technician": "T17", "opened_at": "2026-04-04 00:23", "note": "Pmp3 amps high 8.9mm/s impeller vanes fine mtr fan unblocked"}
+{"wo_id": "WO-001275", "asset_tag": "B-05", "technician": "T05", "opened_at": "2026-04-04 02:35", "note": "b05 / mechanical seal issue / patched up done"}
+{"wo_id": "WO-001276", "asset_tag": "B-11", "technician": "T14", "opened_at": "2026-04-04 23:15", "note": "Amps high - installed new vanes"}
+{"wo_id": "WO-001277", "asset_tag": "B-04", "technician": "T12", "opened_at": "2026-04-05 10:57", "note": "B04. non return trimmed. was hammering. non return: cav. also impeller vanees vibes"}
+{"wo_id": "WO-001278", "asset_tag": "B-01", "technician": "T18", "opened_at": "2026-04-06 07:22", "note": "B01, warm, grease ok, no wear, de houusing failed, re-set de housing done"}
+{"wo_id": "WO-001279", "asset_tag": "B-09", "technician": "T09", "opened_at": "2026-04-07 09:14", "note": "b09 silt nrv rinsed nrv"}
+{"wo_id": "WO-001281", "asset_tag": "B-10", "technician": "T07", "opened_at": "2026-04-07 17:40", "note": "LUBED. WAS BUZZING 10.5MM/S. MTR FAULTY"}
+{"wo_id": "WO-001282", "asset_tag": "B-12", "technician": "T11", "opened_at": "2026-04-08 00:34", "note": "Bomba 12. vibes up 2.2 bar. shaft off brg. brg lined up"}
+{"wo_id": "WO-001283", "asset_tag": "B-12", "technician": "T19", "opened_at": "2026-04-08 19:43", "note": "B-12; vibes; coupling insert alignment out; coupling insert re-aligned"}
+{"wo_id": "WO-001285", "asset_tag": "B-01", "technician": "T12", "opened_at": "2026-04-09 06:50", "note": "B01. retorqued. was rough noise. DE bearinng issue. shaft seal looks ok"}
+{"wo_id": "WO-001286", "asset_tag": "B-02", "technician": "T18", "opened_at": "2026-04-09 09:16", "note": "P-02, low pressure, also drive end bearing noisy, temp ok, impeller vanes cavitating, impeller vanes r&r done"}
+{"wo_id": "WO-001288", "asset_tag": "B-10", "technician": "T12", "opened_at": "2026-04-09 13:20", "note": "B10. impelolr - to do next shift. was amps high. found impellor cav"}
+{"wo_id": "WO-001289", "asset_tag": "B-08", "technician": "T01", "opened_at": "2026-04-09 14:19", "note": "Pump 8; humming loud; wornout; patched up roller."}
+{"wo_id": "WO-001290", "asset_tag": "B-06", "technician": "T02", "opened_at": "2026-04-10 00:19", "note": "pmp6. DE brg u/s. topped up oil"}
+{"wo_id": "WO-001292", "asset_tag": "B-05", "technician": "T10", "opened_at": "2026-04-10 21:36", "note": "B-05; cleared; was hot; motor unit: burnt; grease ok"}
+{"wo_id": "WO-001293", "asset_tag": "B-12", "technician": "T14", "opened_at": "2026-04-11 02:47", "note": "Cooked - motor fan cleared out"}
+{"wo_id": "WO-001294", "asset_tag": "B-06", "technician": "T13", "opened_at": "2026-04-11 20:39", "note": "motor fan bone dry. motor fan lube done"}
+{"wo_id": "WO-001297", "asset_tag": "B-02", "technician": "T17", "opened_at": "2026-04-14 01:00", "note": "B-02 noisy also cplg rubber dust had it drive end bearing r&r"}
+{"wo_id": "WO-001298", "asset_tag": "B-05", "technician": "T10", "opened_at": "2026-04-14 16:24", "note": "bomba 5; new one fitted DE brg; dry; oil clean"}
+{"wo_id": "WO-001299", "asset_tag": "B-07", "technician": "T20", "opened_at": "2026-04-14 22:50", "note": "B07; RUBBER DUST 5.0 BAR; LOOSE; JAW TWEAKED"}
+{"wo_id": "WO-001300", "asset_tag": "B-03", "technician": "T12", "opened_at": "2026-04-15 10:39", "note": "B03. cleraed mtr. mtr faulty"}
+{"wo_id": "WO-001301", "asset_tag": "B-07", "technician": "T14", "opened_at": "2026-04-15 23:28", "note": "P-07 - bering greased up"}
+{"wo_id": "WO-001302", "asset_tag": "B-08", "technician": "T03", "opened_at": "2026-04-16 12:22", "note": "bomba 8, also check valve wot close, runner: cav, keep an eye"}
+{"wo_id": "WO-001304", "asset_tag": "B-08", "technician": "T01", "opened_at": "2026-04-16 17:11", "note": "Pump 8; roller: chewed; put new."}
+{"wo_id": "WO-001305", "asset_tag": "B-04", "technician": "T09", "opened_at": "2026-04-17 07:09", "note": "b04 mud cleared out vanes"}
+{"wo_id": "WO-001307", "asset_tag": "B-12", "technician": "T02", "opened_at": "2026-04-19 01:48", "note": "leaking bad 5.8mm/s. end of life. put new mech seal"}
+{"wo_id": "WO-001308", "asset_tag": "B-02", "technician": "T13", "opened_at": "2026-04-20 14:25", "note": "spraying. gland is damaged. renewed"}
+{"wo_id": "WO-001309", "asset_tag": "B-12", "technician": "T07", "opened_at": "2026-04-20 18:29", "note": "BLOWN OUT. WAS BUZZING 58A. MTR IS BLOCKED FAN COVER"}
+{"wo_id": "WO-001310", "asset_tag": "B-04", "technician": "T02", "opened_at": "2026-04-21 02:10", "note": "pmp4. rattling. impellor faulty. impellor changed"}
+{"wo_id": "WO-001311", "asset_tag": "B-10", "technician": "T15", "opened_at": "2026-04-21 07:20", "note": "B10; cleared out strainer; was low flow"}
+{"wo_id": "WO-001315", "asset_tag": "B-02", "technician": "T11", "opened_at": "2026-04-22 01:57", "note": "Bomba 2. shaking. exchanged spider"}
+{"wo_id": "WO-001316", "asset_tag": "B-11", "technician": "T18", "opened_at": "2026-04-22 11:47", "note": "B11, drripping, found seal pack not in line, exchanged seal pack done"}
+{"wo_id": "WO-001319", "asset_tag": "B-03", "technician": "T05", "opened_at": "2026-04-24 02:40", "note": "b03 / wornout de brg / changed done"}
+{"wo_id": "WO-001322", "asset_tag": "B-12", "technician": "T13", "opened_at": "2026-04-24 18:24", "note": "clunking. cpl is eaten away. cpl new fitted"}
+{"wo_id": "WO-001323", "asset_tag": "B-10", "technician": "T01", "opened_at": "2026-04-24 21:53", "note": "Low pressure; bearings looks ok; vanes: cavitating; put new vanes."}
+{"wo_id": "WO-001324", "asset_tag": "B-07", "technician": "T14", "opened_at": "2026-04-24 22:53", "note": "Reworked vanes"}
+{"wo_id": "WO-001325", "asset_tag": "B-05", "technician": "T13", "opened_at": "2026-04-25 18:08", "note": "P-05. cpl failed. cpl installed new"}
+{"wo_id": "WO-001326", "asset_tag": "B-11", "technician": "T09", "opened_at": "2026-04-26 09:10", "note": "p-11 low oil brg brg exchanged"}
+{"wo_id": "WO-001327", "asset_tag": "B-08", "technician": "T20", "opened_at": "2026-04-27 00:53", "note": "B08; BALANCE OK; SUCTION VALVE ISSUE; TWEAKED SUCTION VALVE"}
+{"wo_id": "WO-001329", "asset_tag": "B-07", "technician": "T16", "opened_at": "2026-04-27 15:07", "note": "B07 / HOT / TEMP NORMAL / DE BEARING U/S / DE BEARING ADDED GREASE"}
+{"wo_id": "WO-001330", "asset_tag": "B-08", "technician": "T20", "opened_at": "2026-04-28 02:37", "note": "B08; BEARINGS LOOKS OK; CHECKED SPIDER OK; FOUND IMPELLER VANES BLOCKED; RINSED"}
+{"wo_id": "WO-001332", "asset_tag": "B-04", "technician": "T09", "opened_at": "2026-04-28 10:56", "note": "b04 cleaned electrics"}
+{"wo_id": "WO-001333", "asset_tag": "B-11", "technician": "T15", "opened_at": "2026-04-28 12:29", "note": "Jaw r&r; was vibes; found jaw eaten away"}
+{"wo_id": "WO-001334", "asset_tag": "B-08", "technician": "T12", "opened_at": "2026-04-29 09:04", "note": "B08. re-set pipe support. piipe support wobbly"}
+{"wo_id": "WO-001335", "asset_tag": "B-05", "technician": "T04", "opened_at": "2026-04-29 19:15", "note": "drive end bearing - needs replacing, parts ordered, was vibes bad, had it."}
+{"wo_id": "WO-001336", "asset_tag": "B-06", "technician": "T11", "opened_at": "2026-04-30 00:37", "note": "Bomba 6. rattling. disch valve not the problem. spider not the problem. runner scored. exchanged runner"}
+{"wo_id": "WO-001337", "asset_tag": "B-04", "technician": "T05", "opened_at": "2026-04-30 05:29", "note": "b04 / running hot 104c / valve good / de brg failed / tightened de brg done"}
+{"wo_id": "WO-001338", "asset_tag": "B-04", "technician": "T06", "opened_at": "2026-04-30 10:54", "note": "b-04 - nff weekly check - was noise - weekly check done"}
+{"wo_id": "WO-001339", "asset_tag": "B-01", "technician": "T16", "opened_at": "2026-04-30 14:19", "note": "SPRAYING / NO ISSUE W CPLG / NO WEAR / SHAFT SEAL BAD / REPACKED SHAFT SEAL"}
+{"wo_id": "WO-001340", "asset_tag": "B-03", "technician": "T11", "opened_at": "2026-04-30 23:31", "note": "P-03. leakibg. toast. exchanged m/seal"}
+{"wo_id": "WO-001341", "asset_tag": "B-03", "technician": "T19", "opened_at": "2026-05-01 18:03", "note": "B-03; wet around shaft 26A; MS cracked; r&r MS"}
+{"wo_id": "WO-001342", "asset_tag": "B-03", "technician": "T04", "opened_at": "2026-05-01 20:35", "note": "#3, windings unblocked, was wont start, windings bad."}
+{"wo_id": "WO-001345", "asset_tag": "B-01", "technician": "T12", "opened_at": "2026-05-05 12:02", "note": "B01. retorquued mech seal. was weeping. mech seal: soft foot. spider is ok"}
+{"wo_id": "WO-001346", "asset_tag": "B-02", "technician": "T10", "opened_at": "2026-05-05 14:35", "note": "#2; set up m/seal; was weeping; loose; imp is ok"}
+{"wo_id": "WO-001347", "asset_tag": "B-09", "technician": "T13", "opened_at": "2026-05-05 18:17", "note": "alarm. suction screen bad. cleared out suction screen"}
+{"wo_id": "WO-001350", "asset_tag": "B-09", "technician": "T01", "opened_at": "2026-05-06 15:17", "note": "Pump 9; leak at shaft; seal bad; put new seal."}

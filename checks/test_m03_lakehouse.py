@@ -7,7 +7,6 @@ import os
 import re
 
 import duckdb
-import numpy as np
 import pandas as pd
 import pytest
 

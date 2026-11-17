@@ -6,7 +6,6 @@ import json
 import re
 import shutil
 import subprocess
-import time
 
 import httpx
 import pytest

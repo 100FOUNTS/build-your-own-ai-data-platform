@@ -11,7 +11,6 @@ import time
 import httpx
 import hvac
 import jwt
-import psycopg
 import pytest
 from cryptography.hazmat.primitives.asymmetric import rsa
 

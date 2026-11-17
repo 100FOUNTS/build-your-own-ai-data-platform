@@ -1,6 +1,6 @@
 ---
 description: Gives the NEXT hint for module N, from least to most help, without giving away the solution
-argument-hint: <module number 0-14 or challenge R1-R9>
+argument-hint: <module number 0-18 or challenge R1-R9>
 ---
 The learner is stuck on **module $ARGUMENTS**. Read that module's guide (the file in `guide/` that starts with the two-digit number; for a challenge `RN`, `guide/challenges/RN_*.md`) and their current code.
 

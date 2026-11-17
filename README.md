@@ -2,11 +2,12 @@
 
 **Learn the modern data + AI stack by building a whole platform, piece by piece.** Streaming ingestion, a lakehouse, ML with
 experiment tracking, a RAG assistant with evals and guardrails, APIs, a real-time frontend, security, observability, cloud
-infrastructure as code, containers, Kubernetes and GitOps — all wired together around one plant, all running on your machine.
+infrastructure as code, containers, Kubernetes and GitOps — all wired together around one plant, all running on your machine. **Part 2** adds a second plant:
+forward-deployed engineering against a legacy system, a fine-tuned small LLM served at the edge, and a rollout you can prove worked.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
-![Time: 106-128 h](https://img.shields.io/badge/time-106--128%20h-orange)
+![Time: 130-159 h](https://img.shields.io/badge/time-130--159%20h-orange)
 ![Runs locally](https://img.shields.io/badge/runs-100%25%20local-lightgrey)
 
 > **Nothing is done here.** The “company” hands you a base platform (databases, Kafka, storage, Keycloak… started with one
@@ -18,7 +19,8 @@ infrastructure as code, containers, Kubernetes and GitOps — all wired together
 **Stack:** Python · SQL · TypeScript · PostgreSQL · Redis (Valkey) · pgvector · Kafka (Redpanda) · Spark · Iceberg · Delta Lake · DuckDB · dbt ·
 Polars · Dagster · pandas · scikit-learn · PyTorch · LightGBM · MLflow · Ollama · RAG · LangGraph · MCP · evals · guardrails · FastAPI · Node.js ·
 React/Next.js · Keycloak (OIDC) · OpenBao · OpenTelemetry · Prometheus · Grafana · Loki · Tempo · OpenTofu · AWS (emulated) · Docker ·
-Kubernetes (kind) · GitHub Actions · Trivy · Syft · cosign · Semgrep · Gitleaks · Kyverno · Argo CD · Argo Rollouts · Backstage
+Kubernetes (kind) · GitHub Actions · Trivy · Syft · cosign · Semgrep · Gitleaks · Kyverno · Argo CD · Argo Rollouts · Backstage ·
+LoRA (mlx-lm / PEFT) · llama.cpp (GGUF) · difference-in-differences
 
 ---
 
@@ -61,8 +63,21 @@ repeated messages, like real life), the pump master data, work orders and 12 mai
 | 12 | Containers and K8s | Secure images and deployment to a cluster | Docker, Kubernetes (kind) | 6–8 |
 | 13 | CI/CD and GitOps | A CI pipeline that scans the code, scans, inventories (SBOM) and signs the image; a cluster that only admits signed images; canary releases with automatic rollback; a service catalog | GitHub Actions (act), Semgrep, Gitleaks, Trivy, Syft, cosign, Kyverno, Argo CD, Argo Rollouts, Backstage | 12–13 |
 | 14 | Integration | A runbook, ADRs and an end-to-end alert flow | everything | 3–4 |
+| 15 | A second plant (forward-deployed engineer) | A client interview (role-play), a connector from a legacy CMMS (watermark, DST, retries, corrections), a read-only MCP server, an offline site box and its runbook | Claude role-play, HTTP/XML, Postgres upserts, zoneinfo, MCP, Docker internal networks | 8–10 |
+| 16 | Fine-tune a small LLM | A rules baseline, a few-shot base model and a LoRA fine-tune that turn a technician's note into JSON, compared honestly on hidden notes (macro-F1, JSON validity), logged to MLflow | Ollama, mlx-lm / PEFT, Qwen3-0.6B, MLflow | 6–8 |
+| 17 | Serve it at the edge | The fine-tune as a GGUF (Q8_0 and Q4_K_M) behind llama-server with JSON-schema constrained output, a 20-technician load test (TTFT, p95, tokens/s), a decision record against an SLO; bonus: a confidence-based escalation gateway | llama.cpp, GGUF, JSON Schema/GBNF, httpx/asyncio | 5–7 |
+| 18 | Experiments | A randomized staggered rollout of the new alert policy across the fleet: power plan, staggered-adoption DiD, event study with placebo leads, bootstrap interval, naive-TWFE bias, a decision memo | NumPy/pandas, the rollout simulator | 5–6 |
 
-**Total ≈ 106–128 hours.** You don't have to do it all: nobody masters every tool, and it pays to pick 2–3 areas for the role you want.
+**Part 2 — the second plant (PLT02), modules 15–18.** PLT01 works, so the company buys a second plant. It brings three problems the first one never had: its maintenance
+records live in a **legacy CMMS** (a 15-year-old system nobody has documented properly), its **internet is flaky and its data must stay on
+site**, and 20 technicians write the failure notes **as free text**. You go there as a forward-deployed engineer: you interview the client and connect the legacy system (15), teach a small
+language model to read the technicians' notes (16) and run it on a box with no cloud and no GPU (17); then you prove, with a staggered rollout and difference-in-differences, that the new
+alert policy actually reduced downtime across the company's fleet (18). Part 2 builds on modules 0–6 (module 18 only needs module 0 and runs on a simulated fleet of the company's lines, not on PLT02's 12 pumps); the PLT02 story is told in module 15.
+
+> **Status of Part 2:** modules 15 and 18 have been validated end to end. Modules 16 and 17 are new and **not validated yet**: their
+> thresholds are first estimates and may change. If a check there looks wrong, please open an issue.
+
+**Total ≈ 130–159 hours.** You don't have to do it all: nobody masters every tool, and it pays to pick 2–3 areas for the role you want.
 See the **paths by role** in [`guide/role_paths.md`](guide/role_paths.md).
 
 ## Industry challenges (optional)
@@ -78,7 +93,10 @@ bugs, regression tests, a postmortem and a coding agent you supervise (R8) and t
   (each module says which services it needs; `make down` between modules).
 - [`uv`](https://docs.astral.sh/uv/), **Node.js ≥ 20**, `make`, and [**Ollama**](https://ollama.com) running on the host with `mxbai-embed-large` (embeddings) and a chat model (`qwen3:4b-instruct`).
 - For modules 11–13: OpenTofu, kind, act, kubectl, Helm, Trivy, Syft, cosign, Semgrep and Gitleaks (`brew install opentofu kind act kubectl helm trivy syft cosign semgrep gitleaks` on macOS; see each project's docs on Linux).
-- ~25 GB of free disk (Docker images, models and OpenTofu providers).
+- **Modules 16–17 (Part 2):** Apple Silicon with 16 GB is the recommended machine (LoRA training in minutes, GPU inference). Linux, Windows (WSL2) and Intel Macs work through a documented
+  free CPU path (PEFT and, if needed, a smaller model): 30–90 minutes of training instead of minutes. The extra installs are `uv sync --group llm` and `make edge-setup` (a pinned
+  llama.cpp release; nothing to `brew install`) plus `ollama pull qwen3:0.6b`. Module 15 only needs Docker able to build images.
+- ~25 GB of free disk (Docker images, models and OpenTofu providers); ~35 GB if you also do modules 16–17 (model weights and GGUF files).
 - You will check all of it with your own `scripts/doctor.sh` in module 0.
 
 It was built and tested on macOS (Apple Silicon). The host ports are chosen to avoid the usual clashes (Postgres on 5433, Redis on 6380, MLflow on 5001); if one is busy on your machine, change it in `compose.yaml` and `platform.env`.
@@ -91,6 +109,7 @@ cd build-your-own-ai-data-platform
 make setup                       # installs the Python dependencies with uv
 ollama pull mxbai-embed-large    # embeddings for module 6
 ollama pull qwen3:4b-instruct    # chat model for module 6 and challenge R7
+ollama pull qwen3:0.6b           # few-shot baseline of module 16 (Part 2)
 make check-0                     # everything fails with a clear message: that is your starting point
 ```
 
@@ -114,7 +133,7 @@ turns on a mentor mode (`CLAUDE.md` and `.claude/commands/`): `/module N`, `/hin
 ## Rules of the game
 
 1. **`data/history` and `platform/` are not edited**: they are “the plant” and “the platform team”.
-2. **Don't open `checks/_heldout.jsonl`** until you finish module 6: it holds hidden test cases. Opening it takes away exactly the learning.
+2. **Don't open `checks/_heldout.jsonl`** until you finish module 6, nor `checks/_plt02_heldout.jsonl` until you finish module 16: they hold hidden test cases. Opening them takes away exactly the learning.
 3. **No credentials in the code** (module 8 watches for it). Paths and URLs come from environment variables (`platform.env`, local development values only).
 4. **There is no single solution.** The checks verify behavior and properties (does it duplicate when repeated? is there time leakage? is the
    forged token rejected?), not your style.
@@ -133,13 +152,13 @@ networks and real costs need a real environment.
 
 ```
 README.md  CLAUDE.md  Makefile  compose.yaml  platform.env
-guide/      the guides (00_foundations … 14_integration), glossary, role paths and challenges/ (R1 … R9)
+guide/      the guides (00_foundations … 18_experiments), glossary, role paths and challenges/ (R1 … R9)
 notes/      YOUR decision notebook
 platform/   what the platform team gives you (simulator, configs, manuals corpus, Keycloak realm…) — not edited
 data/       the plant's history (Parquet) — read only
 checks/     the checks for every module and every challenge
 legacy/     the previous team's code (challenge R8): here you DO fix it
-db/ scripts/ sql/ services/ pipelines/ ml/ genai/ observability/ infra/ deploy/ docs/ tests/   ← this is where YOU build
+db/ scripts/ sql/ services/ pipelines/ ml/ genai/ connectors/ experiments/ observability/ infra/ deploy/ docs/ tests/   ← this is where YOU build
 .claude/    optional mentor mode for Claude Code
 ```
 

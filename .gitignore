@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
+# Part 2 (modules 16-17): downloaded llama.cpp, model files and adapters are generated, never committed
+.tools/
+models/
+ml/notes_llm/artifacts/

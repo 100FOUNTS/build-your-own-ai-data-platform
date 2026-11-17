@@ -60,5 +60,9 @@ It ends with “**This gets worse…**”. An ADR without costs isn't honest. An
 ## On a real job
 Incident drills (*game days*), blameless *post-mortems*, error budgets that hold back deployments, on-call rotations and a service catalog (module 13) that every alert points to.
 
+**Part 2 — the second plant.** The platform you just handed over is PLT01's. When you finish, the company buys **PLT02**: a legacy maintenance system, flaky internet and free-text
+technician notes. Modules [15](15_second_plant_fde.md) (forward-deployed engineering), [16](16_llm_finetuning.md) (LoRA fine-tune), [17](17_edge_inference.md) (edge serving) and
+[18](18_experiments.md) (prove a rollout worked) continue from here; your runbook and ADRs are the starting point for module 15's site runbook.
+
 **When you finish**: write your retrospective in `notes/` and move on to the [industry challenges](challenges/README.md) on your path
 (**R8**, legacy code, is the practice closest to your first month on a job).
