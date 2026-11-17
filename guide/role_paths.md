@@ -6,10 +6,10 @@ if you skipped modules, you do that test only with what you have).
 
 | Role you are aiming for | Modules (in this order) | Industry challenges | What you show in an interview |
 |---|---|---|---|
-| **Data engineer** | 0 · 1 · 2 · 3 · 5 · 10 · 11 · 12 · 14 | R1 · R2 · R3 · R4 · R8 · R9 | Idempotent ingestion, streaming, lakehouse (Iceberg **and Delta**/dbt), SCD2, Polars, orchestration, observability, Databricks |
-| **Applied ML / AI** | 0 · 1 · 3 (up to dbt) · 4 · 6 · 7 (API) · 10 | R5 · R6 · R7 · R8 | Honest evaluation, LightGBM with a business metric, drift, MLflow, evaluated RAG, safe text-to-SQL, agents, MCP |
+| **Data engineer** | 0 · 1 · 2 · 3 · 4 (just enough to have `ml.train`) · 5 · 10 · 11 · 12 · 14 | R1 · R2 · R3 · R4 · R8 · R9 | Idempotent ingestion, streaming, data contracts (schema registry), lakehouse (Iceberg **and Delta**/dbt), SCD2, Polars, orchestration with drift checks, observability, Databricks |
+| **Applied ML / AI** | 0 · 1 · 3 (up to dbt) · 4 · 5 · 6 · 7 (API) · 10 | R5 · R6 · R7 · R8 | Honest evaluation, LightGBM with a business metric and a bootstrap CI, drift, MLflow champion/challenger, evaluated RAG with a calibrated judge, OWASP-mapped guardrails, traced agents, safe text-to-SQL, MCP |
 | **Backend / Full-stack** | 0 · 1 · 7 · 8 · 9 · 10 · 12 · 14 | R1 · R7 · R8 | A validated API, OIDC, real time, Next.js, containers, legacy code |
-| **Platform / DevOps / SRE** | 0 · 1 (usage only) · 7 (just start it) · 10 · 11 · 12 · 13 · 8 · 14 | R8 · R9 | IaC, Kubernetes, GitOps, CI/CD, observability, security, postmortems |
+| **Platform / DevOps / SRE** | 0 · 1 (usage only) · 7 (just start it) · 10 · 11 · 12 · 13 · 8 · 14 | R8 · R9 | IaC, Kubernetes, GitOps, CI/CD with code scanning and a signed supply chain, admission policies, canary releases, SLOs and burn-rate alerts, observability, security, postmortems |
 | **Everything** | 0 → 14 | R1 → R9 | The full picture |
 
 The challenges (in [`challenges/`](challenges/README.md)) are done after the module they extend and are not part of `make check`.
