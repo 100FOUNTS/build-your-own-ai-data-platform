@@ -2,6 +2,7 @@
 
 ⏱ 12–13 h (7–8 h of CI, supply chain, GitOps and catalog + ~5 h of code scanning, signature admission and canaries) · Services: `make kind-up up-git` (and module 12 done) · Check: `make check-13` (⏱ ~15 min the first time: it builds images, installs Argo CD and creates a second, throwaway kind cluster for Kyverno and Argo Rollouts; the dynamic parts need `brew install trivy syft cosign semgrep gitleaks kind helm`)
 **Tools:** GitHub Actions (locally with **act**), **Trivy** (vulnerability scanner), **Syft** (SBOM), **cosign** (signatures), **Semgrep CE** (static analysis of your code), **Gitleaks** (leaked credentials), **Kyverno** (admission policies), **Argo CD** (GitOps), **Argo Rollouts** (canary releases), **Backstage** (internal portal), Git.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 13 <mode>`
 **Memory:** Docker ≈ 8 GB is enough, but not with other modules running: the check starts a second kind cluster (~1.5 GB with the add-ons) and deletes it at the end. Look at `docker stats --no-stream` before you start.
 
 ## What you will build
@@ -130,6 +131,12 @@ For the last two features it creates its **own throwaway kind cluster** (`chk-m1
 - **Admission, for real**: it installs Kyverno (pinned), applies *your* policy with a fresh public key swapped in, and uses **the image your `supply_chain.sh` signed**: it must be **admitted and pinned to its digest**; an unsigned image, a signed tag **re-pointed** to unsigned content and an image signed by **another key** must be **refused by Kyverno**; and an image that is not the plant's must be left alone.
 
 The first run downloads the vulnerability database, the Kyverno and Rollouts images and the kind node image (needs network).
+
+## Your turn (walkthrough mode)
+On your own, add a named step to `.github/workflows/ci.yml` that validates `deploy/k8s/overlays/canary` with `kubectl kustomize`, before image builds.
+Keep the existing job dependencies and pinned actions; the rendered output must contain a `Rollout` for `plant-api`.
+Run `actionlint` and `act -l`, then `kubectl kustomize deploy/k8s/overlays/canary`; inspect the job listing and rendered kind/name pair.
+Then re-run `make check-13`.
 
 ## Comprehension questions
 1. What is the difference between “CI that deploys with `kubectl` using cluster credentials” and *pull* GitOps? Which credentials does the CI no longer need?

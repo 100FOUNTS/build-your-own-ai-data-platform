@@ -2,6 +2,7 @@
 
 ⏱ 5–6 h · Services: none · Check: `make check-18` · **Role:** Data Scientist (it also teaches any engineer how to read an A/B-style claim)
 **Tools:** NumPy/pandas (everything is done with them), the simulator extension `platform/sim/rollout.py`, a bootstrap you write yourself.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 18 <mode>`
 **What you practice:** experimental design, power, difference-in-differences under staggered adoption, event studies and placebo tests, bootstrap uncertainty, a decision memo.
 **Part 2, "The second plant":** the platform now serves more than one plant (PLT01, PLT02, …). This module answers the question every plant asks next: *did the new policy work?* It is a **fleet-wide rollout**: it runs on a simulated fleet of the company's pump lines, not on PLT02's 12 pumps (module 15) and not on the PLT01 data.
 
@@ -146,6 +147,12 @@ Then it generates a **noise-free staggered panel** with the simulator and runs y
 your placebo leads must be exactly 0, and the **naive TWFE** you report must equal the check's own TWFE and sit well away from the truth on that panel, with negative weights. Finally it generates **three noisy panels** from *your* design
 and runs your `analyze` with a smaller bootstrap: your 95 % interval must cover the true ATT in at least two of the three, have a plausible width, the event study must follow the true dynamics and the placebo leads must be quiet.
 It also checks that your code does not read the truth, that the pre-registered plan and the memo exist with the required sections, that the memo quotes your own `result.json` and that its decision does not contradict your interval.
+
+## Your turn (walkthrough mode)
+On your own, extend `experiments/analyze.py` to report the minimum eligible comparison-pump count across the cohort-time cells contributing to each event time, using only the panel and design.
+Run `python -m experiments.analyze --panel data/rollout/panel.csv --design data/rollout/design.json --seed 18 --n-boot 1000 --out /tmp/m18-controls.json`.
+Inspect the counts for event times 0–7: each must have comparison pumps, and no already-treated pump may count; keep the estimand, bootstrap and original memo unchanged.
+Then re-run `make check-18`.
 
 ## Comprehension questions
 1. Why is a before/after comparison of downtime not evidence, even if downtime fell a lot? Name two things other than the policy that could have changed it.

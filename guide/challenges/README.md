@@ -28,6 +28,9 @@ Only R8 hands you code, because the challenge is precisely inheriting it.
 - By role (see [`../role_paths.md`](../role_paths.md)): **data** R1 · R2 · R3 · R4 · R8 · R9 · **ML/AI** R5 · R6 · R7 · R8 · **backend/platform** R1 · R7 · R8.
 
 ## How to work
+Challenges use the same three modes as modules: **solo**, **guided** (default) and **walkthrough**.
+See [learning modes](../modes.md); set a challenge with `/mode R3 walkthrough`.
+
 Same as the modules: read *Why this challenge exists*, build, `make challenge-N`, `/review` with Claude Code and answer the comprehension questions in your own words.
 `/hint` and `/why` also work with the challenges (for example `/hint R5`).
 The `solution` branch has a reference solution for each challenge; open it only after you finish.

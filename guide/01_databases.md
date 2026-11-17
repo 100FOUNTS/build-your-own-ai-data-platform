@@ -2,6 +2,7 @@
 
 ⏱ 4–5 h · Services: `make up-db` · Check: `make check-1`
 **Tools:** PostgreSQL, Redis (here **Valkey**, the open fork: same protocol, same clients), SQL.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 1 <mode>`
 
 ## What you will build
 The plant's **system of record** in PostgreSQL (assets, work orders, risk scores and alerts), with versioned
@@ -66,6 +67,12 @@ doesn't fail or repeat anything. (Professional extra: store a *checksum* and war
 ## How you will know you are done
 `make check-1` creates a **new, empty** database at test time and applies YOUR migrations and YOUR seeds from scratch. It tests each constraint
 by trying to violate it, checks the execution plan with 120,000 rows, compares your view with an independent computation and puts your rate limiter under 60 threads.
+
+## Your turn (walkthrough mode)
+On your own, add `tests/test_cache_expiry.py` to prove that `cache_get_or_set` recomputes after its TTL expires.
+Use a unique test key and a counting `compute` function: two immediate calls should compute once, and a call after expiry should compute again.
+Run `uv run pytest -v tests/test_cache_expiry.py` with Valkey running; look for the counter assertions passing, and clean up the key.
+Then re-run `make check-1`.
 
 ## Comprehension questions
 1. Why doesn't a `CHECK` constraint in the database replace validation in the API, and vice versa?

@@ -2,6 +2,7 @@
 
 ⏱ 3–4 h · Extends **module 3** · Services: `make up-lake` · Check: `make challenge-2`
 **Tools:** Delta Lake (with `deltalake`, the Rust/Python library without Spark), Iceberg (PyIceberg), DuckDB.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R2 <mode>`
 
 ## What you will build
 `python -m pipelines.delta.export`: reads your bronze table `lake.<LAKE_NS>.readings` (Iceberg) and publishes it as a **Delta table** at `DELTA_PATH`,
@@ -37,6 +38,12 @@ versus an explicit column, a catalog versus a `_delta_log` folder). And it is a 
 ## How you will know you are done
 `make challenge-2` creates **its own** small Iceberg table (3 days of history) in a temporary namespace, runs your export, checks rows, schema and partitioning,
 runs it again (idempotency), adds a fourth day to Iceberg and checks that only what is new gets in, tests time travel and reads the result with DuckDB.
+
+## Your turn (walkthrough mode)
+On your own (30–45 min), add a `--dry-run` option to your exporter that prints how many new rows would be inserted without writing them.
+Run `python -m pipelines.delta.export --dry-run` against your own bronze table; compare the Delta version and row count before and after: neither should change.
+Run the normal export, then the dry run again: it should report zero new rows.
+Claude reviews your change but does not write it. Re-run `make challenge-2`.
 
 ## Comprehension questions
 1. What is easier to change later: the partitioning of an Iceberg table or of a Delta table? Why?

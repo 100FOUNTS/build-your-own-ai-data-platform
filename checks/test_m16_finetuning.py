@@ -24,17 +24,18 @@ TRAIN = ROOT / "ml" / "notes_llm" / "data" / "train.jsonl"
 SYNTHETIC = ROOT / "ml" / "notes_llm" / "data" / "synthetic.jsonl"
 EXPERIMENT = "notes-llm"
 
-# ------------------------------------------------------------------------------------------------ thresholds (calibrate in final test pass)
-# Not measured yet: they are set from what a diligent learner should get with Qwen3-0.6B, 240 train notes and mlx-lm LoRA, and must be
-# recalibrated against the reference solution (rules ~0.70 on these notes; expected LoRA 0.80-0.90; few-shot base model 0.45-0.65).
-M16_RULES_MIN_F1 = 0.35          # calibrate in final test pass: a rules baseline that is a real baseline, not "always the majority class"
-M16_FEWSHOT_MIN_F1 = 0.15        # calibrate in final test pass: the base model must have been run for real (the majority-class floor is ~0.1)
-M16_LORA_MIN_F1_MACRO = 0.72     # calibrate in final test pass: mean of the three per-field macro-F1
-M16_LORA_MIN_FIELD_F1 = 0.55     # calibrate in final test pass: no field may be neglected
-M16_LORA_MIN_JSON_VALID = 0.97   # calibrate in final test pass: share of answers that are, as plain text, one valid JSON object
-M16_LORA_GAIN_OVER_FEWSHOT = 0.08  # calibrate in final test pass: fine-tuning must visibly beat the same model with examples in the prompt
-M16_LOG_TOLERANCE = 0.25         # calibrate in final test pass: |logged f1_macro (your dev set) - recomputed (held-out)|; it only catches invented numbers
-M16_MAX_HELDOUT_TEXT_OVERLAP = 2  # calibrate in final test pass: training notes identical (normalized) to a held-out note
+# ------------------------------------------------------------------------------------------------ thresholds
+# Measured on Apple Silicon / Qwen3-0.6B, 240 notes, 1 000 MLX LoRA steps:
+# rules .7516, few-shot .5837, LoRA .7877; weakest LoRA field .7018,
+# JSON-valid 1.0, LoRA gain .2040. Floors leave roughly 7-10 F1 points.
+M16_RULES_MIN_F1 = 0.50  # a real baseline, not a copy of the reference rules (reference .75; majority class ~.1)
+M16_FEWSHOT_MIN_F1 = 0.35  # proves the base model ran for real; prompts vary (reference .58)
+M16_LORA_MIN_F1_MACRO = 0.72
+M16_LORA_MIN_FIELD_F1 = 0.60
+M16_LORA_MIN_JSON_VALID = 0.98
+M16_LORA_GAIN_OVER_FEWSHOT = 0.12
+M16_LOG_TOLERANCE = 0.15  # largest measured dev/held-out macro-F1 gap .0434
+M16_MAX_HELDOUT_TEXT_OVERLAP = 0  # measured zero; identical exam text is leakage
 M16_SYN_MAX_SIMILARITY = 0.9     # calibrate in final test pass: char-trigram Jaccard between a synthetic note and any held-out note
 M16_SYN_MAX_SIMILAR_SHARE = 0.03  # calibrate in final test pass: share of synthetic notes above 0.8 similarity to a held-out note
 M16_PREDICT_TIMEOUT = {"rules": 300, "fewshot": 1800, "lora": 2700}  # seconds; CPU-only fine-tunes are slow at inference too

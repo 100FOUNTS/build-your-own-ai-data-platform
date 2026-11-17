@@ -1,6 +1,7 @@
 # Module 14 — Final integration: operating what you built
 
 ⏱ 3–4 h · Services: `make up-db up-stream up-auth up-cloud` · Check: `make check-14`
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 14 <mode>`
 
 ## What you will build
 What turns a set of services into a platform that **other people can operate**:
@@ -33,6 +34,12 @@ runbook does. And the services can each pass their tests separately and still **
 
 ## How you will know you are done
 `make check-14` reviews the structure and quality of your documentation, and then **starts your API and your gateway with real authentication**, creates a queue and a topic in local AWS, runs your notifier and walks through the alert scenario end to end, including the denial cases.
+
+## Your turn (walkthrough mode)
+On your own, add a verification step to one incident in `docs/runbook.md` that proves recovery through both the API and the SSE gateway.
+Run `curl -i http://localhost:8000/health` and `curl -i http://localhost:8010/healthz`, then rehearse your documented authenticated alert request with `curl -N` connected to `/events`.
+Record the actual command and expected alert identifier in the incident: healthy processes alone do not prove delivery recovered.
+Then re-run `make check-14`.
 
 ## Comprehension questions
 1. Pick an incident from your runbook: in which Grafana panel do you see it first? Which alert warns you?

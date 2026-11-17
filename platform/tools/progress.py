@@ -9,6 +9,8 @@ import sys
 import time
 from pathlib import Path
 
+from modes import get_mode
+
 ROOT = Path(__file__).resolve().parents[2]
 PORTS = {"postgres": 5433, "valkey": 6380, "redpanda": 19092, "s3": 8333, "iceberg": 8181, "mlflow": 5001, "keycloak": 8089, "openbao": 8200,
          "prometheus": 9090, "otlp": 4317, "floci": 4566, "forgejo": 3002, "ollama": 11434, "edge": 8090}
@@ -52,19 +54,20 @@ def main() -> None:
     for n, name, file, needs, slow in MODULES:
         if not (ROOT / "checks" / file).exists():
             continue
+        mode = get_mode(n)
         missing = [s for s in needs if not up(PORTS[s])]
         if missing:
-            print(f"  ⏸   Module {n:>2}  {name:<22} needs: {', '.join(missing)}")
+            print(f"  ⏸   Module {n:>2}  {name:<22} [{mode}] needs: {', '.join(missing)}")
             continue
         if slow and not run_slow:
-            print(f"  ⏱   Module {n:>2}  {name:<22} slow: run it with `make check-{n}`")
+            print(f"  ⏱   Module {n:>2}  {name:<22} [{mode}] slow: run it with `make check-{n}`")
             continue
         t0 = time.time()
         r = subprocess.run([sys.executable, "-m", "pytest", f"checks/{file}", "-q", "-p", "no:warnings", "--tb=no"], cwd=ROOT, env=env, capture_output=True, text=True, check=False)
         ok = r.returncode == 0
         if not ok and first is None:
             first = n
-        print(f"  {'✅' if ok else '⬜'}  Module {n:>2}  {name:<22} ({time.time() - t0:4.0f} s)")
+        print(f"  {'✅' if ok else '⬜'}  Module {n:>2}  {name:<22} [{mode}] ({time.time() - t0:4.0f} s)")
     print(f"\nNext to do: module {first} → guide/{first:02d}_*.md  and  make check-{first}\n" if first is not None else "\nNo pending modules among the ones that ran.\n")
 
 

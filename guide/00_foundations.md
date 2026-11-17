@@ -2,6 +2,7 @@
 
 ⏱ 3–4 h · Services: none · Check: `make check-0`
 **Tools:** Python (uv, ruff, pytest), SQL, Git/GitHub, Linux (shell).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 0 <mode>`
 
 ## What you will build
 Not platform code: the project's **habits**. A Git history people can read, a hook that stops you from
@@ -54,6 +55,12 @@ review, whether someone new can get started in 10 minutes, and whether there are
 `make check-0` reviews your Git history, the `.gitignore`, the hook, ruff, your tests, the real behavior of `doctor.sh`
 (it even runs it with an empty `PATH` to see whether it *really* detects missing tools) and compares your five queries with an
 independent computation in pandas.
+
+## Your turn (walkthrough mode)
+On your own, add a final passed/failed tool count to `scripts/doctor.sh`, keeping its existing exit-code behavior.
+Run `bash scripts/doctor.sh`; compare the summary with the individual ✓/✗ lines and inspect `echo $?`.
+Try a restricted `PATH` as well: missing tools must still produce a non-zero exit, with an accurate summary.
+Then re-run `make check-0`.
 
 ## Comprehension questions
 1. Why does the hook live in `.githooks/` and not in `.git/hooks/`?

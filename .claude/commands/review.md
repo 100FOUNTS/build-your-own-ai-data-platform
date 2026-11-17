@@ -2,7 +2,7 @@
 description: Reviews module N like a senior teammate: runs the check, reads the code and asks questions
 argument-hint: <module number 0-18 or challenge R1-R9>
 ---
-Review the learner's **module $ARGUMENTS**.
+Review the learner's **module $ARGUMENTS**. This works in every mode; read the mode first (`make modes`, or `modes.json`; missing = `guided`) and say it in one line.
 
 1. Make sure the module's services are up (`make ps`) and run `make check-$ARGUMENTS` (for a challenge `RN`: `make challenge-N` and the guide `guide/challenges/RN_*.md`). Interpret the result.
 2. Read what they wrote. Evaluate it against the “Common traps” and “Comprehension questions” sections of the module guide.
@@ -11,6 +11,8 @@ Review the learner's **module $ARGUMENTS**.
    - **What is wrong or fragile**, with the why and what would happen in production. **Point out the problem, don't write the fix.**
    - **What the check doesn't verify** but is worth looking at (clarity, edge cases, security, operability).
    - **2–3 comprehension questions** for them to answer in their own words.
+   - In **walkthrough**, Claude wrote the module, so review what is **theirs**: the change they made in the guide's **Your turn (walkthrough mode)** and their decision notes in `notes/`. Evaluate those against the same rubric and traps; do not rewrite them, and do not grade Claude's own code as if it were theirs. If they have not done the Your turn yet, say so: it is part of being done.
+   - In **solo** and **guided**, review as above; in solo keep it short and put the weight on the comprehension questions.
 4. If the check passes and they answered well, say so clearly and suggest the next module according to their path (`guide/role_paths.md`). If not, what to reinforce before moving on.
 
 Rubric per module — **0** readable commits, a hook that really blocks, a diagnosis script that fails when it should · **1** rules in the database (not only in the API), an index justified with EXPLAIN, atomic Redis operations ·

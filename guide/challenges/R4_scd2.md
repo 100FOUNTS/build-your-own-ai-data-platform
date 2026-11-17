@@ -2,6 +2,7 @@
 
 ⏱ 2–3 h · Extends **module 3** · Services: `make up-db up-lake` · Check: `make challenge-4`
 **Tools:** dbt (snapshots), DuckDB, PostgreSQL. **What you practice:** dimensional modeling, *slowly changing dimensions*, idempotency.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R4 <mode>`
 
 ## What you will build
 In your module 3 dbt project: a **snapshot** `assets_snapshot` that keeps the history of the Postgres `assets` table (every time the criticality,
@@ -36,6 +37,12 @@ interviews and one of the most forgotten in practice.
 ## How you will know you are done
 `make challenge-4` creates a temporary Postgres database with your migrations and seeds (module 1), runs your snapshot, changes the criticality of one pump and the power of another,
 “touches” a third without changing anything, runs it again (and once more without changes) and checks versions, intervals without gaps or overlaps and the current dimension.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a singular dbt test `assets_no_overlap` that returns overlapping validity intervals for the same asset in `assets_snapshot`.
+Run `uv run dbt test --project-dir pipelines/dbt --profiles-dir pipelines/dbt --select assets_no_overlap`: your real snapshot should pass.
+Try the test's query against a tiny synthetic pair of overlapping versions and confirm it returns a row; do not alter the real snapshot history.
+Claude reviews your change but does not write it. Re-run `make challenge-4`.
 
 ## Comprehension questions
 1. Why can't the snapshot rebuild the history **before** its first run? What would you do if they asked you for the 2024 criticality?

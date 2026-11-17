@@ -2,6 +2,7 @@
 
 ⏱ 5–7 h · Services: `make up-db up-stream up-lake` · Check: `make check-5`
 **Tools:** Dagster (and Airflow as an alternative), MLflow (registry aliases), NumPy/pandas (a PSI drift check).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 5 <mode>`
 
 ## What you will build
 `pipelines/dagster/definitions.py`: your whole pipeline as an **asset graph** — history → Iceberg → dbt → model → scores —,
@@ -84,6 +85,12 @@ dependencies, retries, scheduling) are the same; that is why the optional bonus 
 For the loop (it only needs `make up-db up-lake`) it builds, with an independent computation, three variants of gold: one **stationary** (no drift by construction), one where the **last 14 days are rescaled**
 and one where the **old labels are broken**. Then it drives your sensor tick by tick, runs your asset checks, and runs your `retrain_job` in-process against MLflow in fresh experiments and models:
 a *worse* challenger must leave the champion untouched, a *better* one must be promoted, the tags must tell the truth, and running it again on the same data must change nothing.
+
+## Your turn (walkthrough mode)
+On your own, add the measured PSI and your chosen threshold as metadata on the drift asset check in `pipelines/dagster/definitions.py`.
+Run `make dagster`, materialize the checked gold asset and execute its checks in the UI at http://localhost:3400.
+Open the drift-check result: the numbers should explain its pass/fail status without changing the windows or promotion gate.
+Then re-run `make check-5`.
 
 ## Comprehension questions
 1. What is the practical difference between saying “run A, B, C” and declaring “C depends on B depends on A”?

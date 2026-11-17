@@ -2,6 +2,7 @@
 
 ⏱ 5–6 h · Extends **module 4** · Services: `make up-lake` (MLflow on :5001) · Check: `make challenge-5`
 **Tools:** LightGBM, scikit-learn, MLflow, pandas, NumPy. **What you practice:** decision thresholds, business metrics, honest validation, explainability (SHAP), **uncertainty with a block bootstrap**.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R5 <mode>`
 
 ## What you will build
 `python -m ml.lgbm`: trains a **LightGBM** on `asset_daily_features`, picks the **alert threshold on validation** to meet the business target,
@@ -88,6 +89,12 @@ It also checks that your threshold is the **cheapest** one on validation among t
 - on a **synthetic period built to expose a naive bootstrap**: all the difference between the policies lives in one week in which every pump drifts at once. A bootstrap that resamples rows reports an interval less than 75 % as wide as the right one, and the check says so.
 
 It prints your test figures, the interval, and whether it contains 0. The check does **not** care which way the result goes: the optimal policy may well turn out to be *no better* than 0.5 on test. That is a finding, not a failure.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a regression test for `ml.policy_compare` using a small predictions CSV you create and a threshold different from 0.5.
+Compute both policies' costs and their difference per 100 asset-days by hand; assert that the output point estimates match, independently of the bootstrap seed.
+Run `python -m pytest tests/test_r5_policy_costs.py -q` (put your test there), with two different seeds and at least 1,000 draws each.
+Claude reviews your change but does not write it. Re-run `make challenge-5`.
 
 ## Comprehension questions
 1. On validation you meet ≤ 5 false alerts and on test you get 7. Did you do something wrong? What would you tell Marta?

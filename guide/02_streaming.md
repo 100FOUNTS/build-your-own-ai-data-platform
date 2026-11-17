@@ -2,6 +2,7 @@
 
 ⏱ 4–5 h · Services: `make up-db up-stream` · Check: `make check-2`
 **Tools:** Kafka (here **Redpanda**, compatible with the Kafka API and without a JVM), Python, Pydantic, Redis.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 2 <mode>`
 
 ## What you will build
 A consumer (`python -m pipelines.stream.consumer`) that reads sensor readings from `plant.readings.raw`, **validates** every message,
@@ -46,6 +47,12 @@ As in real life: not everything that arrives is usable. Find out which kinds of 
 ## How you will know you are done
 `make check-2` sends simulator bursts (with an exact manifest of what was sent) to new topics, runs your consumer and checks: `clean` = unique valid ones, `DLQ` = defective ones (each with a reason),
 restarting with the same group doesn't repeat, reprocessing everything with **another group** doesn't duplicate either (persistent dedupe) and a second burst adds exactly what is new.
+
+## Your turn (walkthrough mode)
+On your own, add a shutdown summary to `pipelines/stream/consumer.py` with counts of clean, duplicate and DLQ messages for that run.
+Run `docker compose --profile tools run --rm sim burst --n 3000`, then `IDLE_EXIT_SECONDS=10 python -m pipelines.stream.consumer`.
+Compare the summary with `plant.readings.clean` and `plant.readings.dlq` in the Redpanda console; restart the consumer and look for no new output records.
+Keep the existing validation, deduplication and commit order. Then re-run `make check-2`.
 
 ## Comprehension questions
 1. Your process dies right after `producer.flush()` and before the `commit`. What happens on restart? Is anything lost? Is anything repeated? Who detects it?

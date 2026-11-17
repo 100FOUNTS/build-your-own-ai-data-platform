@@ -2,6 +2,7 @@
 
 ⏱ 4–5 h · Extends **module 6** · Services: Ollama (`qwen3:4b-instruct`) · Check: `make challenge-7`
 **Tools:** LLMs, DuckDB, guardrails, evals. **What you practice:** defense in depth, analyzing SQL as a tree, bounded retries.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R7 <mode>`
 
 ## What you will build
 `genai/text2sql.py` with `ask(question, llm=None, ...)`: Marta types *“which pump had the highest maximum vibration?”* and the system asks the LLM for
@@ -42,6 +43,12 @@ files even if the validation fails. Two layers, in case one breaks.
 `make challenge-7` creates a warehouse with `asset_daily_features`, `readings_hourly` and a `secret_tokens` table that must **not** be readable. With a simulated LLM it tests:
 a valid query, SQL wrapped in Markdown, the row limit, **11 attacks** (destructive, several statements, forbidden tables in a CTE and a JOIN, files, system functions, `COPY`, `ATTACH`, `INSTALL`),
 that the warehouse file doesn't change, the retry with the error and the input guardrail. With real Ollama it requires ≥ 4/6 right on simple questions.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a regression test with a simulated LLM that hides a forbidden table behind two nested CTE aliases.
+Run `python -m pytest tests/test_r7_nested_cte.py -q` (put your test there); assert `blocked_sql`, no retry and no query execution.
+Include an otherwise similar query over an allowed table to show the guardrail still permits valid CTEs.
+Claude reviews your change but does not write it. Re-run `make challenge-7`.
 
 ## Comprehension questions
 1. Why isn't `if "drop" in sql.lower()` enough? Give two queries that get around it.

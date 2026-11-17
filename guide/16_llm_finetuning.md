@@ -1,10 +1,8 @@
 # Module 16 — Fine-tune a small LLM: from a technician's scribble to structured JSON
 
 ⏱ 6–8 h · Services: Ollama (host) and MLflow (`make up-lake`) · Check: `make check-16` · Role: **ML Engineer**
-
-> **Status:** this module is new and not validated end to end yet. The check thresholds are first estimates and may change.
-
 **Tools:** Ollama, `mlx-lm` (Apple Silicon) or Hugging Face `transformers` + `peft` (everything else), MLflow, a bit of regex.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 16 <mode>`
 **Hardware:** Apple Silicon with 16 GB is the comfortable setup (training takes minutes). Linux/Windows/Intel Macs work through a documented CPU path, slower (see "CPU path").
 **Part 2 of the exercise, "The second plant"**: modules 15–18 are about PLT02. They can be done in any order after module 4; this one needs nothing from module 15.
 
@@ -83,12 +81,18 @@ from plt02 import schema                           # schema.SYSTEM_PROMPT, schem
 8. *(Bonus)* **Synthetic augmentation**: ask a bigger local model (`qwen3:4b-instruct`, already in your Ollama) for notes of the rare classes, **with the label you asked for** (never let the big model label), keep `source: synthetic`, and add a **leakage guard** (near-duplicate filter against everything you evaluate on; never put dev notes in the generator's prompt). `make bonus` checks the synthetic file against the hidden notes.
 
 ## How you will know you are done
-`make check-16` feeds the 150 hidden notes to **your** `predict` command three times (rules, few-shot, LoRA), parses `raw`, recomputes every metric, and then compares them with what you logged to MLflow (a big gap means invented or stale numbers). It also checks that `train.jsonl` doesn't contain the hidden notes (by id or by text) and that nothing claims to be a human label that isn't. The LoRA system must be valid JSON ≥ 97 % of the time, reach the F1 floors, and beat few-shot by a margin. Needs Ollama running (`ollama serve`, `qwen3:0.6b` pulled) and `make up-lake`. Expect 10–25 minutes the first time (model loading, 450 generations); CPU-only: up to ~45 minutes.
+`make check-16` feeds the 150 hidden notes to **your** `predict` command three times (rules, few-shot, LoRA), parses `raw`, recomputes every metric, and then compares them with what you logged to MLflow (a big gap means invented or stale numbers). It also checks that `train.jsonl` doesn't contain the hidden notes (by id or by text) and that nothing claims to be a human label that isn't. The LoRA system must be valid JSON ≥ 98 % of the time, reach the F1 floors, and beat few-shot by a margin. Needs Ollama running (`ollama serve`, `qwen3:0.6b` pulled) and `make up-lake`. On the validation M4 Max, the warm-cache check took about 54 seconds; cold model downloads and setup can take 10–25 minutes. CPU-only: an estimated ~45 minutes (not timed in this validation).
+
+## Your turn (walkthrough mode)
+On your own, extend your dev evaluator under `ml/notes_llm/` to report per-class F1 for the rules baseline, alongside the existing macro-F1.
+Run `python -m ml.notes_llm.predict --system rules --in ml/notes_llm/data/dev.jsonl --out /tmp/m16-dev-rules.jsonl`, then run your evaluator on those predictions and dev labels.
+Look for a weak class that the aggregate hides, and verify that averaging the class scores reproduces each field's macro-F1; use only your visible dev split.
+Then re-run `make check-16`.
 
 ## CPU path (Linux, Windows via WSL2, Intel Mac)
 `uv sync --group llm` installs `peft` + `transformers` instead of `mlx-lm` on these platforms. Same contract, same prompt, different trainer.
 - **Model:** `Qwen/Qwen3-0.6B` works on CPU in float32 (≈ 3 GB RAM, 8 GB machine is enough). Estimate: **30–90 minutes** to train 3 epochs on 240 notes (about 700 sequences of ~230 tokens) on a modern 8-core CPU, and **10–20 minutes** to generate the 150 answers. These are estimates, not promises: time one step before committing.
-- **Too slow / not enough RAM?** Use `NOTES_BASE_MODEL=HuggingFaceTB/SmolLM2-360M-Instruct` (Apache-2.0, 360 M): roughly 40 % faster, a bit less accurate; the check's thresholds are the same, so you may need more epochs.
+- **Too slow / not enough RAM?** Use `NOTES_BASE_MODEL=HuggingFaceTB/SmolLM2-360M-Instruct` (Apache-2.0, 360 M): estimated roughly 40 % faster (not timed in this validation), a bit less accurate; the check's thresholds are the same, so you may need more epochs.
 - **Tricks that are legitimate:** shorter `max_length`, batch 8, LoRA on attention + MLP projections with `r=16`, train only on the answer tokens (the prompt is the same for every example, so it carries no signal).
 - Set `NOTES_BACKEND=peft` to force this path on a Mac.
 
@@ -124,7 +128,7 @@ Start from the most frequent component/cause/action words. Typos: compare each t
 </details>
 <details><summary>Training data for mlx-lm</summary>
 
-`mlx_lm.lora` wants a folder with `train.jsonl` and `valid.jsonl`; each line `{"messages": [{"role": "system", …}, {"role": "user", …}, {"role": "assistant", …}]}`. Start with `python -m mlx_lm.lora --help`. The knobs you will touch: `--model`, `--data`, `--train`, `--adapter-path`, `--iters`, `--batch-size`, `--learning-rate`, `--num-layers`, `--mask-prompt`, `--steps-per-eval`. 240 examples at batch 4 is 60 steps per epoch; 5–8 epochs is a sane range to explore. Learning rate between `5e-5` and `3e-4`.
+`mlx_lm.lora` wants a folder with `train.jsonl` and `valid.jsonl`; each line `{"messages": [{"role": "system", …}, {"role": "user", …}, {"role": "assistant", …}]}`. Start with `python -m mlx_lm.lora --help`. The knobs you will touch: `--model`, `--data`, `--train`, `--adapter-path`, `--iters`, `--batch-size`, `--learning-rate`, `--num-layers`, `--mask-prompt`, `--steps-per-eval`. 240 examples at batch 4 is 60 steps per epoch. On the validation Mac (M4 Max, 36 GB RAM), training took 4 min 23 s. The validated reference uses 1 000 steps (about 17 epochs), 16 LoRA layers, rank 8, scale 20 and learning rate `2e-4`; start smaller and watch dev loss before extending the run. Learning rate between `5e-5` and `3e-4`.
 </details>
 <details><summary>Generating with the adapter (mlx)</summary>
 
@@ -140,7 +144,7 @@ Build `input_ids` = prompt tokens + answer tokens, `labels` = `-100` on the prom
 </details>
 <details><summary>The score is fine in training and the JSON is garbage at inference</summary>
 
-Print the **exact prompt string** your training code and your inference code produce for the same note and diff them. Look for a `<think>` block, a missing system prompt, or a different end-of-turn token. Then print 5 `raw` outputs.
+For Qwen3, the rendered training example must start with the inference prefix ending in `<|im_start|>assistant\n<think>\n\n</think>\n\n`, followed immediately by the JSON target. The empty thinking prefill belongs to the prompt, not the returned `raw`. Print the **exact prompt string** your training code and your inference code produce for the same note and diff them. Look for a `<think>` block, a missing system prompt, or a different end-of-turn token. Then print 5 `raw` outputs.
 </details>
 <details><summary>A class is never predicted</summary>
 

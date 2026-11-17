@@ -2,6 +2,7 @@
 
 ⏱ 13–15 h · Services: `make up-db` (+ `make up-vector` for the bonus) and **Ollama** running (`ollama pull mxbai-embed-large`) · Check: `make check-6`
 **Tools:** LLMs, embeddings, RAG, **pgvector** (Qdrant for comparison), **LangGraph**, **MCP**, **evals (retrieval and LLM-as-judge) and guardrails** (the gap most AI courses leave open), **OWASP** vocabulary for AI risks.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 6 <mode>`
 
 ## What you will build
 A reliability assistant **you can trust**:
@@ -78,6 +79,12 @@ Errors are clear messages (e.g. “asset not found”), not exceptions.
 ## How you will know you are done
 `make check-6` builds a temporary database with your migrations, runs YOUR ingest with real Ollama, measures hit@3 against the 24 questions, evaluates your guardrails with visible **and hidden** cases,
 runs your **judge** on 52 human-labelled answers (agreement, bad ones caught, good ones accepted, repeatability), runs your runner (answers judged with real Ollama; with impossible minimums to see whether it breaks CI; it watches that the judge really calls the model at temperature 0), compares your **per-OWASP-category block rates** with a recomputation, tests your agent with a **simulated LLM** (deterministic: no dependence on a model) and starts your MCP server with a real MCP client.
+
+## Your turn (walkthrough mode)
+On your own, extend `genai/evals/run.py` to report the `doc_id`s retrieved for each evaluated question, alongside the existing aggregate metrics.
+Run `python -m genai.evals.run --min-hit3 0.8 --min-faithfulness 0.6 --limit 3 --out report.json`.
+Open `report.json` and compare those document ids with the corresponding entries in `platform/corpus/golden.jsonl`; keep the existing scoring and exit behavior.
+Then re-run `make check-6`.
 
 ## Comprehension questions
 1. Your hit@3 goes from 0.7 to 0.9 when you change the chunk size. What did you evaluate, and what did you NOT evaluate (and could have gotten worse)?

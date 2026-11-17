@@ -2,6 +2,7 @@
 
 ⏱ 6–8 h · Services: `make up-stream` and Docker with ≥ 8 GB · Check: `make check-12` (⏱ ~3 min: builds 3 images and deploys to a cluster)
 **Tools:** Docker, Kubernetes (here **kind**: “ephemeral, made for CI”; minikube or k3d are alternatives), Linux.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 12 <mode>`
 
 ## What you will build
 1. **Three Docker images**, secure and small — API (Python), gateway (Node) and web (Next.js) — with multi-stage *builds*, a non-root user and *healthchecks*.
@@ -48,6 +49,12 @@ Every container: `requests` **and** `limits`; `readinessProbe` **and** `liveness
 ## How you will know you are done
 `make check-12` analyzes your Dockerfiles, **builds** them, measures sizes, starts each container to test its health and its user, renders your manifests and checks **production good practices**, validates them on the Kubernetes server (`--dry-run=server`)
 and **deploys them on kind**, waiting for each Deployment to be available, with no restarts, and reachable through `port-forward`.
+
+## Your turn (walkthrough mode)
+On your own, add a Kustomize patch in `deploy/k8s/overlays/dev/` that gives `plant-api` three replicas while keeping the base at two.
+Run `kubectl kustomize deploy/k8s/overlays/dev` and inspect the rendered API Deployment's replica count.
+Run `kubectl apply -k deploy/k8s/overlays/dev` and `kubectl -n plant rollout status deployment/plant-api`; confirm three Ready replicas with `kubectl -n plant get deployment plant-api`.
+Then re-run `make check-12`.
 
 ## Comprehension questions
 1. You change one line of `main.py`. Why does your build take 5 s and not 3 minutes? (layers) What would happen if the `COPY . .` came before installing dependencies?
