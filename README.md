@@ -6,7 +6,7 @@ infrastructure as code, containers, Kubernetes and GitOps — all wired together
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
-![Time: 90-110 h](https://img.shields.io/badge/time-90--110%20h-orange)
+![Time: 106-128 h](https://img.shields.io/badge/time-106--128%20h-orange)
 ![Runs locally](https://img.shields.io/badge/runs-100%25%20local-lightgrey)
 
 > **Nothing is done here.** The “company” hands you a base platform (databases, Kafka, storage, Keycloak… started with one
@@ -18,7 +18,7 @@ infrastructure as code, containers, Kubernetes and GitOps — all wired together
 **Stack:** Python · SQL · TypeScript · PostgreSQL · Redis (Valkey) · pgvector · Kafka (Redpanda) · Spark · Iceberg · Delta Lake · DuckDB · dbt ·
 Polars · Dagster · pandas · scikit-learn · PyTorch · LightGBM · MLflow · Ollama · RAG · LangGraph · MCP · evals · guardrails · FastAPI · Node.js ·
 React/Next.js · Keycloak (OIDC) · OpenBao · OpenTelemetry · Prometheus · Grafana · Loki · Tempo · OpenTofu · AWS (emulated) · Docker ·
-Kubernetes (kind) · GitHub Actions · Argo CD · Backstage
+Kubernetes (kind) · GitHub Actions · Trivy · Syft · cosign · Semgrep · Gitleaks · Kyverno · Argo CD · Argo Rollouts · Backstage
 
 ---
 
@@ -51,33 +51,33 @@ repeated messages, like real life), the pump master data, work orders and 12 mai
 | 2 | Streaming | A consumer that validates, deduplicates and sets the bad aside (DLQ) | Kafka (Redpanda), Pydantic, Redis | 4–5 |
 | 3 | Lakehouse | Spark batch and streaming → Iceberg; dbt on DuckDB | Spark, Iceberg, local S3, DuckDB, dbt | 8–10 |
 | 4 | ML | Two models, experiments, champion registration, scoring | pandas, scikit-learn, PyTorch, MLflow | 5–6 |
-| 5 | Orchestration | The pipeline as an asset graph, checks, scheduling | Dagster (Airflow as a bonus) | 3–4 |
-| 6 | Generative AI | Evaluated RAG, guardrails, an agent, an MCP server | LLMs, embeddings, pgvector, LangGraph, MCP, evals, guardrails (Qdrant as a bonus) | 10–12 |
+| 5 | Orchestration | The pipeline as an asset graph, checks, scheduling and a retrain → compare → promote loop | Dagster (Airflow as a bonus), MLflow | 5–7 |
+| 6 | Generative AI | Evaluated RAG (retrieval and answer faithfulness), guardrails mapped to OWASP, an agent, an MCP server | LLMs, embeddings, pgvector, LangGraph, MCP, evals, LLM-as-judge, guardrails (Qdrant as a bonus) | 13–15 |
 | 7 | Backend | A validated REST API, cache, real time | FastAPI, Pydantic, Node.js, TypeScript | 6–8 |
 | 8 | Security | JWT/roles, secrets, a threat model | OAuth 2.0, OIDC, Keycloak, OpenBao, STRIDE | 6–8 |
 | 9 | Frontend | A dashboard with SSR, login and live alerts | React, Next.js, TypeScript | 6–8 |
-| 10 | Observability | Correlated traces, metrics and logs, a dashboard, alerts | OpenTelemetry, Prometheus, Grafana, Loki, Tempo | 5–6 |
+| 10 | Observability | Correlated traces, metrics and logs, traces of the AI agent, a dashboard, SLOs with burn-rate alerts | OpenTelemetry (with the GenAI conventions), Prometheus, Grafana, Loki, Tempo | 9–11 |
 | 11 | Cloud | Infrastructure as code for AWS (local) | AWS (S3, IAM, SNS/SQS, VPC), OpenTofu | 6–8 |
 | 12 | Containers and K8s | Secure images and deployment to a cluster | Docker, Kubernetes (kind) | 6–8 |
-| 13 | CI/CD and GitOps | A CI pipeline, Argo CD, a service catalog | GitHub Actions (act), Argo CD, Backstage | 5–6 |
+| 13 | CI/CD and GitOps | A CI pipeline that scans the code, scans, inventories (SBOM) and signs the image; a cluster that only admits signed images; canary releases with automatic rollback; a service catalog | GitHub Actions (act), Semgrep, Gitleaks, Trivy, Syft, cosign, Kyverno, Argo CD, Argo Rollouts, Backstage | 12–13 |
 | 14 | Integration | A runbook, ADRs and an end-to-end alert flow | everything | 3–4 |
 
-**Total ≈ 90–110 hours.** You don't have to do it all: nobody masters every tool, and it pays to pick 2–3 areas for the role you want.
+**Total ≈ 106–128 hours.** You don't have to do it all: nobody masters every tool, and it pays to pick 2–3 areas for the role you want.
 See the **paths by role** in [`guide/role_paths.md`](guide/role_paths.md).
 
 ## Industry challenges (optional)
 
-Nine challenges that extend the modules with what you see most on a real job: a vendor that changes the schema and the units (R1), **Delta Lake** next to
+Nine challenges that extend the modules with what you see most on a real job: a vendor that changes the schema and the units, stopped at the door by a data contract in a schema registry (R1), **Delta Lake** next to
 Iceberg (R2), **Polars** at 5× scale with a benchmark done with method (R3), dimension history with **SCD2** in dbt (R4), **LightGBM** with the business metric
-and the why of each alert (R5), **drift** that catches a silent unit change without alert fatigue (R6), safe **text-to-SQL** (R7), **legacy code** with
-bugs, regression tests and a postmortem (R8) and the map onto **Databricks** (R9). ≈ 30–38 h. Guides in [`guide/challenges/`](guide/challenges/README.md); `make challenge-N` checks one, `make challenges` all of them.
+and the why of each alert, compared with the default policy through a block bootstrap (R5), **drift** that catches a silent unit change without alert fatigue (R6), safe **text-to-SQL** (R7), **legacy code** with
+bugs, regression tests, a postmortem and a coding agent you supervise (R8) and the map onto **Databricks** (R9). ≈ 33–41 h. Guides in [`guide/challenges/`](guide/challenges/README.md); `make challenge-N` checks one, `make challenges` all of them.
 
 ## What your machine needs
 
 - **Docker** (Docker Desktop on macOS/Windows, Docker Engine on Linux), with **≥ 12 GB of memory** for Docker. With 8 GB it works if you run one module at a time
   (each module says which services it needs; `make down` between modules).
 - [`uv`](https://docs.astral.sh/uv/), **Node.js ≥ 20**, `make`, and [**Ollama**](https://ollama.com) running on the host with `mxbai-embed-large` (embeddings) and a chat model (`qwen3:4b-instruct`).
-- For modules 11–13: OpenTofu, kind, act and kubectl (`brew install opentofu kind act kubectl` on macOS; see each project's docs on Linux).
+- For modules 11–13: OpenTofu, kind, act, kubectl, Helm, Trivy, Syft, cosign, Semgrep and Gitleaks (`brew install opentofu kind act kubectl helm trivy syft cosign semgrep gitleaks` on macOS; see each project's docs on Linux).
 - ~25 GB of free disk (Docker images, models and OpenTofu providers).
 - You will check all of it with your own `scripts/doctor.sh` in module 0.
 

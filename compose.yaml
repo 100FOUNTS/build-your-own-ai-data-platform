@@ -52,7 +52,7 @@ services:
       - --memory=768M
       - --kafka-addr=internal://0.0.0.0:9092,external://0.0.0.0:19092,k8s://0.0.0.0:29092
       - --advertise-kafka-addr=internal://redpanda:9092,external://localhost:19092,k8s://host.docker.internal:29092
-    ports: ["19092:19092", "29092:29092", "9644:9644"]   # 29092: for Kubernetes (kind) pods
+    ports: ["19092:19092", "29092:29092", "9644:9644", "18081:8081"]   # 29092: for Kubernetes (kind) pods · 18081: Schema Registry (challenge R1)
     healthcheck: {test: ["CMD-SHELL", "rpk cluster health | grep -E 'Healthy:.+true' || exit 1"], interval: 5s, timeout: 5s, retries: 30}
 
   redpanda-console:
@@ -64,7 +64,7 @@ services:
 
   # ----------------------------------------------------------------- lake
   seaweedfs:
-    image: chrislusf/seaweedfs:latest   # S3-compatible storage (MinIO no longer gets patches)
+    image: chrislusf/seaweedfs:4.51@sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8   # S3-compatible storage (MinIO no longer gets patches)
     profiles: [lake, all]
     command: ["server", "-dir=/data", "-s3", "-s3.port=8333", "-s3.config=/etc/s3.json", "-ip.bind=0.0.0.0"]
     ports: ["8333:8333"]
@@ -73,7 +73,7 @@ services:
       - swdata:/data
 
   s3-init:
-    image: amazon/aws-cli:latest
+    image: amazon/aws-cli:2.39.0@sha256:6014c77975a4ae237395924cc821333f20bf87c91964a45dd4ed5f3b13b424f5   # one-shot: creates the buckets
     profiles: [lake, all]
     depends_on: [seaweedfs]
     environment: *s3-env
@@ -108,7 +108,7 @@ services:
       mlflow server --host 0.0.0.0 --port 5000
       --backend-store-uri postgresql://plant:plant@postgres:5432/mlflow
       --artifacts-destination s3://mlflow --serve-artifacts --workers 1
-    mem_limit: 1500m
+    mem_limit: 2g   # MLflow 3 + the module 5 retrain loop sit right at 1.5 GB
     ports: ["5001:5000"]            # 5001: AirPlay uses 5000 on macOS
 
   # ----------------------------------------------------------------- auth

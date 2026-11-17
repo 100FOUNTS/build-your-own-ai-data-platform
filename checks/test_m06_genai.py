@@ -6,11 +6,22 @@ import asyncio
 import json
 import os
 import sys
+import threading
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
+import httpx
 import psycopg
 import pytest
-
-from conftest import ROOT, need, ok, py, seeded_db, tail, unique
+from conftest import ROOT, free_port, need, ok, py, seeded_db, tail
+from expected import (
+    M6_GATE_LIMIT,
+    M6_JUDGE_MIN_ACCEPT,
+    M6_JUDGE_MIN_AGREEMENT,
+    M6_JUDGE_MIN_CATCH,
+    M6_MIN_FAITHFULNESS,
+    M6_OWASP_ASI,
+    M6_OWASP_LLM,
+)
 
 CORPUS = ROOT / "platform" / "corpus"
 
@@ -99,19 +110,186 @@ def test_guardrails_generalize_to_new_cases(guard):
     ok(fp / len(good) <= 0.2, f"With new legitimate cases you block {fp}/{len(good)}.")
 
 
-# ------------------------------------------------------------------ evals
-def test_evaluation_runner(rag_env, tmp_path):
-    f = ROOT / "genai" / "evals" / "run.py"
-    ok(f.exists(), "Missing genai/evals/run.py (`python -m genai.evals.run`).")
-    out = tmp_path / "report.json"
-    env = {"DATABASE_URL": rag_env, "RAG_SCHEMA": "rag"}
-    r = py(["-m", "genai.evals.run", "--min-hit3", "0.8", "--out", str(out)], env=env, timeout=600)
-    ok(r.returncode == 0, "The evals runner should exit with 0 when the minimums are met:\n" + tail(r))
+# ------------------------------------------------------------------ evals: retrieval, answer quality (LLM-as-judge), OWASP
+class OllamaTap:
+    """A transparent proxy in front of the real Ollama that records every chat/generate request your runner makes.
+    It lets the check see HOW the runner talks to the model (was it called at all? at temperature 0?) without trusting the report."""
+
+    PATHS = ("/api/chat", "/api/generate", "/v1/chat/completions")
+
+    def __init__(self):
+        self.requests: list[dict] = []
+        real = os.environ["OLLAMA_URL"].rstrip("/")
+        tap = self
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):  # noqa: N802
+                body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
+                if self.path in tap.PATHS:
+                    try:
+                        tap.requests.append(json.loads(body))
+                    except ValueError:
+                        tap.requests.append({})
+                r = httpx.post(real + self.path, content=body, headers={"Content-Type": "application/json"}, timeout=300)
+                self.send_response(r.status_code)
+                self.send_header("Content-Type", r.headers.get("content-type", "application/json"))
+                self.send_header("Content-Length", str(len(r.content)))
+                self.end_headers()
+                self.wfile.write(r.content)
+
+            def log_message(self, *a):
+                pass
+
+        self.port = free_port()
+        self.server = ThreadingHTTPServer(("127.0.0.1", self.port), Handler)
+        threading.Thread(target=self.server.serve_forever, daemon=True).start()
+
+    @property
+    def url(self) -> str:
+        return f"http://127.0.0.1:{self.port}"
+
+    def temperatures(self) -> list:
+        return [(r.get("options") or {}).get("temperature", r.get("temperature")) for r in self.requests]
+
+    def close(self):
+        self.server.shutdown()
+
+
+@pytest.fixture(scope="module")
+def runner_report(rag_env, tmp_path_factory):
+    """ONE full run of YOUR runner (retrieval + answers + judge + guardrails); several checks read its report."""
+    ok((ROOT / "genai" / "evals" / "run.py").exists(), "Missing genai/evals/run.py (`python -m genai.evals.run`).")
+    out = tmp_path_factory.mktemp("evals") / "report.json"
+    r = py(["-m", "genai.evals.run", "--min-hit3", "0.8", "--min-faithfulness", str(M6_MIN_FAITHFULNESS), "--out", str(out)],
+           env={"DATABASE_URL": rag_env, "RAG_SCHEMA": "rag"}, timeout=900)
+    return r, out
+
+
+def test_evaluation_runner(runner_report, rag_env, tmp_path):
+    r, out = runner_report
+    ok(r.returncode == 0, f"The evals runner should exit with 0 when the minimums are met (hit@3 >= 0.8, faithfulness >= {M6_MIN_FAITHFULNESS}):\n" + tail(r))
     rep = json.loads(out.read_text())
     ok({"n_questions", "hit_at_3", "mrr"} <= set(rep), f"The report must include at least n_questions, hit_at_3 and mrr (it has {sorted(rep)}).")
     ok(rep["n_questions"] == 24 and 0.8 <= rep["hit_at_3"] <= 1, f"Inconsistent report: {rep}")
-    r2 = py(["-m", "genai.evals.run", "--min-hit3", "1.01", "--out", str(out)], env=env, timeout=600)
-    ok(r2.returncode != 0, "With an impossible minimum (hit@3 ≥ 1.01) the runner must exit with code ≠ 0. That is how it works as a CI gate: if quality drops, the deployment stops.")
+    r2 = py(["-m", "genai.evals.run", "--min-hit3", "1.01", "--limit", str(M6_GATE_LIMIT), "--out", str(tmp_path / "gate_hit3.json")], env={"DATABASE_URL": rag_env, "RAG_SCHEMA": "rag"}, timeout=900)
+    ok(r2.returncode != 0, "With an impossible minimum (hit@3 >= 1.01) the runner must exit with code != 0. That is how it works as a CI gate: if quality drops, the deployment stops.")
+
+
+def test_runner_reports_answer_faithfulness(runner_report):
+    r, out = runner_report
+    ok(out.exists(), "The runner did not write the report (--out). Output:\n" + tail(r))
+    rep = json.loads(out.read_text())
+    ok("faithfulness" in rep, f"The report has no `faithfulness` (it has {sorted(rep)}).\nhit@3 only says the right manual came back; it says nothing about whether the ANSWER the model wrote stays inside it.")
+    ok(isinstance(rep["faithfulness"], (int, float)) and 0 <= rep["faithfulness"] <= 1, f"`faithfulness` must be a share between 0 and 1, not {rep['faithfulness']!r}.")
+    ok(rep.get("n_judged") == 24, f"`n_judged` must say how many golden questions were judged (24 expected, got {rep.get('n_judged')!r}): a share without its denominator can't be trusted.")
+    ok(rep["faithfulness"] >= M6_MIN_FAITHFULNESS, f"faithfulness = {rep['faithfulness']:.2f}; >= {M6_MIN_FAITHFULNESS} expected from a RAG that answers ONLY from what it retrieved.\nLook at which answers your judge rejects and why: is the generation prompt too loose, or is the judge too strict? (The judge is calibrated against human labels in the judge checks below.)")
+
+
+def test_faithfulness_gate_breaks_ci(rag_env, tmp_path):
+    ok((ROOT / "genai" / "evals" / "run.py").exists(), "Missing genai/evals/run.py (`python -m genai.evals.run`).")
+    need("ollama")
+    tap = OllamaTap()
+    try:
+        out = tmp_path / "gate.json"
+        r = py(["-m", "genai.evals.run", "--limit", str(M6_GATE_LIMIT), "--min-faithfulness", "1.01", "--out", str(out)],
+               env={"DATABASE_URL": rag_env, "RAG_SCHEMA": "rag", "OLLAMA_URL": tap.url}, timeout=600)
+        calls, temps = len(tap.requests), tap.temperatures()
+    finally:
+        tap.close()
+    ok(r.returncode != 0 and "Traceback" not in (r.stderr or ""),
+       "With an impossible minimum (faithfulness >= 1.01) the runner must exit with code != 0 (and without crashing): that is the gate that stops a deployment when answers stop being faithful.\n" + tail(r))
+    ok(out.exists() and json.loads(out.read_text()).get("n_judged") == M6_GATE_LIMIT,
+       f"`--limit N` must judge only the first N golden questions (the judge is the slow part: a quick smoke run in CI needs it). Expected n_judged == {M6_GATE_LIMIT} in the report.")
+    ok(calls >= M6_GATE_LIMIT, f"While judging {M6_GATE_LIMIT} questions the runner made only {calls} LLM calls. A faithfulness number that is not produced by a judge reading the answer against its sources is not a measurement.")
+    ok(all(t == 0 for t in temps), f"Some LLM calls of the runner did not use temperature 0 (temperatures seen: {sorted(set(map(str, temps)))}).\nIf the generation or the judge is random, the metric moves between runs of the SAME system and you can't tell a regression from noise.")
+
+
+def test_owasp_breakdown_in_the_report(runner_report, guard):
+    r, out = runner_report
+    ok(out.exists(), "The runner did not write the report (--out). Output:\n" + tail(r))
+    rep = json.loads(out.read_text())
+    ok(isinstance(rep.get("owasp"), dict) and rep["owasp"], f"The report has no `owasp` breakdown (it has {sorted(rep)}).\nA single overall block rate hides WHERE you are weak; a security review asks per category (prompt injection, data leakage, excessive agency...).")
+    truth: dict[str, list[bool]] = {}
+    for c in jl(CORPUS / "adversarial.jsonl"):
+        if c["should_block"]:
+            for cat in c["owasp"]:
+                truth.setdefault(cat, []).append(not _verdict(guard, c).allowed)
+    valid = set(M6_OWASP_LLM) | set(M6_OWASP_ASI)
+    ok(set(rep["owasp"]) <= valid, f"Unknown OWASP ids in the report: {sorted(set(rep['owasp']) - valid)}. Use the ids written in adversarial.jsonl, edition suffix included (e.g. LLM01:2026, ASI01).")
+    ok(set(rep["owasp"]) == set(truth), f"The report must have one entry per OWASP id used by the ATTACK cases of adversarial.jsonl.\nMissing: {sorted(set(truth) - set(rep['owasp']))}  ·  Unexpected: {sorted(set(rep['owasp']) - set(truth))}")
+    for cat, flags in sorted(truth.items()):
+        got = rep["owasp"][cat]
+        ok(isinstance(got, dict) and {"n", "block_rate"} <= set(got), f"owasp[{cat!r}] must be {{'n': attacks tagged with it, 'block_rate': share blocked}}, got {got!r}.")
+        ok(got["n"] == len(flags), f"owasp[{cat!r}]['n'] = {got['n']}, but {len(flags)} attack cases carry that id. A case with several ids counts once in EACH of them; benign cases (owasp = []) count in none.")
+        ok(abs(got["block_rate"] - sum(flags) / len(flags)) < 0.01,
+           f"owasp[{cat!r}]['block_rate'] = {got['block_rate']:.2f}, but recomputing with your guardrails on the cases tagged with it gives {sum(flags) / len(flags):.2f}.")
+
+
+# --- calibrating the judge ("who watches the watcher?")
+LABELS = CORPUS / "judge_labels.jsonl"
+
+
+@pytest.fixture(scope="module")
+def judged():
+    """YOUR judge run once over the human-labelled set; the calibration checks read the verdicts."""
+    need("ollama")
+    ok((ROOT / "genai" / "evals" / "judge.py").exists(), "Missing genai/evals/judge.py (`judge_faithfulness(question, answer, sources)`; see guide/06_generative_ai.md).")
+    from genai.evals.judge import judge_faithfulness
+
+    out = {}
+    for c in jl(LABELS):
+        v = judge_faithfulness(c["question"], c["answer"], c["sources"])
+        ok(isinstance(getattr(v, "faithful", None), bool) and isinstance(getattr(v, "reason", None), str),
+           "judge_faithfulness must return an object with `.faithful` (bool) and `.reason` (str): the reason is what lets a human audit a verdict.")
+        out[c["id"]] = (c, v)
+    return out
+
+
+def _pct(n, d):
+    return f"{n}/{d} = {n / d:.0%}"
+
+
+def test_judge_agrees_with_the_human_labels(judged):
+    wrong = [(c, v) for c, v in judged.values() if v.faithful != c["faithful"]]
+    agree = len(judged) - len(wrong)
+    lines = "\n".join(f"  - {c['id']} (human: {'faithful' if c['faithful'] else 'UNFAITHFUL ' + str(c['defect'])}; yours: {v.faithful}) {v.reason[:110]}" for c, v in wrong[:8])
+    ok(agree / len(judged) >= M6_JUDGE_MIN_AGREEMENT,
+       f"Your judge agrees with the human labels on {_pct(agree, len(judged))}; >= {M6_JUDGE_MIN_AGREEMENT:.0%} expected.\n"
+       f"Until the judge is measured against people, its faithfulness number is an opinion. Disagreements:\n{lines}\n"
+       "Read those items in platform/corpus/judge_labels.jsonl: what does a strict human check that your judge does not?")
+
+
+def test_judge_catches_unfaithful_answers(judged):
+    bad = [(c, v) for c, v in judged.values() if not c["faithful"]]
+    caught = [c for c, v in bad if not v.faithful]
+    missed: dict[str, list[str]] = {}
+    for c, v in bad:
+        if v.faithful:
+            missed.setdefault(c["defect"], []).append(c["id"])
+    detail = "; ".join(f"{d}: {ids}" for d, ids in sorted(missed.items()))
+    ok(len(caught) / len(bad) >= M6_JUDGE_MIN_CATCH,
+       f"Your judge flags only {_pct(len(caught), len(bad))} of the deliberately UNFAITHFUL answers; >= {M6_JUDGE_MIN_CATCH:.0%} expected.\n"
+       f"Missed, by kind of defect: {detail}.\n"
+       "A judge that waves through invented numbers, wrong citations or claims that are not in the source gives you a green dashboard on a system that makes things up.")
+
+
+def test_judge_does_not_cry_wolf(judged):
+    good = [(c, v) for c, v in judged.values() if c["faithful"]]
+    passed = [c for c, v in good if v.faithful]
+    rejected = [c["id"] for c, v in good if not v.faithful]
+    ok(len(passed) / len(good) >= M6_JUDGE_MIN_ACCEPT,
+       f"Your judge accepts only {_pct(len(passed), len(good))} of the FAITHFUL answers; >= {M6_JUDGE_MIN_ACCEPT:.0%} expected (rejected: {rejected}).\n"
+       "A judge that rejects everything is as useless as one that accepts everything: the gate would block every release, the team would learn to ignore it.")
+
+
+def test_judge_is_reproducible(judged):
+    """Same input, same verdict: otherwise a change in the metric could be noise rather than a change in the system."""
+    from genai.evals.judge import judge_faithfulness
+
+    for i in ("j02", "j09", "j11", "j16"):
+        c, first = judged[i]
+        again = judge_faithfulness(c["question"], c["answer"], c["sources"])
+        ok(again.faithful == first.faithful, f"The judge gave two different verdicts for the same item ({i}). With temperature 0 (and a fixed seed) a judge must be repeatable; otherwise you can't tell a regression from noise.")
 
 
 # ------------------------------------------------------------------ agent (LangGraph)

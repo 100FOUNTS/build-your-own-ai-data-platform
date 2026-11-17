@@ -4,7 +4,7 @@ include platform.env
 export
 export PYTHONPATH := $(CURDIR)
 DC = docker compose
-.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all check bonus challenges challenge-% sim-v2 doctor migrate consumer dbt train dagster ingest evals api gateway web
+.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all check bonus challenges challenge-% sim-v2 contract kyverno-up rollouts-up doctor migrate consumer dbt train dagster ingest evals api gateway web
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z0-9_%-]+:.*?## ' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -41,6 +41,10 @@ gitops-up:  ## Argo CD (core) on kind + plant-deploy repo on Forgejo (requires k
 	bash platform/tools/gitops_up.sh
 gitops-push:  ## Publish deploy/k8s to the GitOps repo
 	bash platform/tools/gitops_push.sh
+kyverno-up:  ## Module 13: Kyverno (admission policies) on the kind cluster
+	bash checks/m13_fixtures/kyverno_up.sh kind-plant
+rollouts-up:  ## Module 13: Argo Rollouts (canary releases) on the kind cluster
+	bash checks/m13_fixtures/rollouts_up.sh kind-plant
 up-git:  ## Forgejo (local Git for GitOps) on :3002
 	$(DC) --profile git up -d --wait forgejo
 down:  ## Stop everything (keeps the data in the volumes)
@@ -75,6 +79,8 @@ challenges:  ## All industry challenges
 	$(UV) run pytest checks/test_r*.py -m challenge
 sim-v2:  ## Challenge 1: burst from the new gateway (v1+v2 mixed) on plant.readings.raw
 	$(UV) run python checks/vendor_v2.py --n 3000
+contract:  ## Challenge 1: register the raw topic's data contract in the Schema Registry
+	$(UV) run python -m pipelines.stream.contract
 
 # ------------------------------------------------------------------ shortcuts for your services and pipelines
 doctor:  ## Environment diagnosis (module 0)
@@ -92,7 +98,7 @@ dagster:  ## Module 5: Dagster UI on http://localhost:3400
 ingest:  ## Module 6: index the manuals in pgvector
 	$(UV) run python -m genai.rag ingest
 evals:  ## Module 6: assistant evaluations
-	$(UV) run python -m genai.evals.run
+	$(UV) run python -m genai.evals.run --min-hit3 0.8 --min-faithfulness 0.6
 api:  ## Module 7: API on http://localhost:8000/docs (AUTH_DISABLED=1 for development)
 	AUTH_DISABLED=$${AUTH_DISABLED:-1} $(UV) run uvicorn services.api.app.main:app --reload --port 8000
 gateway:  ## Module 7: Node.js gateway on :8010
