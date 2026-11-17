@@ -13,6 +13,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score
 
+from ml.policy_compare import COST_FALSE_ALERT, COST_MISSED_DAY
+
 KEYS = ["asset_id", "feature_date", "label_failure_7d"]
 GAP = pd.Timedelta(days=7)
 TARGET_FA = 5.0  # false alerts per 100 healthy asset-days
@@ -43,12 +45,21 @@ def fa_per_100(labels: pd.Series, alerts: pd.Series) -> float:
     return 100 * float((alerts & healthy).sum()) / max(int(healthy.sum()), 1)
 
 
+def validation_cost(labels: pd.Series, alerts: pd.Series) -> float:
+    """Business cost of a policy: wasted visits + asset-days with a coming failure and no alert."""
+    false_alerts = int((alerts & (labels == 0)).sum())
+    missed = int((~alerts & (labels == 1)).sum())
+    return COST_FALSE_ALERT * false_alerts + COST_MISSED_DAY * missed
+
+
 def pick_threshold(val: pd.DataFrame) -> float:
-    """The lowest (most sensitive) threshold that meets the false-alert target on validation."""
-    for thr in np.unique(val["score"]):
-        if fa_per_100(val["label_failure_7d"], val["score"] >= thr) <= TARGET_FA:
-            return float(thr)
-    return float(val["score"].max()) + 1e-9
+    """The cheapest threshold on validation among those that meet the false-alert target.
+
+    Ties go to the higher threshold (fewer alerts for the same cost)."""
+    candidates = [*np.unique(val["score"]), float(val["score"].max()) + 1e-9]
+    feasible = [t for t in candidates if fa_per_100(val["label_failure_7d"], val["score"] >= t) <= TARGET_FA]
+    best = min(feasible, key=lambda t: (validation_cost(val["label_failure_7d"], val["score"] >= t), -t))
+    return float(best)
 
 
 def early_detection(df: pd.DataFrame) -> tuple[int, int]:

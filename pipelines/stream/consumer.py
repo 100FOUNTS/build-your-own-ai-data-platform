@@ -6,9 +6,11 @@ import json
 import os
 import time
 
+import httpx
 import psycopg
 import redis
 from confluent_kafka import Consumer, Producer
+from jsonschema.validators import validator_for
 from pydantic import ValidationError
 
 from pipelines.stream.models import Reading, Rejected, from_v2
@@ -31,7 +33,47 @@ def known_assets() -> set[str]:
         return {r[0] for r in c.execute("select asset_id from assets")}
 
 
-def classify(raw: bytes, assets: set[str]) -> dict:
+def load_contracts(topic: str) -> dict[int, object] | None:
+    """The registered contracts of the topic, by wire version: {1: validator for `<topic>-value`, N: validator for `<topic>-vN-value`}.
+
+    None = the topic is not governed (no registry configured, or no subject for it): module 2 behavior.
+    If the registry is configured but unreachable we stop: guessing the contract would defeat the purpose of having one.
+    """
+    url = os.environ.get("SCHEMA_REGISTRY_URL")
+    if not url:
+        return None
+    contracts: dict[int, object] = {}
+    subjects = {1: f"{topic}-value", **{n: f"{topic}-v{n}-value" for n in range(2, 10)}}
+    with httpx.Client(base_url=url, timeout=10) as c:
+        for version, subject in subjects.items():
+            try:
+                r = c.get(f"/subjects/{subject}/versions/latest")
+            except httpx.HTTPError as exc:
+                raise SystemExit(f"Schema Registry unreachable at {url}: {exc}") from None
+            if r.status_code == 404:
+                continue
+            r.raise_for_status()
+            schema = json.loads(r.json()["schema"])
+            contracts[version] = validator_for(schema)(schema)
+    if 1 not in contracts:
+        print(f"WARNING: no contract registered for {topic}-value: the topic is NOT governed", flush=True)
+        return None
+    return contracts
+
+
+def check_contract(m: dict, contracts: dict[int, object]) -> None:
+    """Edge enforcement: the message must conform to the registered schema of ITS declared version. Raises Rejected('schema:…')."""
+    version = m.get("schema_version", 1)
+    validator = contracts.get(version) if type(version) is int else None
+    if validator is None:
+        raise Rejected(f"schema:no contract registered for version {version!r}")
+    err = next(iter(validator.iter_errors(m)), None)
+    if err is not None:
+        where = "/".join(str(p) for p in err.absolute_path) or "(root)"
+        raise Rejected(f"schema:{where}: {err.message[:120]}")
+
+
+def classify(raw: bytes, assets: set[str], contracts: dict[int, object] | None = None) -> dict:
     """Returns the canonical (v1) message or raises Rejected."""
     try:
         m = json.loads(raw)
@@ -39,6 +81,8 @@ def classify(raw: bytes, assets: set[str]) -> dict:
         raise Rejected("malformed_json") from None
     if not isinstance(m, dict):
         raise Rejected("malformed_json:not an object")
+    if contracts is not None:
+        check_contract(m, contracts)
     if "schema_version" in m:
         if m["schema_version"] != 2:
             raise Rejected(f"unknown_schema:version {m['schema_version']!r}")
@@ -79,7 +123,9 @@ def main() -> None:
     )
     r = redis.Redis.from_url(env("REDIS_URL"))
     assets = known_assets()
-    cons.subscribe([env("KAFKA_TOPIC_RAW", "plant.readings.raw")])
+    raw_topic = env("KAFKA_TOPIC_RAW", "plant.readings.raw")
+    contracts = load_contracts(raw_topic)
+    cons.subscribe([raw_topic])
     last_msg = time.time()
     try:
         while True:
@@ -93,7 +139,7 @@ def main() -> None:
             batch_ids: set[str] = set()
             for m in msgs:
                 try:
-                    good = classify(m.value(), assets)
+                    good = classify(m.value(), assets, contracts)
                 except Rejected as exc:
                     prod.produce(
                         dlq_t,
