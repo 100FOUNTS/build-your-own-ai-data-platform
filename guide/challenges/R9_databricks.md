@@ -2,6 +2,7 @@
 
 ⏱ 3–4 h · Extends **modules 3 and 14** · Services: none (optional: a Databricks Free Edition account) · Check: `make challenge-9`
 **Tools:** Databricks, Delta, Unity Catalog, MLflow. **What you practice:** thinking in managed platforms, costs, staged migrations, documents for making decisions.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R9 <mode>`
 
 ## What you will build
 `docs/databricks.md`: the document your manager would use to decide whether to move the platform to Databricks. A map of every piece you built onto its managed equivalent,
@@ -43,6 +44,12 @@ skill in itself: it is what separates those who implement from those who propose
 ## How you will know you are done
 `make challenge-9` reviews the structure of the document: a table of ≥ 10 rows covering the key pieces, sections on what doesn't carry over, costs, the plan (≥ 4 numbered steps) and the recommendation,
 and that vendor lock-in is discussed. **The check can't judge whether your equivalences are right**: for that, `/review R9` with Claude Code and compare it with the official docs.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a rollback rehearsal for one migration stage in `docs/databricks.md`.
+Specify a measurable trigger, who switches back, the exact data comparison to run and the evidence that the old path is serving correctly again.
+Run `make challenge-9`, then read the rehearsal as the on-call engineer: can you execute it without guessing? Your recommendation and decision notes remain yours.
+Claude reviews your change but does not write it. Re-run `make challenge-9`.
 
 ## Comprehension questions
 1. Which piece of your platform would gain the most from moving to Databricks? And which would lose?

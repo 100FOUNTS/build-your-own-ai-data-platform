@@ -2,6 +2,7 @@
 
 ⏱ 3–4 h · Extends **module 4** · Services: none · Check: `make challenge-6`
 **Tools:** NumPy, pandas. **What you practice:** model monitoring, PSI, calibrating a threshold with the data itself, the cost of an alert.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R6 <mode>`
 
 ## What you will build
 `ml/drift.py` with two functions: `psi(...)`, the *Population Stability Index* between a reference distribution and a current one, and `drift_report(...)`,
@@ -38,6 +39,12 @@ The craft is in the middle: catch what is serious without drowning anyone.
 ## How you will know you are done
 `make challenge-6` tests `psi` with synthetic cases, introduces a silent unit change on `PLT01-P105` and requires you to flag it, and measures what percentage of pairs you flag
 on data without incidents (≤ 10%). It prints your percentage.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a sensitivity experiment using seeded synthetic reference data and current data with three increasing mean shifts.
+Run `python scripts/drift_sensitivity.py` (put your experiment there); print each shift, its PSI and whether your monitor flags it, including a no-shift control.
+Keep the calibration fixed across cases and explain the observed sensitivity in your own notes rather than tuning it to make every case alert.
+Claude reviews your change but does not write it. Re-run `make challenge-6`.
 
 ## Comprehension questions
 1. Why do the bins come from the quantiles of the **reference** and not from a fixed range or from the current data?

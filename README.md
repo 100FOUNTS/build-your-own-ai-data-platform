@@ -74,8 +74,6 @@ site**, and 20 technicians write the failure notes **as free text**. You go ther
 language model to read the technicians' notes (16) and run it on a box with no cloud and no GPU (17); then you prove, with a staggered rollout and difference-in-differences, that the new
 alert policy actually reduced downtime across the company's fleet (18). Part 2 builds on modules 0–6 (module 18 only needs module 0 and runs on a simulated fleet of the company's lines, not on PLT02's 12 pumps); the PLT02 story is told in module 15.
 
-> **Status of Part 2:** modules 15 and 18 have been validated end to end. Modules 16 and 17 are new and **not validated yet**: their
-> thresholds are first estimates and may change. If a check there looks wrong, please open an issue.
 
 **Total ≈ 130–159 hours.** You don't have to do it all: nobody masters every tool, and it pays to pick 2–3 areas for the role you want.
 See the **paths by role** in [`guide/role_paths.md`](guide/role_paths.md).
@@ -129,6 +127,15 @@ Then open [`guide/00_foundations.md`](guide/00_foundations.md). The plant's 90-d
 
 It also works **without Claude Code**: the guides and the checks are self-sufficient. With [Claude Code](https://claude.com/claude-code) the repo
 turns on a mentor mode (`CLAUDE.md` and `.claude/commands/`): `/module N`, `/hint N`, `/why <topic>`, `/review N` (N can also be a challenge, e.g. `R5`).
+
+### Three ways to do each module
+
+Choose per module or challenge: **solo** (you build alone; Claude gives a small hint when asked),
+**guided** (the default: you build with mentoring), or **walkthrough** (Claude builds in small pieces; you run them and make the key decisions).
+Set it with `/mode 5 solo` or `make mode N=5 MODE=solo` (challenges: `/mode R3 walkthrough`); `make modes` shows your choices.
+Every mode ends with a green check and 2–3 comprehension answers in your own words; walkthrough also includes **Your turn**, done alone.
+Your decision notes stay yours in every mode. You can switch at any time; walkthrough uses more of your Claude usage.
+See [learning modes](guide/modes.md) for the full workflow and time estimates.
 
 ## Rules of the game
 

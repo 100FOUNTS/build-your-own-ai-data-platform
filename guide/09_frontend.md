@@ -2,6 +2,7 @@
 
 ⏱ 6–8 h · Services: `make up-db up-stream up-auth` and your API (`make api`) · Check: `make check-9`
 **Tools:** React, Next.js, TypeScript (React Native is only mentioned in `role_paths.md`).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 9 <mode>`
 
 ## What you will build
 `services/web`: Marta's dashboard (she runs maintenance at the plant).
@@ -51,6 +52,12 @@ A Next.js 15 project (App Router) with TypeScript `strict`, a `package.json` wit
 
 ## How you will know you are done
 `make check-9` runs `npm ci && npm run build` (types included), runs `npm test`, starts YOUR API and YOUR built Next app, and reviews the **HTML the browser receives**: accessible table, order by risk, levels with text, the detail 404, the redirect to login without a session, the `keycloak` provider and that no secrets leak.
+
+## Your turn (walkthrough mode)
+On your own, add an accessible text summary beside the risk-history SVG on `services/web`'s `/assets/[id]` page: first risk, latest risk and change in percentage points.
+Handle an empty history explicitly, using the same points as the chart and leaving its accessible label intact.
+Run `npm --prefix services/web run dev` and open a scored asset's detail page; compare the summary with the chart, including with styles disabled.
+Then re-run `make check-9`.
 
 ## Comprehension questions
 1. Why is the fleet a server component and the live alerts a client one?

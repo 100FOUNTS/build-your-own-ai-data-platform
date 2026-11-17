@@ -2,6 +2,7 @@
 
 ⏱ 9–11 h · Services: `make up-db up-stream up-obs` and **Ollama** running (the tracing check runs your module 6 RAG) · Check: `make check-10`
 **Tools:** OpenTelemetry (including its **GenAI semantic conventions**), Prometheus (recording rules, `promtool`), Grafana (plus **Loki** and **Tempo**, the open alternatives for logs and traces).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 10 <mode>`
 
 ## What you will build
 The ability to **understand what is happening inside your system from the outside**:
@@ -104,6 +105,12 @@ and then reads the trace back from the Tempo HTTP API: one root span, model-call
 
 For the SLO, it feeds `promtool test rules` with **synthetic series it generates** (20 % failures, 20 % slow answers, a healthy week, an 8 % leak, a spike that recovered, a blip that just started; plus noise from another route and another service) and asserts what your SLI computes and which alerts fire and which don't.
 Finally it checks that your SLI expression returns a sensible value on the live metrics of your API. It does not check that you chose a *good* SLO: that is the comprehension questions.
+
+## Your turn (walkthrough mode)
+On your own, add a provisioned Grafana panel in `observability/grafana/` showing `1 - sli:risk_bad_ratio:rate5m` as the five-minute good-request share.
+Run `make up-obs`, generate risk requests with `curl http://localhost:8000/assets/PLT01-P101/risk` (use a token if authentication is enabled), and allow a scrape interval.
+Open the dashboard at http://localhost:3030; compare the panel with the same expression in Prometheus, then restart Grafana and verify the panel remains.
+Then re-run `make check-10`.
 
 ## Comprehension questions
 1. Why use a Collector instead of having the API talk directly to Prometheus/Tempo/Loki?

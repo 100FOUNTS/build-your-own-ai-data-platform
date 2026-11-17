@@ -2,6 +2,7 @@
 
 ⏱ 6–8 h · Services: `make up-db up-stream` · Check: `make check-7`
 **Tools:** FastAPI, Pydantic, Node.js, TypeScript, REST APIs, testing, Redis (cache), Kafka.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 7 <mode>`
 
 ## What you will build
 - **`services/api`**: a REST API (FastAPI) with assets, risk (cached in Valkey), history, work orders and alerts; strict validation with Pydantic,
@@ -57,6 +58,12 @@ Also write **tests** in `services/api/tests/` (at least the Pydantic validations
 ## How you will know you are done
 `make check-7` starts YOUR real API with `uvicorn` against a temporary database (and a new alerts topic), tests every endpoint and every error case, checks the cache and the TTL **in Valkey**, the Kafka message and the 429.
 Then it runs `npm ci && npm run build` on your gateway, starts it, connects over SSE, publishes an alert to Kafka and waits to receive it.
+
+## Your turn (walkthrough mode)
+On your own, make the risk-cache TTL configurable through `RISK_CACHE_TTL_SECONDS` in `services/api`, defaulting to 30 and bounded to 1–30 seconds.
+Start `RISK_CACHE_TTL_SECONDS=5 AUTH_DISABLED=1 make api`, then run `curl http://localhost:8000/assets/PLT01-P101/risk` for a scored asset.
+Run `redis-cli -p 6380 ttl risk:PLT01-P101` twice: watch the TTL fall from at most 5, then expire before another request fills it.
+Then re-run `make check-7`.
 
 ## Comprehension questions
 1. Why is `POST /work-orders` with a nonexistent asset a 404 and not a 422? And an invalid `wo_type`?

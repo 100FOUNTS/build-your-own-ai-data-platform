@@ -2,6 +2,7 @@
 
 ⏱ 4–5.5 h (part 1: 3–4 h · part 2: 1–1.5 h) · Extends **module 2** · Services: `make up-db up-stream` · Check: `make challenge-1`
 **Tools:** Kafka (Redpanda), Pydantic, Redis, Schema Registry (built into Redpanda), JSON Schema. **What you practice:** schema evolution, units, late data, migrations without downtime, **data contracts enforced at the edge**.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R1 <mode>`
 
 ## What you will build
 You extend your module 2 consumer so that, during the migration to a new sensor gateway, it accepts **two formats** at once on
@@ -105,6 +106,12 @@ each new defect in the DLQ with its reason, and that reprocessing with another g
 that accepts a good v1 reading and rejects the structural defects, that the script is idempotent, that a compatibility rule was chosen on the subject, that the vendor's v2 is **rejected** as an evolution and a compatible
 change is **accepted**. Then it runs your consumer on a burst where only v1 is registered (v2 and the unannounced version must go to the DLQ with reason `schema`, and so must v1-looking messages that break the schema,
 while every valid v1 reading gets through) and on a burst where the vendor's v2 contract is also registered (translation works again). Its probes leave nothing behind: it drops its temporary subjects and topics.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), add a regression test for the same temperature reading arriving once as v1 in °C and once as v2 in °F.
+Choose the values yourself; assert that translation gives the same canonical value and deduplication emits only one clean reading.
+Run `python -m pytest tests/test_r1_cross_version.py -q` (put your test there); inspect both assertions.
+Claude reviews your change but does not write it. Re-run `make challenge-1`.
 
 ## Comprehension questions
 1. Why translate in the consumer and not in Spark or dbt? What would happen the day a v3 arrives?

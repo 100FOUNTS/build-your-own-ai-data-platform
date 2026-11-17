@@ -2,6 +2,7 @@
 
 ⏱ 4–5 h · Extends **module 14** · Services: none · Check: `make challenge-8`
 **Tools:** pandas, pytest, Git, **a coding agent** (Claude Code or any other, for part 2). **What you practice:** reading someone else's code, reproducing before fixing, regression tests, a blameless postmortem, **supervising an AI coding agent**.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R8 <mode>`
 
 ## What you will build
 Nothing from scratch: this time you **inherit** code. In [`legacy/report/`](../../legacy/report/) is the monthly reliability report the previous team wrote,
@@ -88,6 +89,12 @@ and with a copy of the **original code** (at least 3 must fail); and it reviews 
 
 For part 2 the check is deliberately light: it can't judge a review, it can only see that you wrote one. It verifies that `notes/R8_agent_review.md` has the six sections and that each has substance (not a line saying “ok”),
 that the Failing test section includes red pytest output, and that the test it names **exists, fails on the original code and passes on yours**. Whether the review is *good* is for the `/review R8` conversation with your mentor.
+
+## Your turn (walkthrough mode)
+After Claude demonstrates reproduce → compare with the definition → failing test → fix on one ticket symptom you pick, choose another symptom yourself (30–45 min).
+Independently reproduce it, write and run a failing regression test from the ticket's definitions, then make the fix and verify the test turns green.
+Run `python -m pytest legacy/report/tests -q`; compare the report before and after and write your own explanation of the difference.
+Claude reviews your work without pointing out other bugs or writing this change; the existing Part 2 exception still applies. Re-run `make challenge-8`.
 
 ## Comprehension questions
 1. Which of the bugs would a plausibility test have caught without computing anything by hand? Which one wouldn't?

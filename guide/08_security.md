@@ -2,6 +2,7 @@
 
 ⏱ 6–8 h · Services: `make up-db up-stream up-auth` · Check: `make check-8`
 **Tools:** OAuth 2.0, OIDC, IAM, secrets, auditing, *threat modelling* — **Keycloak** (identity) and **OpenBao** (secrets; the open fork of Vault).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 8 <mode>`
 
 ## What you will build
 1. **Authentication and authorization** in the API and the gateway: they only accept valid Keycloak JWTs and enforce roles (*operator*, *engineer*, *admin*).
@@ -52,6 +53,12 @@ Environment: `KEYCLOAK_URL` (`http://localhost:8089`), `KEYCLOAK_REALM` (`plant`
 ## How you will know you are done
 `make check-8` starts your API with real authentication against your Keycloak, gets tokens for `ana`/`bruno`/`carla`, **forges fake tokens of four kinds** and one for another audience, checks every permission and the 401/403/404/204 behavior;
 it checks your gateway; runs your `bao_setup.py` twice, logs in with the AppRole and checks least privilege (reading its own: yes; reading someone else's or writing: no); starts the API **without** `DATABASE_URL`; scans the code for credentials; and reviews your STRIDE model.
+
+## Your turn (walkthrough mode)
+On your own, add a regression test under `services/api/tests/` for an expired JWT signed by a trusted test key, with the correct issuer and audience.
+Use a local test JWKS stub so the only invalid claim is expiry; assert 401 and `WWW-Authenticate: Bearer`.
+Run `uv run pytest -v services/api/tests/`; look for this case passing, and confirm it fails if expiry validation is temporarily disabled, then restore it.
+Then re-run `make check-8`.
 
 ## Comprehension questions
 1. Why check `aud` if the signature is already valid? Describe the attack it prevents.

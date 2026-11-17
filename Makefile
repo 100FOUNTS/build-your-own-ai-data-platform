@@ -4,7 +4,7 @@ include platform.env
 export
 export PYTHONPATH := $(CURDIR)
 DC = docker compose
-.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all check bonus challenges challenge-% sim-v2 contract kyverno-up rollouts-up doctor migrate consumer dbt train dagster ingest evals api gateway web up-plt02 plt02-cmms plt02-sync plt02-mcp site-up site-down llm-data llm-train llm-eval edge-setup edge-export edge-serve edge-loadtest rollout
+.PHONY: help setup fix-venv up-db up-vector up-stream up-lake up-auth up-obs up-cloud up-git down ps kind-up kind-down gitops-up gitops-push history topics sim spark progress progress-all mode modes check bonus challenges challenge-% sim-v2 contract kyverno-up rollouts-up doctor migrate consumer dbt train dagster ingest evals api gateway web up-plt02 plt02-cmms plt02-sync plt02-mcp site-up site-down llm-data llm-train llm-eval edge-setup edge-export edge-serve edge-loadtest rollout
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z0-9_%-]+:.*?## ' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -67,6 +67,11 @@ spark:  ## Run a Spark job:  make spark JOB=pipelines/spark/my_job.py
 # ------------------------------------------------------------------ checks
 progress:  ## Summary of green modules (make progress-all includes the slow ones)
 	$(UV) run python platform/tools/progress.py
+mode:  ## Set a learning mode: make mode N=5 MODE=solo (N=all sets the default)
+	@test -n "$(N)" && test -n "$(MODE)" || { echo "Error: N and MODE are required. Use make mode N=5 MODE=solo" >&2; exit 2; }
+	$(UV) run python platform/tools/modes.py set "$(N)" "$(MODE)"
+modes:  ## Show the learning mode for every module and challenge
+	$(UV) run python platform/tools/modes.py show
 progress-all:
 	$(UV) run python platform/tools/progress.py --all
 check-%:  ## Check one module: make check-3

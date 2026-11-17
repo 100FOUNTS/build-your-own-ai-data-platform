@@ -22,6 +22,28 @@ The challenges (in [`challenges/`](challenges/README.md)) are done after the mod
 > Modules 7, 8, 9 and 14 reuse code from others. If your path skips them, look at which contracts you need (each guide lists them) and build
 > just enough of that piece to satisfy them.
 
+## Suggested learning modes
+
+These are suggestions, not requirements: choose per module with `/mode N <mode>` and switch whenever you need.
+Use solo or guided for the skills at the heart of your role and walkthrough for supporting pieces; see [learning modes](modes.md).
+The module order and partial-module scope in the path above still apply. Challenges can have their own mode too.
+
+| Role you are aiming for | Solo | Guided | Walkthrough |
+|---|---|---|---|
+| **Data engineer** | 1 · 2 · 3 | 0 · 5 · 10 · 14 | 4 · 11 · 12 |
+| **Applied ML / AI** | 4 | 0 · 5 · 6 · 16 (optional) | 1 · 3 · 7 · 10 |
+| **Backend / Full-stack** | 7 · 9 | 0 · 1 · 8 · 10 · 14 | 12 |
+| **Platform / DevOps / SRE** | 12 · 13 | 0 · 10 · 11 · 8 · 14 | 1 · 7 |
+| **Forward-deployed / solutions engineer** | 15 | 0 · 1 · 6 · 8 · 14 | 7 · 12 |
+| **ML Engineer (LLMs)** | 4 · 16 | 0 · 5 · 6 | 1 · 3 · 10 |
+| **Inference engineer / LLM serving** | 17 | 0 · 16 · 10 | 4 · 6 |
+| **Data scientist** | 4 · 18 | 0 · 5 | 1 · 3 · 10 |
+| **AI engineer (applications)** | 6 | 0 · 7 · 15 · 17 | 1 · 10 |
+| **Everything** | 2–3 modules you want to master | 0 and the remaining modules | Supporting pieces you want to understand first |
+
+For **Everything**, start with guided for every module 0–18, then assign solo to your 2–3 focus modules and walkthrough to supporting ones.
+In module 15 the client interview is always yours, including in walkthrough; all decision notes and recommendations are yours in every mode.
+
 ## What is not here (and how to study it separately)
 
 | Tool | Why it is not here | How to practice it |

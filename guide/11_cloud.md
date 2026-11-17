@@ -2,6 +2,7 @@
 
 ⏱ 6–8 h · Services: `make up-stream up-cloud` · Check: `make check-11` (⏱ takes ~4 minutes: it creates and destroys 22 resources)
 **Tools:** AWS (S3, IAM, networking, SNS/SQS), **OpenTofu** (the open fork of Terraform), **Floci** (an AWS emulator, MIT, no account; LocalStack is no longer free).
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 11 <mode>`
 
 ## What you will build
 The platform's cloud infrastructure **described in code** (`infra/aws/*.tf`) and deployed with OpenTofu on Floci:
@@ -54,6 +55,12 @@ We emulate AWS locally because you learn **the same APIs** (S3, SQS, IAM… with
 ## How you will know you are done
 `make check-11` copies your `.tf` files to a temporary folder, runs `init`/`validate`/`apply` with a unique `env` against Floci, checks that a second `plan` proposes no changes, checks with boto3 the versioning, encryption, tags, redrive, subscription, **IAM policy documents**, network and logs,
 runs your notifier **first with a nonexistent topic** (it must fail without losing messages) and then with the right one (the 3 alerts must reach the queue), and finally destroys everything.
+
+## Your turn (walkthrough mode)
+On your own, expose the API log group's retention as a `log_retention_days` variable in `infra/aws/observability.tf`, with a default of 14.
+Run `tofu -chdir=infra/aws plan -var env=test -var log_retention_days=30` against Floci, using the same state as your existing test deployment.
+Look for the log group's retention changing to 30 without replacing unrelated resources; keep its `/plant/<env>/api` name and tags.
+Then re-run `make check-11`.
 
 ## Comprehension questions
 1. Why does it matter that `tofu plan` right after `apply` proposes no changes? What usually causes it when it does?

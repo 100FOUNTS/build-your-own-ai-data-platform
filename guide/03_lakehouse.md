@@ -2,6 +2,7 @@
 
 ⏱ 8–10 h · Services: `make up-db up-stream up-lake` · Check: `make check-3`
 **Tools:** Spark, Apache Iceberg, DuckDB, dbt, local S3 storage (SeaweedFS; MinIO no longer gets patches), SQL.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 3 <mode>`
 
 ## What you will build
 - **Two Spark jobs** that write to an **Iceberg** table: `backfill_history.py` (loads the 90-day history) and `stream_to_bronze.py`
@@ -69,6 +70,12 @@ Table `lake.<ns>.readings`: `msg_id string, asset_id string, plant string, ts ti
 ## How you will know you are done
 `make check-3` runs your Spark jobs in a temporary namespace (backfill twice; streaming with 3,120 messages of which 3,000 are unique, again, and then with more messages), counts rows with PyIceberg and checks the partitioning. Then it runs your `dbt build`
 against that namespace and a temporary Postgres database and compares **all** your gold columns with the independent computation.
+
+## Your turn (walkthrough mode)
+On your own, add a singular dbt test in `pipelines/dbt/tests/` that rejects `readings_hourly` rows where `value_mean` lies outside `value_min` and `value_max`.
+Run `dbt test --project-dir pipelines/dbt --profiles-dir pipelines/dbt` against your warehouse; look for your new test passing.
+Temporarily invert the test's comparison to prove it can fail on non-constant hours, then restore the intended comparison.
+Then re-run `make check-3`.
 
 ## Comprehension questions
 1. Why `MERGE` and not a plain `INSERT` in the streaming job? What role does the checkpoint play and what role the `MERGE`? Could you do without either?

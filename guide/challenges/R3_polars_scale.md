@@ -2,6 +2,7 @@
 
 ⏱ 4–5 h · Extends **module 3** · Services: none · Check: `make challenge-3`
 **Tools:** Polars, DuckDB, pandas. **What you practice:** expressions and *lazy* mode, window functions, measuring performance with method.
+**Mode:** solo, guided or walkthrough — see [modes](../modes.md) · set it with `/mode R3 <mode>`
 
 ## What you will build
 `pipelines/polars_gold.py` with `build_gold(history_dir, work_orders_csv) -> polars.DataFrame`, which computes **exactly** the module 3
@@ -39,6 +40,12 @@ Polars is the fastest-growing alternative to pandas today: it is columnar, multi
 `make challenge-3` builds a plant of **60 pumps** (3.9 M readings) in a temporary folder, computes the reference gold with pandas and yours with Polars,
 compares **every** column (tolerance 1e-6), checks that your version is lazy and 100% Polars, that it is **faster** than the reference (it prints both times)
 and that your report has a methodology, a table and an `EXPLAIN`.
+
+## Your turn (walkthrough mode)
+On your own (20–30 min), extend your benchmark script with a `--repeats` option and report the median and range of run times after a separate warm-up.
+Run `python scripts/benchmark_gold.py --repeats 5` (put your benchmark entry point there), using the same input for all three engines.
+Add the observed spread to `docs/benchmark.md` yourself; check that every repetition still produces equal results.
+Claude reviews your change but does not write it. Re-run `make challenge-3`.
 
 ## Comprehension questions
 1. Which optimizations did Polars apply in your plan? Which one would have been impossible in *eager* mode?

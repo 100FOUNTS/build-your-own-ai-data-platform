@@ -2,6 +2,7 @@
 
 ⏱ 8–10 h · Services: `make up-db` and Docker (for the site box) · Check: `make check-15`
 **Tools:** an interview (the `/client-plt02` role-play), HTTP + XML, PostgreSQL upserts, time zones, MCP, Docker Compose internal networks.
+**Mode:** solo, guided or walkthrough — see [modes](modes.md) · set it with `/mode 15 <mode>`
 **Part 2 — "The second plant".** The platform worked in PLT01, so the company bought a second plant. This module is the first of four: the next ones teach the assistant to read PLT02's handwriting (16, LoRA) and to run on the plant's own box (17, llama.cpp), and then to prove the rollout worked (18).
 
 ## What you will build
@@ -117,6 +118,12 @@ A Compose file with the services **`db`** (Postgres, user `plant`, database `pla
 - starts the mock CMMS as a process and a temporary database built from **your migrations**, then runs **your sync** through full loads, incremental runs, supervisors' late corrections with stale duplicates, a flaky server (503, 429, truncated bodies), a `Retry-After` it can measure, an outage in the middle of a run, an unknown pump, and daylight-saving edge cases, comparing the database with the truth computed independently from the generator;
 - starts **your MCP server** with a real MCP client, calls every tool, throws hostile inputs at it and then reads what the CMMS saw: methods, keys, paths, parameters;
 - reads your **compose file** (`docker compose config`) for internal networks, pinned images, restart policies and ports, and (it is marked slow: `make progress-all`) **builds and starts the site box and tries to escape**: it must reach the CMMS and must not reach 1.1.1.1 or resolve a public name, and the sync inside it must work.
+
+## Your turn (walkthrough mode)
+On your own, add one rehearsed recovery verification to `docs/runbook_plt02.md`, using only your own interview notes and the site stack you built.
+Run `docker compose -f deploy/site/compose.site.yaml run --rm sync python -m connectors.plt02.sync` twice with your documented site configuration.
+Before and after the second run, run `docker compose -f deploy/site/compose.site.yaml exec -T db psql -U plant -d plant -c 'SELECT (SELECT count(*) FROM assets) AS assets, (SELECT count(*) FROM work_orders) AS work_orders;'`; with no source changes, both counts must stay unchanged.
+Document the exact comparison command and what a healthy result looks like; take unanswered client questions back to the interview. Then re-run `make check-15`.
 
 ## Comprehension questions
 1. Your sync worked for two weeks and then the plant manager says two work orders show the wrong close time. Which three questions do you ask before you open the code?
